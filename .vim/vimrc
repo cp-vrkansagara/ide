@@ -117,8 +117,11 @@ set mouse=a
 set cmdheight=2
  
 " Display line numbers on the left
+" This setting can be useful for determining how many lines of text you want to
+" yank. It will display the line number column, but lines will be the distance
+" from the current line.
+set relativenumber
 set number
- 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
  
@@ -137,7 +140,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
  
-" Indentation settings for using hard tabs fsor indent. Display tabs as
+" Indentation settings for using hard tabs for indent. Display tabs as
 " four characters wide.
 "set shiftwidth=4
 "set tabstop=4
@@ -156,11 +159,15 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
  
-" A visual walk through of a couple of the new features in Vim 7.0
-" @ sourle  http://www.aboutlinux.info/2006/09/visual-walk-through-of-couple-of-new.html
-" Set spell and get flying with the  press 'z='
-"set spell
+"------------------------------------------------------------
 
+
+" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+"	VALLABH KANSAGARA @VRKANSAGARA <VRKANSAGARA@GMAIL.COM> 
+" 		MY CUSTOM CONFIGURATION START FORM HERE
+" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+" Disable the splash screen
+:set shortmess +=I
 
 " Enable pathogen bundles
 " See http://www.vim.org/scripts/script.php?script_id=2332
@@ -168,32 +175,90 @@ nnoremap <C-L> :nohl<CR><C-L>
 " without having to do separate installation.
 " Call "filetype off" first to ensure that bundle ftplugins can be added to the
 " path before we re-enable it later in the vimrc.
-" :filetype off
+:filetype off
 call pathogen#infect()
 call pathogen#helptags()
-filetype plugin indent on
+" Added 2010-09-21 Based on http://stevelosh.com/blog/2010/09/coming-home-to-vim
+" Set mapleader to ","
+let mapleader = ","
+
+" vimcasts #24
+" Auto-reload vimrc on save
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    filetype plugin indent on
+endif
+
+" Load vimrc in new tab with leader-v
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+set omnifunc=syntaxcomplete#Complete
 
 
-" mwop.net suggestion
+" If want to avoid jk in certain languages can use:
+" (and to make it where order doesn't matter, the second mapping also)
+:imap jk <Esc>
+
 " run file with PHP CLI (CTRL-M)
 :autocmd FileType php noremap <C-M> :w!<CR>:!$HOME/bin/php %<CR>
+
 " PHP parser check (CTRL-L)
 :autocmd FileType php noremap <C-L> :!$HOME/bin/php -l %<CR>
 
+" " Via https://twitter.com/vimtips/status/208241766816677889
+" " Allows all operations to work with system clipboard
+" :set clipboard=unnamed
 
-" Vim syntax file
-" Begin my settings!
+" Color scheme
+" First line ensures we can have full spectrum of colors
+" Check what t_Co vim has picked up from your term emulator (a quick :echo &t_Co).
+" If it's 8 you'll want to se t_Co=16. 
+" You might also try se t_Co=256 though without let g:solarized_termcolors=16 
+" this will use the 256 fallback mode, which isn't quite the correct color scheme.
+" Source : https://stackoverflow.com/questions/5560658/ubuntu-vim-and-the-solarized-color-palette
 
-" Disable the splash screen
-:set shortmess +=I
+syntax enable
+set cursorline
+if has('gui_running')
+	set background=light
+else
+	set background=dark
+endif
+set t_Co=256
+"	used for gvim
+":let g:solarized_termcolors=1
+"	used for vim only on terminal
+:let g:solarized_termcolors=256
+:colorscheme solarized
+
+" Tab nevigation start
+"http://vim.wikia.com/wiki/Alternative_tab_navigation
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap tc  :tabnew<CR>
+nnoremap td  :tabclose<CR>
+" Open files always in new tabs
+" autocmd VimEnter * tab all
+" autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 
-" Loads a tag file from ~/.vim.tags/, based on the argument provided. The
-" command "Ltag"" is mapped to this function.
-:function! LoadTags(file)
-:   let tagspath = $HOME . "/.vim/tags/" . a:file
-:   let tagcommand = 'set tags+=' . tagspath
-:   execute tagcommand
-:endfunction
-:command! -nargs=1 Ltag :call LoadTags("<args>")
-:imap jk <Esc>
+nnoremap ZZ :call QuitPrompt()<cr>
+
+" Force GVim to prompt before close
+" Source : https://stackoverflow.com/questions/11672028/force-gvim-to-prompt-before-close
+fun! QuitPrompt()
+   if has("gui_running") && tabpagenr("$") == 1 && winnr("$") == 1
+      let choice = confirm("Close?", "&yes\n&no", 1)
+      if choice == 1 | wq | endif
+   else | wq | endif
+endfun
