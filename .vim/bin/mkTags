@@ -36,7 +36,7 @@ fi
 echo "Creating tags for directory '$dir' using alias '$name'"
 cd $dir
 exec ctags \
--f ~/.vim.tags/$name \
+-f ~/.vim/tags/$name \
 --languages=PHP \
 -R \
 --extra=+f \
