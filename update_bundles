@@ -14,8 +14,8 @@ git_bundles = [
   "git://github.com/vimwiki/vimwiki.git",
   "git://github.com/tomtom/tcomment_vim.git",
   "git://github.com/vim-scripts/mru.vim.git",
-  "https://bitbucket.org/ns9tks/vim-fuzzyfinder",
-  "https://bitbucket.org/ns9tks/vim-l9",
+  "git://github.com/vim-scripts/FuzzyFinder.git",
+  "git://github.com/Sudiukil/vim-l9.git",
   "git://github.com/scrooloose/syntastic.git",
 ]
 
