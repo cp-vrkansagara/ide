@@ -17,6 +17,9 @@ git_bundles = [
   "git://github.com/vim-scripts/FuzzyFinder.git",
   "git://github.com/Sudiukil/vim-l9.git",
   "git://github.com/scrooloose/syntastic.git",
+  "git://github.com/vim-scripts/project.tar.gz.git",
+  "git://github.com/powerline/powerline.git",
+  "git://github.com/powerline/fonts.git",
 ]
 
 vim_org_scripts = [
