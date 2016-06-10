@@ -20,8 +20,12 @@ git_bundles = [
   "git://github.com/vim-scripts/project.tar.gz.git",
   "git://github.com/powerline/powerline.git",
   "git://github.com/powerline/fonts.git",
+<<<<<<< HEAD
   "git://github.com/tmux-plugins/tmux-resurrect.git",
   "git://gist.github.com/1229612.git"
+=======
+  "git://github.com/tmux-plugins/tmux-resurrect.git"
+>>>>>>> upstream/2016
 ]
 
 vim_org_scripts = [
