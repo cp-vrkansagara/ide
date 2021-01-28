@@ -1,93 +1,119 @@
+" Disable the splash screen
+:set shortmess +=I
+
+"Enable syntax highlighting
+if has('syntax')
+  syntax on
+endif
+
+set number
+" Highlight current line
+:set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+
+" run file with PHP CLI (CTRL-M)
+:autocmd FileType php noremap <C-M> :w!<CR>:!$HOME/bin/php %<CR>
+
+" PHP parser check (CTRL-L)
+:autocmd FileType php noremap <C-L> :!$HOME/bin/php -l %<CR>
+
+
 " This setting can be useful for determining how many lines of text you want to
 " yank. It will display the line number column, but lines will be the distance
 " from the current line.
 :set relativenumber
 
+
 " vimcasts #24
 " Auto-reload vimrc on save
 if has("autocmd")
      autocmd bufwritepost .vimrc source $MYVIMRC
-     filetype plugin indent on
  endif
 
-" Load vimrc in new tab with leader-v
-nmap <leader>v :tabedit $MYVIMRC<CR>
+ " Load vimrc in new tab with leader-v
+" nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>v :tabedit ~/.vim_runtime/my_configs.vim<CR>
 
-" I like tabstops of 4, and prefer spaces to tabs. I want the text width to be
-" 80, and for it to wrap. My default background is dark. I like syntax
-" highlighting.
-:set nocompatible
-:set encoding=utf-8
-:set expandtab
-:set textwidth=80
-:set tabstop=4
-:set softtabstop=4
-:set shiftwidth=4
-:set number
-:set background=dark
-:syntax on
-:set tags=$HOME/.vim/doc/tags
-:set ttyfast
-:set showcmd
-:set showmode
-:set wildmenu
-:set wildmode=list:longest
-:set undofile
-:set splitbelow
-:set splitright
-
+"Hidden" buffers -- i.e., don't require saving before editing another file.
+" Calling quit will prompt you to save unsaved buffers anyways.
+:set hidden
 
 " " Via https://twitter.com/vimtips/status/208241766816677889
 " " Allows all operations to work with system clipboard
 :set clipboard=unnamed
 
-
-" Added 2005-03-23 Based on http://www.perlmonks.org/index.pl?node_id=441738
-:set smarttab
-:set shiftround
-:set autoindent
-:set smartindent
-
 "sudo" save:
 :cmap w!! w !sudo tee % >/dev/null
 
-" Turn on "very magic" regex status by default for searches.
-" :he /magic for more information
-:nnoremap / /\v
-:vnoremap / /\v
+" The escape key is a long ways away. This maps it to the sequence 'kj'
+:map! kj <Esc>
+:inoremap kj <Esc>
 
-" Highlight Searches
-:set highlight=lub
-:map <Leader>s :set hlsearch<CR>
-:map <Leader>S :set nohlsearch<CR>
-:set incsearch
-:set showmatch
+" Allow better terminal/mouse integration
+:set mousemodel=extend
 
-" Make case-insensitive search the norm
-:set ignorecase
-:set smartcase
+" Remember settings between sessions
+:set viminfo='400,f1,"500,h,/100,:100,<500
 
+" Repair weird terminal/vim settings
+:set backspace=start,eol,indent
 
-" Folding
-" Toggle folding with spacebar instead of za
-nnoremap <Space> za
+" Bash is my shell
+" Well, not really. But this makes CLI integration better.
+:let bash_is_sh=1
 
+" Tab options (as in Vim GUI Tabs)
+" <C-t> Opens a new tab, <C-w> closes current tab
+" Remember, gt goes to next tab, gT goes to previous; easier than using firefox
+" control sequences
+" I don't use tabs often, so I've disabled these for now.
+:nmap <C-t> :tabnew<CR>
+:imap <C-t> <ESC>:tabnew<CR>
+:nmap <C-w> :tabclose<CR>
+:imap <C-w> <ESC>:tabclose<CR>
 
-" Trim trailing whitespace and \r characters
-" autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml,phtml,vimrc autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+" Use UTF-8 encoding
+:set encoding=utf-8
 
+" Show info in ruler
+set laststatus=2
 
-" PHP parser check (CTRL-L)
-:autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
+" Scrolling options
+set scrolljump=5
+set scrolloff=3
 
-" run file with PHP CLI (CTRL-M)
-:autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
+" netrw options
+" Map ,n to open netrw in the current working directory
+:map <Leader>n :edit .<CR>
+" Hide swap and undo files from netrw
+:let g:netrw_list_hide="^\.sw.*$,^\.*\.sw.*$,^\..*\.un[~]$"
 
-" .inc, phpt, phtml, phps files as PHP
-:autocmd BufNewFile,BufRead *.inc set ft=php
-:autocmd BufNewFile,BufRead *.phpt set ft=php
-:autocmd BufNewFile,BufRead *.phtml set ft=php
-:autocmd BufNewFile,BufRead *.phps set ft=php
+" Color scheme
+" First line ensures we can have full spectrum of colors
+:set t_Co=256
+:let g:solarized_termcolors=256
+":let g:solarized_termtrans=1
+:colorscheme solarized
+set background=light
+call togglebg#map("<F5>")
 
-Highlight current line
-:set cursorline
+" ACK support
+:set grepprg=ack-grep\ -a
+:let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+:map <Leader>g :Ack
+
+" snipMate options
+let g:snips_author = "Vallabh Kansagara"
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+"How can I open a NERDTree automatically when vim starts up if no files were specified?
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeQuitOnOpen=1
+let NERDTreeMapOpenInTab='<ENTER>'
+
+" C and C++ related stuff goes here
+" run file with gnu compiler
+:autocmd FileType c noremap <C-M> :w!<CR>:!/usr/bin/gcc % && ./a.out<CR>

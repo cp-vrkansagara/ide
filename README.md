@@ -1,20 +1,7 @@
-#REQUIREMENT OF IDE (Integrated Development Environment)
--[] Fuzzy Search
--[] Deep Search 
-    - Possibly using ctags
--[] Spell Check
--[] Git track
--[] Unit test case
--[] Code indent
--[] Live code template
--[] Code formating
--[] Color and theme
--[] Skype notification
--[] Pindgin notification
--[] Email notification
--[] Multipal Cursor
--[] Code Wrap
--[] Run/Deug line by line
+My every day editor based using two things
+
+(1) clone this repo https://github.com/amix/vimrc
+(2) copy config of my file called my_configs.vim and place into .vim_runtime folder
 
 ~~~bash
     Linux User :- If there is terminal there is a way.
