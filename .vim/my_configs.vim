@@ -40,7 +40,13 @@ nmap <leader>v :tabedit ~/.vim_runtime/my_configs.vim<CR>
 
 " " Via https://twitter.com/vimtips/status/208241766816677889
 " " Allows all operations to work with system clipboard
-:set clipboard=unnamed
+" :set clipboard=unnamed
+
+" Added 2005-03-23 Based on http://www.perlmonks.org/index.pl?node_id=441738
+:set smarttab
+:set shiftround
+:set autoindent
+:set smartindent
 
 "sudo" save:
 :cmap w!! w !sudo tee % >/dev/null
@@ -54,6 +60,12 @@ nmap <leader>v :tabedit ~/.vim_runtime/my_configs.vim<CR>
 
 " Remember settings between sessions
 :set viminfo='400,f1,"500,h,/100,:100,<500
+
+" Following will prevent vim from closing folds in a current pane when opening a
+" new pane.
+" See http://stackoverflow.com/posts/30618494/revisions
+:autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+:autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
 
 " Repair weird terminal/vim settings
 :set backspace=start,eol,indent
@@ -71,6 +83,10 @@ nmap <leader>v :tabedit ~/.vim_runtime/my_configs.vim<CR>
 :imap <C-t> <ESC>:tabnew<CR>
 :nmap <C-w> :tabclose<CR>
 :imap <C-w> <ESC>:tabclose<CR>
+:nmap <C-Left> :tabprevious<CR>
+:imap <C-Left> <ESC>:tabeprevious<CR>
+:nmap <C-Right> :tabNext<CR>
+:imap <C-Right> <ESC>:tabNext<CR>
 
 " Use UTF-8 encoding
 :set encoding=utf-8
@@ -112,10 +128,29 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeQuitOnOpen=1
-let NERDTreeMapOpenInTab='<ENTER>'
-:nnoremap <Space> :NERDTreeToggle<cr>
+:nnoremap <leader><Space> :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
+let NERDTreeShowHidden=1
+
+" Folding
+" Toggle folding with spacebar instead of za
+nnoremap <Space> za
+
+" Move between windows
+" Map <leader>f to split horizontally, and move to bottom window
+" nnoremap <leader>f <C-w>s<C-w>j
+" Use <ctrl> plus direction key to move around within windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Tab specific changes
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>
+
 " C and C++ related stuff goes here
 "
 " run file with gnu compiler

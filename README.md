@@ -10,6 +10,11 @@ Developer User :- If there is vim thre is geek.
 ~~~
 
 
+, z distruction free view
 
+relative jump 
 
-
+5 h = jump to 5 character left
+5 l = jump to 5 character right
+5 j = jump to 5 line to next 
+5 k = jump to 5 line to privious 
