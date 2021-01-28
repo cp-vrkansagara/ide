@@ -113,7 +113,10 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeQuitOnOpen=1
 let NERDTreeMapOpenInTab='<ENTER>'
-
+:nnoremap <Space> :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark 
+map <leader>nf :NERDTreeFind<cr>
 " C and C++ related stuff goes here
+"
 " run file with gnu compiler
 :autocmd FileType c noremap <C-M> :w!<CR>:!/usr/bin/gcc % && ./a.out<CR>
