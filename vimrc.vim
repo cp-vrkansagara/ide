@@ -8,7 +8,7 @@ source ~/.vim_runtime/vimrcs/extended.vim
 " try
 
 source ~/.vim/config/vim.vim
-source ~/.vim/config/bufexplorer.vim.vim
+source ~/.vim/config/bufexplorer.vim
 source ~/.vim/config/vim-colors-solarized.vim
 
 source ~/.vim/config/gcc.vim
