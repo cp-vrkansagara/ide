@@ -16,7 +16,7 @@ fi
 #Clone main repository
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
-git clone --recursive --depth 1 --branch 2021  https://github.com/vrkansagara/ide.git /tmp/.vim
+git clone --recursive --depth 1 --branch master  https://github.com/vrkansagara/ide.git /tmp/.vim
 cd /tmp/.vim
 git pull --recurse-submodules
 mv /tmp/.vim $HOME
