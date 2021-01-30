@@ -20,7 +20,7 @@ git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/i
 cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
-cp $HOME/.vim/vimrc $HOME/.vimrc
+cp $HOME/.vim/vimrc.vim $HOME/.vimrc
 
 # Before leaving the script reset to CWD
 cd $HOME
