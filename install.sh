@@ -16,10 +16,14 @@ fi
 #Clone main repository
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
-git clone --recursive --depth 1 --branch master  https://github.com/vrkansagara/ide.git /tmp/.vim
-cd /tmp/.vim
+git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
+cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
-mv /tmp/.vim $HOME
+mv /tmp/.vim-${CURRENT_DATE} $HOME
+cp $HOME/.vim/vimrc $HOME/.vimrc
+
+# Before leaving the script reset to CWD
+cd $HOME
 
 echo "Installed the Ultimate Vim configuration of [vrkansagara] successfully! Enjoy :-)"
 # cp -f .vim/my_configs.vim  ~/.vim_runtime/
