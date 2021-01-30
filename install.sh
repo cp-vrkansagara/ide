@@ -19,7 +19,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
 cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
-mv /tmp/.vim-${CURRENT_DATE} $HOME
+mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 cp $HOME/.vim/vimrc $HOME/.vimrc
 
 # Before leaving the script reset to CWD
