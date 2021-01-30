@@ -19,6 +19,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 git clone --recursive --depth 1 --branch 2021  https://github.com/vrkansagara/ide.git /tmp/.vim
 cd /tmp/.vim
 git pull --recurse-submodules
+mv /tmp/.vim $HOME
 
 echo "Installed the Ultimate Vim configuration of [vrkansagara] successfully! Enjoy :-)"
 # cp -f .vim/my_configs.vim  ~/.vim_runtime/
