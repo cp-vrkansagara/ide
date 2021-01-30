@@ -1,3 +1,6 @@
+" Disable the splash screen
+:set shortmess +=I
+
 " "Hidden" buffers -- i.e., don't require saving before editing another file.
 " Calling quit will prompt you to save unsaved buffers anyways.
 :set hidden
@@ -16,3 +19,45 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
 nnoremap <Leader>r :source $MYVIMRC<CR>
+
+
+" The escape key is a long ways away. This maps it to the sequence 'kj'
+:map! kj <Esc>
+:inoremap kj <Esc>
+
+" Turn off modelines
+:set modelines=0
+
+" Remember settings between sessions
+:set viminfo='400,f1,"500,h,/100,:100,<500
+
+" Repair weird terminal/vim settings
+:set backspace=start,eol,indent
+
+" Bash is my shell
+" Well, not really. But this makes CLI integration better.
+:let bash_is_sh=1
+
+" Use UTF-8 encoding
+:set encoding=utf-8
+
+" Scrolling options
+set scrolljump=5
+set scrolloff=3
+
+" Map <leader>f to split horizontally, and move to bottom window
+" nnoremap <leader>f <C-w>s<C-w>j
+" Use <ctrl> plus direction key to move around within windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+
+" Keybindings for movement in insert mode
+imap <Leader>0 <Esc>I
+imap <Leader>$ <Esc>A
+imap <Leader>h <Esc>i
+imap <Leader>l <Esc>lli
+imap <Leader>j <Esc>lji
+imap <Leader>k <Esc>lki
