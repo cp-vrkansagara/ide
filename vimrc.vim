@@ -6,6 +6,13 @@ source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
 " try
-source ~/.vim/vimrc.vim
+
+source ~/.vim/config/vim.vim
+source ~/.vim/config/bufexplorer.vim.vim
+source ~/.vim/config/vim-colors-solarized.vim
+
+source ~/.vim/config/gcc.vim
+source ~/.vim/config/tab.vim
+source ~/.vim/config/nerdtree.vim
 " catch
 " endtry
