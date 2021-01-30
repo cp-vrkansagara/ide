@@ -45,6 +45,22 @@ nnoremap <Leader>r :source $MYVIMRC<CR>
 set scrolljump=5
 set scrolloff=3
 
+" Turn on "very magic" regex status by default for searches.
+" :he /magic for more information
+:nnoremap / /\v
+:vnoremap / /\v
+
+" Highlight Searches
+:set highlight=lub
+:map <Leader>s :set hlsearch<CR>
+:map <Leader>S :set nohlsearch<CR>
+:set incsearch
+:set showmatch
+
+" Make case-insensitive search the norm
+:set ignorecase
+:set smartcase
+
 " Map <leader>f to split horizontally, and move to bottom window
 " nnoremap <leader>f <C-w>s<C-w>j
 " Use <ctrl> plus direction key to move around within windows
