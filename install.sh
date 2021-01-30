@@ -22,6 +22,9 @@ git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 cp $HOME/.vim/vimrc.vim $HOME/.vimrc
 
+# Set sh directory executable
+chmod -R +x $HOME/.vim/sh/*
+
 # Before leaving the script reset to CWD
 cd $HOME
 
