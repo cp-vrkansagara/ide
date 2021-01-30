@@ -1,20 +1,20 @@
 My every day editor based using two things
-
-(1) clone this repo https://github.com/amix/vimrc
-
-(2) copy config of my file called my_configs.vim and place into .vim_runtime folder
-
 ~~~bash
 Linux User :- If there is terminal there is a way.
-Developer User :- If there is vim thre is geek.
+Developer User :- If there is vim there is geek.
 ~~~
 
+### Basic Installation
 
-, z distruction free view
+`vim` is installed by running one of the following commands in your terminal. You can install this via the command-line with either `curl`, `wget` or another similar tool.
 
-relative jump 
+| Method    | Command                                                                                           |
+|:----------|:--------------------------------------------------------------------------------------------------|
+| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
 
-5 h = jump to 5 character left
-5 l = jump to 5 character right
-5 j = jump to 5 line to next 
-5 k = jump to 5 line to privious 
+
+### How to debug vimrc config file.
+`https://vi.stackexchange.com/questions/2003/how-do-i-debug-my-vimrc-file`
+vim -u NONE -U NONE -N
