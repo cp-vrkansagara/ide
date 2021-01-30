@@ -18,8 +18,6 @@ Developer User :- If there is vim there is geek.
 ### How to debug vimrc config file.
 vim -u NONE -U NONE -N
 
-
-
 # How can I update this project
 
 You can simply run bellow command to update, this `vimrc` project
