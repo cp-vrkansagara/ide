@@ -16,7 +16,6 @@ Developer User :- If there is vim there is geek.
 
 
 ### How to debug vimrc config file.
-`https://vi.stackexchange.com/questions/2003/how-do-i-debug-my-vimrc-file`
 vim -u NONE -U NONE -N
 
 
