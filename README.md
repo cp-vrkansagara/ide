@@ -41,3 +41,13 @@ git submodule foreach git pull origin master
 -[] Create/Rename/Delete file/directory using NERDTree
 
 -[] Add autoupdate script for this project
+
+-[] Add nerdtree index cache
+
+-[] Add shortcut to make it inline code untill user press key i.e. CTRL+j
+
+-[] Add multicursor selection so easy variable modification 
+
+-[] Add config parser for nginx/vim and other CD/CI
+
+-[] Add php file cs-check and cs-fix parser using phpcs.xml on the root directory. on each modificatio of php file it will cs-fix automatcly if cs fix config file found
