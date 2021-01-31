@@ -14,8 +14,18 @@ Developer User :- If there is vim there is geek.
 | **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
 | **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
 
+#### Manual inspection
 
-### How to debug vimrc config file.
+It's a good idea to inspect the install script from projects you don't yet know. You can do
+that by downloading the install script first, looking through it so everything looks normal,
+then running it:
+
+```shell
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
+```
+
+```### How to debug vimrc config file.
 vim -u NONE -U NONE -N
 
 # How can I update this project
