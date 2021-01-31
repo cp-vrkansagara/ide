@@ -12,6 +12,7 @@ try
     source ~/.vim/config/vim.vim
     source ~/.vim/config/bufexplorer.vim
     source ~/.vim/config/vim-colors-solarized.vim
+    source ~/.vim/config/lightline.vim
 
 
     source ~/.vim/config/tab.vim

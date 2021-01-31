@@ -6,6 +6,9 @@ CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
 # This directory name must not start with .vim
 BACKUP_DIRECTORY_NAME="${HOME}/.old/vim-${CURRENT_DATE}"
 
+# check weather dependant binary is available with system or not like , vim,ctags and $HOME/bin directory @todo @fixme
+
+
 echo "Creating backup directory."
 if [ ! -d "$BACKUP_DIRECTORY_NAME" ]; then
   mkdir -p $BACKUP_DIRECTORY_NAME
