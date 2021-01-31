@@ -33,6 +33,11 @@ git submodule foreach git pull origin master
 ~~~
 
 # Things to add / TODO
+
 -[] Add cat statement for the `vimrc.vim` for better debuggin of vim config file. 
+
 -[] Add auto complete of html tags.
+
 -[] Create/Rename/Delete file/directory using NERDTree
+
+-[] Add autoupdate script for this project
