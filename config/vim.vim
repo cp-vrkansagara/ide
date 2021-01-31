@@ -18,7 +18,8 @@
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
-nnoremap <Leader>r :source $MYVIMRC<CR>
+" nnoremap <Leader>r :source $MYVIMRC<CR>
+nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
 
 
 " The escape key is a long ways away. This maps it to the sequence 'kj'
