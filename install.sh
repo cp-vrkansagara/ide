@@ -28,6 +28,9 @@ git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 # Copy of current vimrc to root direcory cause to update .vim folder with git tracking so create symbolink link
 # cp $HOME/.vim/vimrc.vim $HOME/.vimrc
+echo "Moving base vimrc config to back up folder"
+mv $HOME/.vimrc  $BACKUP_DIRECTORY_NAME
+echo "Adding symbolink link for better git tracking of project"
 ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
 
 # Set sh directory executable
