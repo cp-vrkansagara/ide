@@ -26,7 +26,9 @@ git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/i
 cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
-cp $HOME/.vim/vimrc.vim $HOME/.vimrc
+# Copy of current vimrc to root direcory cause to update .vim folder with git tracking so create symbolink link
+# cp $HOME/.vim/vimrc.vim $HOME/.vimrc
+ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
 
 # Set sh directory executable
 chmod -R +x $HOME/.vim/sh/*
