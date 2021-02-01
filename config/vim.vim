@@ -15,8 +15,9 @@
 :set number relativenumber
 
 " Highlight current line
-:set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+" hi CursorLine term=bold cterm=bold guibg=Grey40
+set cursorline
+:hi CursorLine cterm=bold ctermbg=darkblue ctermfg=white guibg=Grey40 ctermfg=white
 
 
 " Load vimrc in new tab with leader-v
