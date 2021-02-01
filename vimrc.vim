@@ -30,7 +30,10 @@ try
 
     " Linux terminal specic vim config(s) like , tmux,nmap,top etc..
     source ~/.vim/config/tmux.vim
+    
+    " My own configuration @START
+    source ~/.vim/config/macro/html.vim
 
 catch
-    silent exec "!echo " shellescape(v:exception)
- endtry
+   silent exec "!echo " shellescape(v:exception)
+endtry
