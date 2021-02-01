@@ -12,7 +12,7 @@ else
     :let g:solarized_underline = 1
     :let g:solarized_italic = 1
     :let g:solarized_visibility= "normal"
-    set background=light
+    :set background=light
 endif
 call togglebg#map("<F5>")
 
