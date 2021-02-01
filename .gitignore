@@ -2,6 +2,6 @@
 *.log
 *~
 *.swp
-tags
+tags/
 .vim_runtime
 .DS_Store
