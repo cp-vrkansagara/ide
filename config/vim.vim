@@ -12,7 +12,12 @@
 " This setting can be useful for determining how many lines of text you want to
 " yank. It will display the line number column, but lines will be the distance
 " from the current line.
-:set relativenumber
+:set number relativenumber
+
+" Highlight current line
+:set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+
 
 " Load vimrc in new tab with leader-v
 nmap <leader>v :tabedit $MYVIMRC<CR>
@@ -78,3 +83,32 @@ imap <Leader>h <Esc>i
 imap <Leader>l <Esc>lli
 imap <Leader>j <Esc>lji
 imap <Leader>k <Esc>lki
+
+" Allow better terminal/mouse integration
+:set mousemodel=extend
+
+
+" Following will prevent vim from closing folds in a current pane when opening a
+" new pane.
+" See http://stackoverflow.com/posts/30618494/revisions
+:autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+:autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
+
+
+" Use UTF-8 encoding
+:set encoding=utf-8
+
+" ACK support
+:set grepprg=ack-grep\ -a
+:let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+:map <Leader>g :Ack
+
+" snipMate options
+let g:snips_author = "Vallabh Kansagara"
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+" Folding
+" Toggle folding with spacebar instead of za
+nnoremap <Space> za
