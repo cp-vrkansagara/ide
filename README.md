@@ -1,4 +1,5 @@
 My every day editor based using two things
+
 ~~~bash
 Linux User :- If there is terminal there is a way.
 Developer User :- If there is vim there is geek.
@@ -14,7 +15,7 @@ Developer User :- If there is vim there is geek.
 | **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
 | **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
 
-#### Manual inspection
+### Manual inspection
 
 It's a good idea to inspect the install script from projects you don't yet know. You can do
 that by downloading the install script first, looking through it so everything looks normal,
@@ -41,6 +42,18 @@ git pull --rebase
 ~~~bash
 git submodule foreach git pull origin master
 ~~~
+# Editor short cut list
+| Command   | Description|
+|:----------|:--------------------------------------------------------------------------------------------------|
+| CTRL + f  | Auto search of file. |
+| Leader space  | Open file explorer right side, `press m` to add/rename/delete file,folder |
+| F8        | PHP File cs check |
+| F9        | PHP File cs fix|
+| CTRL + m | Run PHP file into console. |
+| CTRL + l | Parse PHP file into console. |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
+
 
 ### Things to add / TODO
 
