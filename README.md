@@ -25,10 +25,10 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 ```
 
-```### How to debug vimrc config file.
+### How to debug vimrc config file.
 vim -u NONE -U NONE -N
 
-# How can I update this project
+### How can I update this project
 
 You can simply run bellow command to update, this `vimrc` project
 
@@ -36,28 +36,20 @@ You can simply run bellow command to update, this `vimrc` project
 git pull --rebase
 ~~~
 
-#How to update all git submodules using single command.
+### How to update all git submodules using single command.
 
 ~~~bash
 git submodule foreach git pull origin master
 ~~~
 
-# Things to add / TODO
-
--[] Add cat statement for the `vimrc.vim` for better debuggin of vim config file. 
+### Things to add / TODO
 
 -[] Add auto complete of html tags.
-
--[] Create/Rename/Delete file/directory using NERDTree
 
 -[] Add autoupdate script for this project
 
 -[] Add nerdtree index cache
 
--[] Add shortcut to make it inline code untill user press key i.e. CTRL+j
-
 -[] Add multicursor selection so easy variable modification 
 
 -[] Add config parser for nginx/vim and other CD/CI
-
--[] Add php file cs-check and cs-fix parser using phpcs.xml on the root directory. on each modificatio of php file it will cs-fix automatcly if cs fix config file found
