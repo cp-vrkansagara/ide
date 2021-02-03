@@ -19,6 +19,10 @@ if [ $(ls $HOME/.vim* | wc -l) != 0 ]; then
   mv -f $HOME/.vim*  $BACKUP_DIRECTORY_NAME
 fi
 
+echo "Set up pathogen for vim run time path."
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 #Clone main repository
 echo "Cloning the basic repository of [amix]"
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
