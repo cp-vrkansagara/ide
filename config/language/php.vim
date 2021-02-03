@@ -1,7 +1,7 @@
 " PHP parser check (CTRL + l)
 :autocmd FileType php noremap <C-l> :w!<CR>:! clear && php -l %<CR>
 
-" run file with PHP CLI (CTRL-M)
+" run file with PHP CLI (CTRL-m)
 :autocmd FileType php noremap <C-m> :w!<CR>:!php %<CR>
 
 :autocmd FileType php  nnoremap <F8> :call PhpCsCheck()<CR>
