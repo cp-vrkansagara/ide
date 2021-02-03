@@ -7,7 +7,7 @@
 
 " " Via https://twitter.com/vimtips/status/208241766816677889
 " " Allows all operations to work with system clipboard
-:set clipboard=unnamed
+" :set clipboard=unnamed
 
 " This setting can be useful for determining how many lines of text you want to
 " yank. It will display the line number column, but lines will be the distance
@@ -89,12 +89,10 @@ imap <Leader>k <Esc>lki
 :set mousemodel=extend
 
 
-" Following will prevent vim from closing folds in a current pane when opening a
-" new pane.
+" Following will prevent vim from closing folds in a current pane when opening a new pane.
 " See http://stackoverflow.com/posts/30618494/revisions
 :autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
 :autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
-
 
 " Use UTF-8 encoding
 :set encoding=utf-8
@@ -105,11 +103,14 @@ imap <Leader>k <Esc>lki
 :map <Leader>g :Ack
 
 " snipMate options
-let g:snips_author = "Vallabh Kansagara"
+let g:snips_author = "Vallabh Kansagara<vrkansagara@gmail.com>"
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " Folding
-" Toggle folding with spacebar instead of za
+" Toggle folding with space bar instead of za
 nnoremap <Space> za
+
+:set ttyfast
+:set undofile
