@@ -11,11 +11,15 @@ try
     " Import defaults configuration
     source $VIMRUNTIME/defaults.vim
 
+    " (0) pathogen.vim for runtimepath
+    source ~/.vim/config/pathogen.vim
+
     " (1) Helper file for general purpose
     source ~/.vim/config/helper.vim
 
     " (2) Add basic configuration of editor, Runtime path etc.
     source ~/.vim/config/vim.vim
+
 
 
     " echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
