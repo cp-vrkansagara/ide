@@ -1,4 +1,8 @@
+# git submodule update --init --recursive
 # git submodule update --recursive
+# git submodule foreach git pull origin master
+# git submodule foreach git pull --rebase
+
 
 git submodule add https://github.com/tpope/vim-pathogen bundle/vim-pathogen
 git submodule add https://github.com/tpope/vim-sensible.git bundle/vim-sensible

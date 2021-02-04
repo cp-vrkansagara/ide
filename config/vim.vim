@@ -97,9 +97,14 @@ set cursorline
 :nmap <C-Right> :tabNext<CR>
 :imap <C-Right> <ESC>:tabNext<CR>
 "==============
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
+"Vim Splits - Move Faster and More Naturally
+" Map <leader>f to split horizontally, and move to bottom window
+nnoremap <leader>h <C-w>s<C-w>j
+nnoremap <leader>v <C-w>v<C-w>j
+" Use <ctrl> plus direction key to move around within windows
+set splitbelow
+set splitright
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
