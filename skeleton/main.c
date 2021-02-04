@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 void main(){
-    printf("hello world !");
+	int i;
+	printf("hello world !");
 
-    for (int i = 0; i < 10;++i ) {
+    for (i= 0; i < 10;++i ) {
         printf("\n I is [%d]",i);
     }    
 }
