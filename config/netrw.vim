@@ -12,11 +12,8 @@
 " ":Se	:Sexplore	in split at directory of current file
 " ":Vex	:Vexplore	in vertical split at directory of current file
 
+let g:netrw_home=$HOME.'/vim/tmp'
 
-
-" netrw magic
-" enable mouse usage. makes it easier to browse multiple tabs
-set mouse=a
 " hide netrw top message
 let g:netrw_banner=0
 " tree listing by default
@@ -28,35 +25,21 @@ let g:netrw_list_hide='.*\.swp$'
 let g:netrw_browse_split = 3
 
 " remap shift-enter to fire up the sidebar
-nnoremap <silent> <S-CR> :rightbelow 20vs<CR>:e .<CR>
+"nnoremap <silent> <S-CR> :rightbelow 20vs<CR>:e .<CR>
 " the same remap as above - may be necessary in some distros
-nnoremap <silent> <C-M> :rightbelow 20vs<CR>:e .<CR>
+"nnoremap <silent> <C-M> :rightbelow 20vs<CR>:e .<CR>
 " remap control-enter to open files in new tab
-nmap <silent> <C-CR> t :rightbelow 20vs<CR>:e .<CR>:wincmd h<CR>
+"nmap <silent> <C-CR> t :rightbelow 20vs<CR>:e .<CR>:wincmd h<CR>
 " the same remap as above - may be necessary in some distros
-nmap <silent> <NL> t :rightbelow 20vs<CR>:e .<CR>:wincmd h<CR>
-
-
+"nmap <silent> <NL> t :rightbelow 20vs<CR>:e .<CR>:wincmd h<CR>
 
 " Open file explorer at right side
 :nnoremap <leader><Space> :Vex! .<cr>
 " Open file explorer at top side
 :nnoremap <leader>nn :Hex! .<cr>
 
-" Use <ctrl> plus direction key to move around within windows
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
-
 " Value in percentage
 let g:netrw_winsize = 25
-
-
-
-
-
-
 
 " https://vi.stackexchange.com/a/13351/2917
 function! NetrwOpenMultiTab(current_line,...) range

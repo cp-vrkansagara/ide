@@ -18,8 +18,7 @@ endif
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
-nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
-"nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
 
 " like <leader>q quite current file
 :nnoremap <leader>q :q<cr>
@@ -36,6 +35,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " like <leader>n one new tab
 :nnoremap <leader>t :tabnew<cr>
 
+" Switch CWD to the directory of the open buffer:
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Use UTF-8 encoding
 :set encoding=utf-8
@@ -51,8 +52,11 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Calling quit will prompt you to save unsaved buffers anyways.
 :set hidden
 
-" " Via https://twitter.com/vimtips/status/208241766816677889
-" " Allows all operations to work with system clipboard
+" enable mouse usage. makes it easier to browse multiple tabs,
+:set mouse=a
+
+" Via https://twitter.com/vimtips/status/208241766816677889
+" Allows all operations to work with system clipboard
 :set clipboard=unnamed
 
 " Set line number
@@ -82,7 +86,6 @@ set cursorline
 :hi CursorColumn term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
-
 " Tab options (as in Vim GUI Tabs)
 " <C-t> Opens a new tab, <C-w> closes current tab
 " Remember, gt goes to next tab, gT goes to previous; easier than using firefox
@@ -92,14 +95,20 @@ set cursorline
 " :imap <C-t> <ESC>:tabnew<CR>
 " :nmap <C-w> :tabclose<CR>
 " :imap <C-w> <ESC>:tabclose<CR>
-:nmap <C-Left> :tabprevious<CR>
-:imap <C-Left> <ESC>:tabeprevious<CR>
-:nmap <C-Right> :tabNext<CR>
-:imap <C-Right> <ESC>:tabNext<CR>
-"==============
+:nmap <c-left> : tabprevious<CR>
+:imap <c-left> <ESC>:tabeprevious<CR>
+:nmap <c-right> :tabNext<CR>
+:imap <c-right> <ESC>:tabNext<CR>
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
+"Vim Splits - Move Faster and More Naturally
+" Map <leader>f to split horizontally, and move to bottom window
+nnoremap <leader>h <C-w>s<C-w>j
+nnoremap <leader>v <C-w>v<C-w>j
+"
+" Use <ctrl> plus direction key to move around within windows
+set splitbelow
+set splitright
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l

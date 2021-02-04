@@ -1,6 +1,6 @@
-"if !has('gui_running')
-"  set t_Co=256
-"endif
+if !has('gui_running')
+  set t_Co=256
+endif
 
 ":let g:solarized_termtrans=1
 call togglebg#map("<F5>")

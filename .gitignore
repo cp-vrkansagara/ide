@@ -12,3 +12,5 @@ tmp/
 # ide related
 .idea/
 .DS_Store
+
+.netrwhist
