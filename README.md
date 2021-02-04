@@ -29,6 +29,23 @@ sh install.sh
 ### How to debug vimrc config file.
 vim -u NONE -U NONE -N
 
+### How to debug vimrc conflicts of shortcut
+Use this comand into vim console by pressing `:`
+~~~bash
+:verbose map <leader>v
+
+:verbose map <c-w>s
+~~~
+
+### How to check what value vim is having in running mode
+This will print the current vlue vim is using.
+~~~bash
+:set expandtab?
+
+:set number?
+
+:set syntex?
+~~~
 ### How can I update this project
 
 You can simply run bellow command to update, this `vimrc` project

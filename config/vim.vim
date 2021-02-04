@@ -18,8 +18,7 @@ endif
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
-nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
-"nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
 
 " like <leader>q quite current file
 :nnoremap <leader>q :q<cr>
