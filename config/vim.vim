@@ -99,10 +99,10 @@ set cursorline
 " :imap <C-t> <ESC>:tabnew<CR>
 " :nmap <C-w> :tabclose<CR>
 " :imap <C-w> <ESC>:tabclose<CR>
-:nmap <C-Left> :tabprevious<CR>
-:imap <C-Left> <ESC>:tabeprevious<CR>
-:nmap <C-Right> :tabNext<CR>
-:imap <C-Right> <ESC>:tabNext<CR>
+:nmap <c-left> : tabprevious<CR>
+:imap <c-left> <ESC>:tabeprevious<CR>
+:nmap <c-right> :tabNext<CR>
+:imap <c-right> <ESC>:tabNext<CR>
 "==============
 "Vim Splits - Move Faster and More Naturally
 " Map <leader>f to split horizontally, and move to bottom window
