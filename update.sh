@@ -9,6 +9,7 @@ if [ ! -d "$PLUGINS_DIRECTORY/vim-rhubarb" ]; then
 else
     cd ${PLUGINS_DIRECTORY}/vim-rhubarb
 
-    git pull --rebase
+    git pull --rebas,
 fi
 
+an apple,

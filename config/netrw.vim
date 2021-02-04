@@ -44,10 +44,10 @@ nmap <silent> <NL> t :rightbelow 20vs<CR>:e .<CR>:wincmd h<CR>
 :nnoremap <leader>nn :Hex! .<cr>
 
 " Use <ctrl> plus direction key to move around within windows
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 " Value in percentage
 let g:netrw_winsize = 25
