@@ -19,7 +19,7 @@ try
 
     " (2) Add basic configuration of editor, Runtime path etc.
     source ~/.vim/config/vim.vim
-    " source ~/.vim/config/session.vim
+    source ~/.vim/config/session.vim
     source ~/.vim/config/backup.vim
 
     " (3) VIM distributed native file explorer
@@ -29,6 +29,11 @@ try
     source ~/.vim/config/vim-airline.vim
     source ~/.vim/config/ctrlp.vim
     source ~/.vim/config/bufexplorer.zip.vim
+    source ~/.vim/config/skeleton.vim
+    
+    " Language specific settings
+    source ~/.vim/config/language/gcc.vim
+    source ~/.vim/config/language/php.vim
 
     " echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
