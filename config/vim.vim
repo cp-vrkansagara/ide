@@ -76,5 +76,19 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 :set viminfo='400,f1,"500,h,/100,:100,<500
 
 
+" Highlight current line
+" hi CursorLine term=bold cterm=bold guibg=Grey40
+color desert
+
+set cursorline
+" ":hi CursorLine cterm=bold ctermbg=darkblue ctermfg=white guibg=Grey40 ctermfg=white
+
+" :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+:nnoremap <Leader>c :set cursorline!<CR>
+:hi CursorLine term=bold cterm=bold guibg=Grey40
+
 "==============
+
 
