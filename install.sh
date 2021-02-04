@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -e
 
 CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
@@ -7,8 +6,6 @@ CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
 BACKUP_DIRECTORY_NAME="${HOME}/.old/vim-${CURRENT_DATE}"
 
 # check weather dependant binary is available with system or not like , vim,ctags and $HOME/bin directory @todo @fixme
-
-
 echo "Creating backup directory."
 if [ ! -d "$BACKUP_DIRECTORY_NAME" ]; then
   mkdir -p $BACKUP_DIRECTORY_NAME
@@ -33,6 +30,7 @@ git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/i
 cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
+
 # Copy of current vimrc to root direcory cause to update .vim folder with git tracking so create symbolink link
 # cp $HOME/.vim/vimrc.vim $HOME/.vimrc
 echo "Moving base vimrc config to back up folder"
