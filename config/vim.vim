@@ -36,6 +36,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " like <leader>n one new tab
 :nnoremap <leader>t :tabnew<cr>
 
+" Switch CWD to the directory of the open buffer:
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Use UTF-8 encoding
 :set encoding=utf-8
@@ -50,6 +52,11 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " "Hidden" buffers -- i.e., don't require saving before editing another file.
 " Calling quit will prompt you to save unsaved buffers anyways.
 :set hidden
+
+" enable mouse usage. makes it easier to browse multiple tabs,
+:set mouse=a
+
+
 
 " " Via https://twitter.com/vimtips/status/208241766816677889
 " " Allows all operations to work with system clipboard
