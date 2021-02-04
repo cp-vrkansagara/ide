@@ -27,7 +27,8 @@ try
 
     source ~/.vim/config/vim-colors-solarized.vim
     source ~/.vim/config/vim-airline.vim
-
+    source ~/.vim/config/ctrlp.vim
+    source ~/.vim/config/bufexplorer.zip.vim
 
     " echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
