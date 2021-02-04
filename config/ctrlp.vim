@@ -27,3 +27,7 @@ map <leader>f :MRU<CR>
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
+
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_lazy_update = 1
+let g:ctrlp_use_caching = 0

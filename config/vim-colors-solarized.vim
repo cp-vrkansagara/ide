@@ -16,4 +16,5 @@ else
     :let g:solarized_italic = 1
     :let g:solarized_visibility= "normal"
     :set background=light
+    :let g:solarized_termtrans=0
 endif

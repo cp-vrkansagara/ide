@@ -14,12 +14,15 @@
 
 let g:netrw_home=$HOME.'/vim/tmp'
 
+" Map ,n to open netrw in the current working directory
+" ":map <Leader>n :edit .<CR>
+
 " hide netrw top message
 let g:netrw_banner=0
 " tree listing by default
 let g:netrw_liststyle=3
 " hide vim swap files
-let g:netrw_list_hide='.*\.swp$'
+let g:netrw_list_hide="^\.sw.*$,^\.*\.sw.*$,^\..*\.un[~]$"
 " open files in left window by default
 " let g:netrw_chgwin=1
 let g:netrw_browse_split = 3
