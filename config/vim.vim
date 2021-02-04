@@ -55,10 +55,8 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " enable mouse usage. makes it easier to browse multiple tabs,
 :set mouse=a
 
-
-
-" " Via https://twitter.com/vimtips/status/208241766816677889
-" " Allows all operations to work with system clipboard
+" Via https://twitter.com/vimtips/status/208241766816677889
+" Allows all operations to work with system clipboard
 :set clipboard=unnamed
 
 " Set line number
@@ -88,7 +86,6 @@ set cursorline
 :hi CursorColumn term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
-
 " Tab options (as in Vim GUI Tabs)
 " <C-t> Opens a new tab, <C-w> closes current tab
 " Remember, gt goes to next tab, gT goes to previous; easier than using firefox
@@ -102,11 +99,12 @@ set cursorline
 :imap <c-left> <ESC>:tabeprevious<CR>
 :nmap <c-right> :tabNext<CR>
 :imap <c-right> <ESC>:tabNext<CR>
-"==============
+
 "Vim Splits - Move Faster and More Naturally
 " Map <leader>f to split horizontally, and move to bottom window
 nnoremap <leader>h <C-w>s<C-w>j
 nnoremap <leader>v <C-w>v<C-w>j
+"
 " Use <ctrl> plus direction key to move around within windows
 set splitbelow
 set splitright
