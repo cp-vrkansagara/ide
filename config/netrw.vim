@@ -12,6 +12,8 @@
 " ":Se	:Sexplore	in split at directory of current file
 " ":Vex	:Vexplore	in vertical split at directory of current file
 
+let g:netrw_home=$_HOME.'/vim/tmp'
+
 " hide netrw top message
 let g:netrw_banner=0
 " tree listing by default
