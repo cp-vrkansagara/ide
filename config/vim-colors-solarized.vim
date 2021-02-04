@@ -17,6 +17,3 @@ else
     :let g:solarized_visibility= "normal"
     :set background=light
 endif
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac

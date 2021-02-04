@@ -20,7 +20,11 @@ try
     " (2) Add basic configuration of editor, Runtime path etc.
     source ~/.vim/config/vim.vim
 
+    " (3) VIM distributed native file explorer
+    source ~/.vim/config/netrw.vim
 
+    source ~/.vim/config/vim-colors-solarized.vim
+    source ~/.vim/config/session.vim
 
     " echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
