@@ -18,8 +18,8 @@ endif
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
-" nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
-nnoremap <Leader>r :source $MYVIMRC<CR>
+nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
+"nnoremap <leader>r :source $MYVIMRC<CR>
 
 " like <leader>q quite current file
 :nnoremap <leader>q :q<cr>
@@ -77,18 +77,29 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 
 " Highlight current line
-" hi CursorLine term=bold cterm=bold guibg=Grey40
-color desert
-
 set cursorline
-" ":hi CursorLine cterm=bold ctermbg=darkblue ctermfg=white guibg=Grey40 ctermfg=white
+:hi CursorLine   term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
-" :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-:nnoremap <Leader>c :set cursorline!<CR>
-:hi CursorLine term=bold cterm=bold guibg=Grey40
 
+" Tab options (as in Vim GUI Tabs)
+" <C-t> Opens a new tab, <C-w> closes current tab
+" Remember, gt goes to next tab, gT goes to previous; easier than using firefox
+" control sequences
+" I don't use tabs often, so I've disabled these for now.
+" :nmap <C-t> :tabnew<CR>
+" :imap <C-t> <ESC>:tabnew<CR>
+" :nmap <C-w> :tabclose<CR>
+" :imap <C-w> <ESC>:tabclose<CR>
+:nmap <C-Left> :tabprevious<CR>
+:imap <C-Left> <ESC>:tabeprevious<CR>
+:nmap <C-Right> :tabNext<CR>
+:imap <C-Right> <ESC>:tabNext<CR>
 "==============
 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
