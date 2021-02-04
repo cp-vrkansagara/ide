@@ -4,7 +4,7 @@
 
 let NERDTreeQuitOnOpen=1
 " nnoremap <C-t> :NERDTreeToggle<CR>
-:nnoremap <leader><Space> :NERDTreeToggle<cr>
+
 map <leader>nb :NERDTreeFromBookmark
 " nnoremap <C-f> :NERDTreeFind<CR>
 " map <leader>nf :NERDTreeFind<cr>

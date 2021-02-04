@@ -8,6 +8,7 @@ if [ ! -d "$PLUGINS_DIRECTORY/vim-rhubarb" ]; then
   git clone https://github.com/tpope/vim-rhubarb.git $HOME/.vim_runtime/my_plugins/vim-rhubarb
 else
     cd ${PLUGINS_DIRECTORY}/vim-rhubarb
+
     git pull --rebase
 fi
 
