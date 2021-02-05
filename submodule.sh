@@ -12,7 +12,8 @@ git submodule add https://github.com/altercation/vim-colors-solarized.git bundle
 git submodule add https://github.com/vim-airline/vim-airline.git bundle/vim-airline
 git submodule add https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
 git submodule add https://github.com/vim-scripts/bufexplorer.zip.git bundle/bufexplorer.zip
-git submodule add https://github.com/yegappan/mru.git bundle/mru.zip
+git submodule add https://github.com/yegappan/mru.git bundle/mru.zip bundle/mru.zip
+git submodule add https://github.com/vim-airline/vim-airline-themes bundle/vim-airline-themes
 
 
 
