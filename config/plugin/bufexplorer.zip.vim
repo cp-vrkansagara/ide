@@ -12,3 +12,4 @@ map <leader>bd :Bclose<cr>
 " Close all buffers
 map <leader>ba :1,1000 bd!<cr>
 
+nnoremap <silent> <Space> :ToggleBufExplorer<CR>

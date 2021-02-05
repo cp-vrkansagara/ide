@@ -1,51 +1,59 @@
 set runtimepath+=~/.vim
 function! VimErrorCaught()
- if v:exception != ""
-   echo "\n" . 'Caught "' . v:exception . '" in ' . v:throwpoint ."\n"
- else
-   echo 'Nothing caught\n'
- endif
+	if v:exception != ""
+		echo "\n" . 'Caught "' . v:exception . '" in ' . v:throwpoint ."\n"
+	else
+		echo 'Nothing caught\n'
+	endif
 endfunction
 
 try
-    " Import defaults configuration
-    source $VIMRUNTIME/defaults.vim
+	" Import defaults configuration
+	source $VIMRUNTIME/defaults.vim
 
-    " (0) pathogen.vim for runtimepath
-    source ~/.vim/config/pathogen.vim
+	" (0) pathogen.vim for runtimepath
+	source ~/.vim/config/plugin/pathogen.vim
 
-    " (1) Helper file for general purpose
-    source ~/.vim/config/helper.vim
+	" (1) Helper file for general purpose
+	source ~/.vim/config/helper.vim
 
-    " (2) Add basic configuration of editor, Runtime path etc.
-    source ~/.vim/config/vim.vim
-    source ~/.vim/config/session.vim
-    source ~/.vim/config/backup.vim
+	" (2) Add basic configuration of editor, Runtime path etc.
+	source ~/.vim/config/vim.vim
+	source ~/.vim/config/session.vim
+	source ~/.vim/config/backup.vim
 
-    " (3) VIM distributed native file explorer
-    source ~/.vim/config/netrw.vim
+	" (3) VIM distributed plugins configuration override
+	"Load plugin in any order that doesn't matter except pathogen
+	for f in split(glob('~/.vim/config/plugin/*.vim'), '\n')
+		if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 )
+			exe 'source' f
+		elseif(stridx(f, 'pathogen.vim') == -1)
+			throw "File can not able to read " . f
+		endif
+	endfor
 
-    source ~/.vim/config/vim-colors-solarized.vim
-    source ~/.vim/config/vim-airline.vim
-    source ~/.vim/config/ctrlp.vim
-    source ~/.vim/config/bufexplorer.zip.vim
-    source ~/.vim/config/skeleton.vim
-    
-    " Language specific settings
-    source ~/.vim/config/language/gcc.vim
-    source ~/.vim/config/language/php.vim
+	" (4)Language specific settings configuration,Loading order that doesn't matter
+	for f in split(glob('~/.vim/config/language/*.vim'), '\n')
+		if (filereadable(f))
+			exe 'source' f
+		else
+			throw "File can not able to read " . f
+		endif
+	endfor
 
-    " echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
+	source ~/.vim/config/skeleton.vim
+
+	" Before passing access to user , it must be light background.
+	:set background=light
+	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
-        call VimErrorCaught()
+	call VimErrorCaught()
 catch /^\d\+$/
-    " Number value exception captured here
-    echo "Number thrown.  Value is" v:exception
-    echo  "\nError =========@START\n\n"
-    echo "Caught error: " . v:exception
-    echo "Caught error: " . v:errmsg
-    echo  "\nError =========@END\n"
+	echo  "\nError =========@START\n\n"
+	echo "Caught error: " . v:exception
+	echo "Caught error: " . v:errmsg
+	echo  "\nError =========@END\n"
 finally
-    " This is for fail back.
-    " echo "Finally block called."
+	" This is for fail back.
+	" echo "Finally block called."
 endtry
