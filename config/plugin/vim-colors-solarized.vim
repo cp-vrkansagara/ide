@@ -1,13 +1,9 @@
-if !has('gui_running')
-  set t_Co=256
-endif
-
 ":let g:solarized_termtrans=1
 call togglebg#map("<F5>")
 :colorscheme solarized
 
 if has('gui_running')
-    set background=dark
+    :set background=light
     :let g:solarized_termtrans = 1
 else
     " First line ensures we can have full spectrum of colors
