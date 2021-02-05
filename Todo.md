@@ -4,4 +4,4 @@
 - [x] Set left side relative number for easy jump to backward and forward 
 - [x] Set cursorline for row and column , activate using leader  c 
 - [x] Left/right tab movement added
-- [ ] <leader>-v conflicts with creating window span need to resolve
+- [x] <leader>-v conflicts with creating window span need to resolve

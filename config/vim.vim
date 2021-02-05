@@ -3,9 +3,8 @@
 " About:- Very basic configuration about vim
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " With a map leader it's possible to do extra key combinations
-let mapleader = ","
+:let mapleader = ","
 
 " vimcasts #24
 " Auto-reload vimrc on save
@@ -106,7 +105,6 @@ set showcmd
 " Remember settings between sessions
 :set viminfo='400,f1,"500,h,/100,:100,<500
 
-
 " Highlight current line
 set cursorline
 :hi CursorLine   term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -129,8 +127,8 @@ set cursorline
 
 "Vim Splits - Move Faster and More Naturally
 " Map <leader>f to split horizontally, and move to bottom window
-nnoremap <leader>h <C-w>s<C-w>j
-nnoremap <leader>v <C-w>v<C-w>j
+nnoremap <leader>hh <C-w>s<C-w>j
+nnoremap <leader>vv <C-w>v<C-w>j
 "
 " Use <ctrl> plus direction key to move around within windows
 set splitbelow
@@ -147,8 +145,6 @@ imap <Leader>h <Esc>i
 imap <Leader>l <Esc>lli
 imap <Leader>j <Esc>lji
 imap <Leader>k <Esc>lki
-
-
 
 " Turn on "very magic" regex status by default for searches.
 " :he /magic for more information
@@ -171,7 +167,7 @@ imap <Leader>k <Esc>lki
 
 " Folding
 " Toggle folding with spacebar instead of za
-nnoremap <Space> za
+"nnoremap <Space> za
 
 " Pasting toggle...
 :set pastetoggle=<Ins>
