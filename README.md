@@ -73,5 +73,3 @@ git submodule foreach git pull origin master
 | F9        | PHP File cs fix|
 | CTRL + m | Run PHP file into console. |
 | CTRL + l | Parse PHP file into console. |
-| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
-| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
