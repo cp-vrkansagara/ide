@@ -1,8 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" File name :- vim.vim
-" About:- Very basic configuration about vim
+" About:- Main configuration file for the VIM(init)
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " With a map leader it's possible to do extra key combinations
 :let mapleader = ","
 
@@ -31,9 +31,6 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 " w! Save current file with sudo access
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
-
-" like <leader>n one new tab
-:nnoremap <leader>t :tabnew<cr>
 
 " Use UTF-8 encoding
 :set encoding=utf-8
@@ -78,18 +75,6 @@ set showcmd
 " Allows all operations to work with system clipboard
 :set clipboard=unnamed
 
-" This setting can be useful for determining how many lines of text you want to
-" yank. It will display the line number column, but lines will be the distance
-" from the current line.
-" :set number relativenumber
-" Line number must be relative and can be change based on event of mode
-:set number relativenumber
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
-
 " Bash is my shell
 " Well, not really. But this makes CLI integration better.
 :let bash_is_sh=1
@@ -100,44 +85,8 @@ set showcmd
 " Remember settings between sessions
 :set viminfo='400,f1,"500,h,/100,:100,<500
 
-" Tab options (as in Vim GUI Tabs)
-" <C-t> Opens a new tab, <C-w> closes current tab
-" Remember, gt goes to next tab, gT goes to previous; easier than using firefox
-" control sequences
-" I don't use tabs often, so I've disabled these for now.
-" :nmap <C-t> :tabnew<CR>
-" :imap <C-t> <ESC>:tabnew<CR>
-" :nmap <C-w> :tabclose<CR>
-" :imap <C-w> <ESC>:tabclose<CR>
-:nmap <C-Left> :tabp<CR>
-:imap <C-Left> <ESC>:tabp<CR>
-:nmap <C-Right> :tabn<CR>
-:imap <C-Right> <ESC>:tabn<CR>
-
-:nmap <C-Up> :tabfirst<CR>
-:imap <C-Up> <ESC>:tabfirst<CR>
-:nmap <C-Down> :tablast<CR>
-:imap <C-Down> <ESC>:tablast<CR>
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
-
 " Switch CWD to the directory of the open buffer:
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-"Vim Splits - Move Faster and More Naturally
-" Map <leader>f to split horizontally, and move to bottom window
-nnoremap <leader>hh <C-w>s<C-w>j
-nnoremap <leader>vv <C-w>v<C-w>j
-"
-" Use <ctrl> plus direction key to move around within windows
-set splitbelow
-set splitright
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " Keybindings for movement in insert mode
 imap <Leader>0 <Esc>I
@@ -147,21 +96,6 @@ imap <Leader>l <Esc>lli
 imap <Leader>j <Esc>lji
 imap <Leader>k <Esc>lki
 
-" Turn on "very magic" regex status by default for searches.
-" :he /magic for more information
-:nnoremap / /\v
-:vnoremap / /\v
-
-" Highlight Searches
-:set highlight=lub
-:map <Leader>s :set hlsearch<CR>
-:map <Leader>S :set nohlsearch<CR>
-:set incsearch
-:set showmatch
-
-" Make case-insensitive search the norm
-:set ignorecase
-:set smartcase
 
 " Execute last command over a visual selection
 :vnoremap . :norm.<CR>

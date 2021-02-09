@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- spell related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Map <leader>ss to turn spelling on (VIM 7.0+)
 ":for item in ['Bad','Cap','Local','Rare']| exe "hi Spell".item| endfor " Print current value

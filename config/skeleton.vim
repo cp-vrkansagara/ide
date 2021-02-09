@@ -1,3 +1,8 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- Skeleton file for different extention
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Skeleton (template) files...
 :autocmd BufNewFile *.html 0r $HOME/.vim/skeleton/index.html
 

@@ -1,7 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" File name :- pathogen.vim
+" File name :- 001-pathogen.vim
 " About:- pathogen.vim: manage your runtimepath
 " Maintainer:- Vallabh Kansagara — @vrkansagara
+" Note:- Do not rename of file , as It used for priority include name(001)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :" Enable pathogen bundles
 " See http://www.vim.org/scripts/script.php?script_id=2332

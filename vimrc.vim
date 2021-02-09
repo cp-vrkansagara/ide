@@ -13,7 +13,7 @@ try
 
 	" (0) Helper file for general purpose
 	 source ~/.vim/config/helper.vim
-	 source ~/.vim/config/vim.vim
+	 source ~/.vim/config/main.vim
 
 	" (3) Override VIM built in functionality
 	for f in split(glob('~/.vim/config/vim/*.vim'), '\n')
@@ -47,7 +47,6 @@ try
 	" source ~/.vim/config/skeleton.vim
 
 	" Before passing access to user , it must be light background.
-	" ":set background=light
 	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
 	call VimErrorCaught()

@@ -1,4 +1,7 @@
-" ************** GNU C/C++ Language specific setting START **************
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- GCC compiler related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 au BufEnter *.c compiler gcc
 au BufEnter *.cpp compiler gcc
