@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 ```
 
-### How to debug vimrc config file.
+### How to debug vimrc configuration file.
 vim -u NONE -U NONE -N
 
 ### How to debug vimrc conflicts of shortcut
@@ -69,8 +69,7 @@ git submodule foreach git pull origin master
 | CTRL + f  | Auto search of file. |
 | Leader space  | Open file explorer right side, `press m` to add/rename/delete file,folder |
 | F8        | PHP File cs check |
+| :e | refresh of current file|
 | F9        | PHP File cs fix|
 | CTRL + m | Run PHP file into console. |
 | CTRL + l | Parse PHP file into console. |
-| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
-| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |

@@ -27,6 +27,10 @@ let g:netrw_list_hide="^\.sw.*$,^\.*\.sw.*$,^\..*\.un[~]$"
 " let g:netrw_chgwin=1
 let g:netrw_browse_split = 3
 
+" Value in percentage
+let g:netrw_winsize = 25
+
+
 " remap shift-enter to fire up the sidebar
 "nnoremap <silent> <S-CR> :rightbelow 20vs<CR>:e .<CR>
 " the same remap as above - may be necessary in some distros
@@ -40,9 +44,6 @@ let g:netrw_browse_split = 3
 :nnoremap <leader><Space> :Vex! .<cr>
 " Open file explorer at top side
 :nnoremap <leader>nn :Hex! .<cr>
-
-" Value in percentage
-let g:netrw_winsize = 25
 
 " https://vi.stackexchange.com/a/13351/2917
 function! NetrwOpenMultiTab(current_line,...) range

@@ -11,28 +11,31 @@ try
 	" Import defaults configuration
 	source $VIMRUNTIME/defaults.vim
 
-	" (0) pathogen.vim for runtimepath
-	source ~/.vim/config/plugin/pathogen.vim
+	" (0) Helper file for general purpose
+	 source ~/.vim/config/helper.vim
+	 source ~/.vim/config/main.vim
 
-	" (1) Helper file for general purpose
-	source ~/.vim/config/helper.vim
-
-	" (2) Add basic configuration of editor, Runtime path etc.
-	source ~/.vim/config/vim.vim
-	source ~/.vim/config/session.vim
-	source ~/.vim/config/backup.vim
-
-	" (3) VIM distributed plugins configuration override
-	"Load plugin in any order that doesn't matter except pathogen
-	for f in split(glob('~/.vim/config/plugin/*.vim'), '\n')
-		if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 )
+	" (3) Override VIM built in functionality
+	for f in split(glob('~/.vim/config/vim/*.vim'), '\n')
+		if (filereadable(f))
 			exe 'source' f
-		elseif(stridx(f, 'pathogen.vim') == -1)
+		else
 			throw "File can not able to read " . f
 		endif
 	endfor
 
-	" (4)Language specific settings configuration,Loading order that doesn't matter
+	" (4) VIM distributed plugins configuration override(load into 0-9,az,AZ order)
+	for f in split(glob('~/.vim/config/plugin/*.vim'), '\n')
+		" if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 )
+		if (filereadable(f))
+			exe 'source' f
+		" elseif(stridx(f, 'pathogen.vim') == -1)
+		else
+			throw "File can not able to read " . f
+		endif
+	endfor
+
+	" (5)Language specific settings configuration,Loading order that doesn't matter
 	for f in split(glob('~/.vim/config/language/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f
@@ -41,10 +44,9 @@ try
 		endif
 	endfor
 
-	source ~/.vim/config/skeleton.vim
+	" source ~/.vim/config/skeleton.vim
 
 	" Before passing access to user , it must be light background.
-	:set background=light
 	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
 	call VimErrorCaught()

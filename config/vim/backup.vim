@@ -1,5 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" File name :- backup.vim
 " About:- IDE unsaved changes track with .vim/tmp directory
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

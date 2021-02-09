@@ -1,3 +1,8 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- PHP related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " PHP parser check (CTRL + l)
 :autocmd FileType php noremap <C-l> :w!<CR>:! clear && php -l %<CR>
 
