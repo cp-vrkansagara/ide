@@ -1,3 +1,8 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- session related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Ref:- https://stackoverflow.com/a/31978241/2627408
 function! MakeSession()
   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()

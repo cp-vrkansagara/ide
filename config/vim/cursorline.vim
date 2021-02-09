@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- CursorLine related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight current line
 set cursorline
 " :hi CursorLine   term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
