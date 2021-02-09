@@ -1,4 +1,10 @@
 "https://stackoverflow.com/questions/15449591/vim-execute-current-file
+
+" .sh files as Shell script
+:autocmd BufNewFile,BufRead *.sh set ft=sh
+" Disable automate comment insertation
+:autocmd FileType *.sh setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " nnoremap <F9> :!chmod +x % <CR>:!%:p<CR>
 " nnoremap <leader>r :!%:p
 
@@ -6,5 +12,3 @@
 " ":autocmd FileType sh noremap <C-m> :w!<CR>:!chmod +x %<CR>:! clear && sh %<CR>
 :autocmd FileType sh noremap <C-m> :w!<CR>:! clear<CR>:! %:p<CR>
 
-" .sh files as Shell script
-:autocmd BufNewFile,BufRead *.sh set ft=sh
