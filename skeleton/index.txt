@@ -1,10 +1,2 @@
 
-n
-this is a appla
-.
-.
-.
-.
-.
-.
-.
+This is a appla
