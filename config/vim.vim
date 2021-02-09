@@ -16,7 +16,7 @@
 
 " Highlight current line
 " hi CursorLine term=bold cterm=bold guibg=Grey40
-set cursorline
+:set cursorline
 :hi CursorLine cterm=bold ctermbg=darkblue ctermfg=white guibg=Grey40 ctermfg=white
 
 

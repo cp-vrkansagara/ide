@@ -39,3 +39,12 @@ function! PhpCsFix()
     endtry
     return 1
 endfunction
+" Map <leader>e to expand the class name under the cursor to its FQCN
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+
+:set omnifunc=phpcomplete#CompletePHP
