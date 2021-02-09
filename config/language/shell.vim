@@ -1,4 +1,7 @@
-"https://stackoverflow.com/questions/15449591/vim-execute-current-file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- Shell script related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " .sh files as Shell script
 :autocmd BufNewFile,BufRead *.sh set ft=sh
