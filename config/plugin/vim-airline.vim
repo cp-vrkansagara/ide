@@ -1,4 +1,12 @@
-let g:airline_theme='solarized'
+"  The information in Section Z looks like this:
+"  10% ☰ 10/100 ln : 20
+"  This means:
+"  10%     - 10 percent down the top of the file
+"  ☰ 10    - current line 10
+"  /100 ln - of 100 lines
+"  : 20    - current column 20
+
+" let g:airline_theme='solarized'
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'
 let g:airline#extensions#tabline#enabled = 0

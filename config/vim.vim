@@ -38,27 +38,6 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Use UTF-8 encoding
 :set encoding=utf-8
 
-" Map <leader>ss to turn spelling on (VIM 7.0+)
-":for item in ['Bad','Cap','Local','Rare']| exe "hi Spell".item| endfor " Print current value
-
-" word not recognized
-:hi SpellBad term=undercurl ctermfg=15 ctermbg=0 gui=undercurl guifg=#FFFFFF guibg=#000000 guisp=Red
-"word not capitalised
-:hi SpellCap term=undercurl ctermfg=15 ctermbg=0 gui=undercurl guifg=#FFFFFF guibg=#000000 guisp=Blue
-"wrong spelling for region
-:hi SpellLocal term=undercurl ctermfg=15 ctermbg=0 gui=undercurl guifg=#FFFFFF guibg=#000000 guisp=DarkCyan
-"rare word
-:hi SpellRare term=undercurl ctermfg=15 ctermbg=0 gui=undercurl guifg=#FFFFFF guibg=#000000 guisp=Magenta
-
-
-
-autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd BufRead,BufNewFile *.txt setlocal spell
-map <leader>ss :setlocal spell spelllang=en_gb<cr>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
 
 " Set text width to 80 character only., I am not using at this time.
 " :set textwidth=80
@@ -120,12 +99,6 @@ set showcmd
 
 " Remember settings between sessions
 :set viminfo='400,f1,"500,h,/100,:100,<500
-
-" Highlight current line
-set cursorline
-:hi CursorLine   term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:hi CursorColumn term=bold cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Tab options (as in Vim GUI Tabs)
 " <C-t> Opens a new tab, <C-w> closes current tab
