@@ -35,9 +35,6 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " like <leader>n one new tab
 :nnoremap <leader>t :tabnew<cr>
 
-" Switch CWD to the directory of the open buffer:
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
 " Use UTF-8 encoding
 :set encoding=utf-8
 
@@ -148,6 +145,13 @@ set cursorline
 :imap <C-Up> <ESC>:tabfirst<CR>
 :nmap <C-Down> :tablast<CR>
 :imap <C-Down> <ESC>:tablast<CR>
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+
+" Switch CWD to the directory of the open buffer:
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 "Vim Splits - Move Faster and More Naturally
 " Map <leader>f to split horizontally, and move to bottom window
