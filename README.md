@@ -31,6 +31,7 @@ vim -u NONE -U NONE -N
 
 ### How to debug vimrc conflicts of shortcut
 Use this comand into vim console by pressing `:`
+
 ~~~bash
 :verbose map <leader>v
 
@@ -39,6 +40,7 @@ Use this comand into vim console by pressing `:`
 
 ### How to check what value vim is having in running mode
 This will print the current vlue vim is using.
+
 ~~~bash
 :set expandtab?
 
@@ -46,6 +48,7 @@ This will print the current vlue vim is using.
 
 :set syntex?
 ~~~
+
 ### How can I update this project
 
 You can simply run bellow command to update, this `vimrc` project
@@ -59,6 +62,7 @@ git pull --rebase
 ~~~bash
 git submodule foreach git pull origin master
 ~~~
+
 # Editor short cut list
 | Command   | Description|
 |:----------|:--------------------------------------------------------------------------------------------------|
@@ -70,15 +74,3 @@ git submodule foreach git pull origin master
 | CTRL + l | Parse PHP file into console. |
 | **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
 | **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
-
-### Things to add / TODO
-
--[] Add auto complete of html tags.
-
--[] Add autoupdate script for this project
-
--[] Add nerdtree index cache
-
--[] Add multicursor selection so easy variable modification 
-
--[] Add config parser for nginx/vim and other CD/CI
