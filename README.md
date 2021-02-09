@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 ```
 
-### How to debug vimrc config file.
+### How to debug vimrc configuration file.
 vim -u NONE -U NONE -N
 
 ### How to debug vimrc conflicts of shortcut
