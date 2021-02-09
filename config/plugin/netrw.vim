@@ -25,15 +25,11 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide="^\.sw.*$,^\.*\.sw.*$,^\..*\.un[~]$"
 " open files in left window by default
 " let g:netrw_chgwin=1
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 3
 
 " Value in percentage
 let g:netrw_winsize = 25
 
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
 
 " remap shift-enter to fire up the sidebar
 "nnoremap <silent> <S-CR> :rightbelow 20vs<CR>:e .<CR>
@@ -48,6 +44,7 @@ augroup END
 :nnoremap <leader><Space> :Vex! .<cr>
 " Open file explorer at top side
 :nnoremap <leader>nn :Hex! .<cr>
+
 " https://vi.stackexchange.com/a/13351/2917
 function! NetrwOpenMultiTab(current_line,...) range
    " Get the number of lines.
