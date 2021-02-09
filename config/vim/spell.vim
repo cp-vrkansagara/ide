@@ -6,7 +6,7 @@
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_gb
 
-" :set spellfile=$HOME/.vim/spell/en.utf-8.add
+:set spellfile=~/.vim/spell/en.utf-8.add
 
 map <leader>ss :setlocal spell spelllang=en_gb<cr>
 map <leader>sn ]s
