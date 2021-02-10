@@ -13,15 +13,16 @@ call togglebg#map("<F5>")
 :let g:solarized_termtrans=0
 syntax enable
 
-:set background=light
 if has('gui_running')
     " First line ensures we can have full spectrum of colors
-    :set t_Co=256
+    ":set t_Co=256
     :let g:solarized_termcolors=256
+    :set background=dark
 else
     " First line ensures we can have full spectrum of colors
     :set t_Co=256
     :let g:solarized_termcolors=256
+    :set background=light
 endif
 
 :colorscheme solarized

@@ -1,5 +1,6 @@
 My every day editor based using two things
 
+#### Write programs that do one thing and do it well.
 ~~~bash
 Linux User :- If there is terminal there is a way.
 Developer User :- If there is vim there is geek.
