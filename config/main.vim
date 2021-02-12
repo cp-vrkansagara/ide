@@ -15,10 +15,10 @@ if has("autocmd")
 endif
 
 " Load vimrc in new tab with leader-v
-nmap <leader>v :tabedit $MYVIMRC<CR>
+:nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
-nnoremap <leader>r :source $MYVIMRC<CR>
+:nnoremap <leader>r :source $MYVIMRC<CR>
 
 " like <leader>q quite current file
 :nnoremap <leader>q :q<cr>
