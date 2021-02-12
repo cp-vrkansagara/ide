@@ -22,5 +22,5 @@ git submodule add https://github.com/tpope/vim-rhubarb.git bundle/vim-rhubarb
 
 
 
-git submodule add https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
-
+git submodule add https://github.com/preservim/nerdtree.git bundle/nerdtree
+git submodule add https://github.com/jlanzarotta/bufexplorer.git bundle/bufexplorer
