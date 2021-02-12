@@ -12,7 +12,7 @@
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://tpope.io/vim/fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -30,7 +30,7 @@
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+	url = https://github.com/gabrielelana/vim-markdown
 [submodule "bundle/vim-rhubarb"]
 	path = bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
@@ -39,4 +39,13 @@
 	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "bundle/vim-airline-theme"]
+	path = bundle/vim-airline-theme
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "/Users/vallabh/.vim/bundle/nerdtree"]
+	path = /Users/vallabh/.vim/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree.git
