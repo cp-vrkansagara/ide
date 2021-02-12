@@ -1,4 +1,6 @@
 My every day editor based using two things
+
+#### Write programs that do one thing and do it well.
 ~~~bash
 Linux User :- If there is terminal there is a way.
 Developer User :- If there is vim there is geek.
@@ -14,7 +16,7 @@ Developer User :- If there is vim there is geek.
 | **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
 | **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
 
-#### Manual inspection
+### Manual inspection
 
 It's a good idea to inspect the install script from projects you don't yet know. You can do
 that by downloading the install script first, looking through it so everything looks normal,
@@ -25,10 +27,30 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
 ```
 
-```### How to debug vimrc config file.
+### How to debug vimrc configuration file.
 vim -u NONE -U NONE -N
 
-# How can I update this project
+### How to debug vimrc conflicts of shortcut
+Use this comand into vim console by pressing `:`
+
+~~~bash
+:verbose map <leader>v
+
+:verbose map <c-w>s
+~~~
+
+### How to check what value vim is having in running mode
+This will print the current vlue vim is using.
+
+~~~bash
+:set expandtab?
+
+:set number?
+
+:set syntex?
+~~~
+
+### How can I update this project
 
 You can simply run bellow command to update, this `vimrc` project
 
@@ -36,28 +58,19 @@ You can simply run bellow command to update, this `vimrc` project
 git pull --rebase
 ~~~
 
-#How to update all git submodules using single command.
+### How to update all git submodules using single command.
 
 ~~~bash
 git submodule foreach git pull origin master
 ~~~
 
-# Things to add / TODO
-
--[] Add cat statement for the `vimrc.vim` for better debuggin of vim config file. 
-
--[] Add auto complete of html tags.
-
--[] Create/Rename/Delete file/directory using NERDTree
-
--[] Add autoupdate script for this project
-
--[] Add nerdtree index cache
-
--[] Add shortcut to make it inline code untill user press key i.e. CTRL+j
-
--[] Add multicursor selection so easy variable modification 
-
--[] Add config parser for nginx/vim and other CD/CI
-
--[] Add php file cs-check and cs-fix parser using phpcs.xml on the root directory. on each modificatio of php file it will cs-fix automatcly if cs fix config file found
+# Editor short cut list
+| Command   | Description|
+|:----------|:--------------------------------------------------------------------------------------------------|
+| CTRL + f  | Auto search of file. |
+| Leader space  | Open file explorer right side, `press m` to add/rename/delete file,folder |
+| F8        | PHP File cs check |
+| :e | refresh of current file|
+| F9        | PHP File cs fix|
+| CTRL + m | Run PHP file into console. |
+| CTRL + l | Parse PHP file into console. |
