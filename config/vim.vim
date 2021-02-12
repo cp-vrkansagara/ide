@@ -9,23 +9,11 @@
 " " Allows all operations to work with system clipboard
 :set clipboard=unnamed
 
-" This setting can be useful for determining how many lines of text you want to
-" yank. It will display the line number column, but lines will be the distance
-" from the current line.
-:set number relativenumber
-
-" Highlight current line
-" hi CursorLine term=bold cterm=bold guibg=Grey40
-:set cursorline
-:hi CursorLine cterm=bold ctermbg=darkblue ctermfg=white guibg=Grey40 ctermfg=white
-
-
-" Load vimrc in new tab with leader-v
-nmap <leader>v :tabedit $MYVIMRC<CR>
+:nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Reload vimr configuration file
 " nnoremap <Leader>r :source $MYVIMRC<CR>
-nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
+:nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
 
 
 " The escape key is a long ways away. This maps it to the sequence 'kj'
@@ -49,8 +37,8 @@ nnoremap <Leader>r :source ~/.vim/vimrc.vim<CR>
 :set encoding=utf-8
 
 " Scrolling options
-set scrolljump=5
-set scrolloff=3
+:set scrolljump=5
+:set scrolloff=3
 
 " Turn on "very magic" regex status by default for searches.
 " :he /magic for more information
@@ -71,19 +59,19 @@ set scrolloff=3
 " Map <leader>f to split horizontally, and move to bottom window
 " nnoremap <leader>f <C-w>s<C-w>j
 " Use <ctrl> plus direction key to move around within windows
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+:nnoremap <C-h> <C-w>h
+:nnoremap <C-j> <C-w>j
+:nnoremap <C-k> <C-w>k
+:nnoremap <C-l> <C-w>l
 
 
 " Keybindings for movement in insert mode
-imap <Leader>0 <Esc>I
-imap <Leader>$ <Esc>A
-imap <Leader>h <Esc>i
-imap <Leader>l <Esc>lli
-imap <Leader>j <Esc>lji
-imap <Leader>k <Esc>lki
+:imap <Leader>0 <Esc>I
+:imap <Leader>$ <Esc>A
+:imap <Leader>h <Esc>i
+:imap <Leader>l <Esc>lli
+:imap <Leader>j <Esc>lji
+:imap <Leader>k <Esc>lki
 
 " Allow better terminal/mouse integration
 :set mousemodel=extend
@@ -105,11 +93,11 @@ imap <Leader>k <Esc>lki
 :map <Leader>g :Ack
 
 " snipMate options
-let g:snips_author = "Vallabh Kansagara"
+:let g:snips_author = "Vallabh Kansagara"
 
 " Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+:noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " Folding
 " Toggle folding with spacebar instead of za
-nnoremap <Space> za
+:nnoremap <Space> za
