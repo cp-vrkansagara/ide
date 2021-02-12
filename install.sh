@@ -16,25 +16,18 @@ if [ $(ls $HOME/.vim* | wc -l) != 0 ]; then
   mv -f $HOME/.vim*  $BACKUP_DIRECTORY_NAME
 fi
 
-echo "Set up pathogen for vim run time path."
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-#Clone main repository
-echo "Cloning the basic repository of [amix]"
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-
 echo "Cloning the [vrkansagar] vim configuration."
-git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
+git clone --recursive --branch master --depth 1 https://github.com/cp-vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
 cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 
+echo "Set up pathogen for vim run time path."
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 # Copy of current vimrc to root direcory cause to update .vim folder with git tracking so create symbolink link
-# cp $HOME/.vim/vimrc.vim $HOME/.vimrc
 echo "Moving base vimrc config to back up folder"
-mv $HOME/.vimrc  $BACKUP_DIRECTORY_NAME
 echo "Adding symbolink link for better git tracking of project"
 ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
 
