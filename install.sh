@@ -17,7 +17,7 @@ if [ $(ls $HOME/.vim* | wc -l) != 0 ]; then
 fi
 
 echo "Cloning the [vrkansagar] vim configuration."
-git clone --recursive --branch master --depth 1 https://github.com/cp-vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
+git clone --recursive --branch master --depth 1 https://github.com/vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
 cd /tmp/.vim-${CURRENT_DATE}
 git pull --recurse-submodules
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
