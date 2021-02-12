@@ -12,10 +12,11 @@ git submodule add https://tpope.io/vim/fugitive.git bundle/fugitive
 git submodule add https://github.com/altercation/vim-colors-solarized.git bundle/vim-colors-solarized
 git submodule add https://github.com/vim-airline/vim-airline.git bundle/vim-airline
 git submodule add https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
-git submodule add https://github.com/vim-scripts/bufexplorer.zip.git bundle/bufexplorer.zip
 git submodule add https://github.com/yegappan/mru.git bundle/mru.zip bundle/mru.zip
 git submodule add https://github.com/plasticboy/vim-markdown.git bundle/vim-markdown
 git submodule add https://github.com/mileszs/ack.vim.git bundle/ack.vim
 
 
+
+git submodule add https://github.com/preservim/nerdtree.git bundle/nerdtree
 
