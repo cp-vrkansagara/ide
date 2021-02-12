@@ -1,3 +1,8 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- JavaScript related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " JSHint (<Leader> l when in a JS file)
 :autocmd FileType javascript noremap <Leader>l :!jshint %<CR>
 

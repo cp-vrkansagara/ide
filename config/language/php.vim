@@ -1,7 +1,12 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" About:- PHP related configuration
+" Maintainer:- Vallabh Kansagara — @vrkansagara
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " PHP parser check (CTRL + l)
 :autocmd FileType php noremap <C-l> :w!<CR>:! clear && php -l %<CR>
 
-" run file with PHP CLI (CTRL-M)
+" run file with PHP CLI (CTRL-m)
 :autocmd FileType php noremap <C-m> :w!<CR>:!php %<CR>
 
 :autocmd FileType php  nnoremap <F8> :call PhpCsCheck()<CR>
@@ -39,3 +44,12 @@ function! PhpCsFix()
     endtry
     return 1
 endfunction
+" Map <leader>e to expand the class name under the cursor to its FQCN
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+
+:set omnifunc=phpcomplete#CompletePHP
