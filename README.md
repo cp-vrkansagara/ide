@@ -1,10 +1,4 @@
-My every day editor based using two things
-
-#### Write programs that do one thing and do it well.
-~~~bash
-Linux User :- If there is terminal there is a way.
-Developer User :- If there is vim there is geek.
-~~~
+My every day editor for all kind of text interface work. This editor keep the philosophy of `unix`
 
 ### Basic Installation
 
@@ -16,61 +10,32 @@ Developer User :- If there is vim there is geek.
 | **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"`   |
 | **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/vrkansagara/ide/master/install.sh)"` |
 
-### Manual inspection
 
-It's a good idea to inspect the install script from projects you don't yet know. You can do
-that by downloading the install script first, looking through it so everything looks normal,
-then running it:
-
-```shell
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sh install.sh
-```
-
-### How to debug vimrc configuration file.
-vim -u NONE -U NONE -N
-
-### How to debug vimrc conflicts of shortcut
-Use this comand into vim console by pressing `:`
-
-~~~bash
-:verbose map <leader>v
-
-:verbose map <c-w>s
-~~~
-
-### How to check what value vim is having in running mode
-This will print the current vlue vim is using.
-
-~~~bash
-:set expandtab?
-
-:set number?
-
-:set syntex?
-~~~
 
 ### How can I update this project
 
-You can simply run bellow command to update, this `vimrc` project
+You can simply run bellow command to update, this project
 
 ~~~bash
-git pull --rebase
+ cd $HOME/.vimi
+ git pull --rebase
+ git submodule update --init --recursive
 ~~~
 
-### How to update all git submodules using single command.
-
+### Do one thing and do it well.
 ~~~bash
-git submodule foreach git pull origin master
+Linux User :- If there is terminal there is a way.
+Developer User :- If there is vim there is geek.
 ~~~
 
-# Editor short cut list
-| Command   | Description|
-|:----------|:--------------------------------------------------------------------------------------------------|
-| CTRL + f  | Auto search of file. |
-| Leader space  | Open file explorer right side, `press m` to add/rename/delete file,folder |
-| F8        | PHP File cs check |
-| :e | refresh of current file|
-| F9        | PHP File cs fix|
-| CTRL + m | Run PHP file into console. |
-| CTRL + l | Parse PHP file into console. |
+#### Awasome doment for this project
+- Shortcuts
+- Debug information
+- Do's and Don's
+- Developer use case
+- Todo / Fix
+- New feature / Removal of things
+
+#### You can !
+	I would like take issue and pull request regarding this project and love to answer if anything on this.AGG
+
