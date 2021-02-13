@@ -2,10 +2,12 @@
 set -e
 
 CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
+
 # This directory name must not start with .vim
 BACKUP_DIRECTORY_NAME="${HOME}/.old/vim-${CURRENT_DATE}"
 
 # check weather dependant binary is available with system or not like , vim,ctags and $HOME/bin directory @todo @fixme
+
 echo "Creating backup directory."
 if [ ! -d "$BACKUP_DIRECTORY_NAME" ]; then
   mkdir -p $BACKUP_DIRECTORY_NAME
@@ -13,6 +15,7 @@ fi
 
 echo "Creating back of ~/.vim* to ${BACKUP_DIRECTORY_NAME}"
 if [ $(ls $HOME/.vim* | wc -l) != 0 ]; then
+  echo "Moving base vimrc config to back up folder"
   mv -f $HOME/.vim*  $BACKUP_DIRECTORY_NAME
 fi
 
@@ -27,7 +30,6 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Copy of current vimrc to root direcory cause to update .vim folder with git tracking so create symbolink link
-echo "Moving base vimrc config to back up folder"
 echo "Adding symbolink link for better git tracking of project"
 ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
 

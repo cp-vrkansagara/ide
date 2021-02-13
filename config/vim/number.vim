@@ -9,6 +9,7 @@
 " :set number relativenumber
 " Line number must be relative and can be change based on event of mode
 :set number relativenumber
+
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
