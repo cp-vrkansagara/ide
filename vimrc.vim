@@ -9,7 +9,7 @@ endfunction
 
 try
 	" Import defaults configuration
-	source $VIMRUNTIME/defaults.vim
+	source $HOME/.vim/vendor/vim/defaults81.vim
 
 	" (0) Helper file for general purpose
 	 source ~/.vim/config/helper.vim
@@ -43,8 +43,6 @@ try
 			throw "File can not able to read " . f
 		endif
 	endfor
-
-	" source ~/.vim/config/skeleton.vim
 
 	" Before passing access to user , it must be light background.
 	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
