@@ -36,6 +36,9 @@ Developer User :- If there is vim there is geek.
 - Todo / Fix
 - New feature / Removal of things
 
+#### Documents
+[Docs](docs/README.md)
+
 #### You can !
 	I would like take issue and pull request regarding this project and love to answer if anything on this.AGG
 
