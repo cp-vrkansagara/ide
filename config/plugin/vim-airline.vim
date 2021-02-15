@@ -5,7 +5,7 @@
 "  ☰ 10    - current line 10
 "  /100 ln - of 100 lines
 "  : 20    - current column 20
-
+: let g:airline_disable_statusline = 0
 : let g:airline_theme='solarized'
 : let g:airline#extensions#tagbar#enabled = 1
 : let g:airline#extensions#tagbar#flags = 'f'
