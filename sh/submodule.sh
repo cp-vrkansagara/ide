@@ -22,6 +22,7 @@ git submodule add https://github.com/tpope/vim-fugitive.git bundle/fugitive
 git submodule add https://github.com/tpope/vim-sensible.git bundle/vim-sensible
 git submodule add https://github.com/tpope/vim-scriptease.git bundle/vim-scriptease
 git submodule add https://github.com/tpope/vim-rhubarb.git bundle/vim-rhubarb
+git submodule add  https://github.com/tpope/vim-commentary.git bundle/vim-commentry
 
 
 
