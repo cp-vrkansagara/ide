@@ -61,13 +61,13 @@ function! UdfUncomment()
   endif
 endfunction
 "Udf is used as user define functin.It help to identify that person has defined this logic.
-map <C-a> :call UdfComment()<CR>j
-map <C-b> :call UdfUncomment()<CR>k
+" map <C-a> :call UdfComment()<CR>j
+" map <C-b> :call UdfUncomment()<CR>k
 
 
-set isfname+=: " include colon in filenames
+" set isfname+=: " include colon in filenames
 
 " Override vim commands 'gf', '^Wf', '^W^F'
-nnoremap gf :call GotoFile("")<CR>
-nnoremap <C-W>f :call GotoFile("new")<CR>
-nnoremap <C-W><C-F> :call GotoFile("new")<CR>
+" nnoremap gf :call GotoFile("")<CR>
+" nnoremap <C-W>f :call GotoFile("new")<CR>
+" nnoremap <C-W><C-F> :call GotoFile("new")<CR>

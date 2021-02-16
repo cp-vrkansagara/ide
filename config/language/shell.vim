@@ -13,5 +13,5 @@
 
 " run file with PHP CLI (CTRL-m)
 " ":autocmd FileType sh noremap <C-m> :w!<CR>:!chmod +x %<CR>:! clear && sh %<CR>
-:autocmd FileType sh noremap <C-m> :w!<CR>:! clear<CR>:! %:p<CR>
+:autocmd FileType sh noremap <C-m> :w!<CR>:! clear<CR>:!chmod +x %<CR>:! %:p<CR>
 
