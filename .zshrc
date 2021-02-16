@@ -105,6 +105,8 @@ fi
 # dc up -dV --build --remove-orphan --force-recreate
 alias dc='docker-compose '
 alias dcb='docker-compose up -dV --build --remove-orphan --force-recreate'
+alias dcu='docker-compose up -dV --remove-orphan --force-recreate'
+alias dcd='docker-compose down'
 alias www='cd ~/www'
 alias htdocs='cd ~/htdocs'
 alias gh='cd ~/git'
