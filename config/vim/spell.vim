@@ -7,8 +7,10 @@
 
 " Enable spell check
 map <leader>ss :setlocal spell spelllang=en_gb<cr>
+
 " Disable spell check
 map <leader>ss! :set nospell<cr>
+
 map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
