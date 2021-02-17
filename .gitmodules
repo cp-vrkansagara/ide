@@ -43,3 +43,6 @@
 [submodule "bundle/vim-commentry"]
 	path = bundle/vim-commentry
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/vim-multiple"]
+	path = bundle/vim-multiple
+	url = https://github.com/terryma/vim-multiple-cursors.git
