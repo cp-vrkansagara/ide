@@ -25,7 +25,8 @@ endif
 " like <leader>Q quite force fully
 :nnoremap <leader>Q :qa!<cr>
 
-" Save current file.
+" "sudo" save: current file.
+:cmap w!! w !sudo tee % >/dev/null
 :nnoremap <leader>w :w<cr>
 
 " w! Save current file with sudo access
