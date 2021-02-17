@@ -1,9 +1,4 @@
 ### Document for the IDE
-
-
-
-
-
 # Key binding equivalent
 
 Ctrl-I      Tab
