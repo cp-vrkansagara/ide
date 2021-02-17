@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=$HOME/bin:/usr/local/bin:$HOME/bin:$HOME/.config/composer/vendor/bin:$HOME/git/magento/ece-tools/vendor/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/vallabh/.oh-my-zsh"
 
@@ -110,3 +109,6 @@ alias dcd='docker-compose down'
 alias www='cd ~/www'
 alias htdocs='cd ~/htdocs'
 alias gh='cd ~/git'
+
+
+alias ownIt='sudo chown -Rf $USER:$USER '

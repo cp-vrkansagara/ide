@@ -101,3 +101,11 @@
 " Folding
 " Toggle folding with spacebar instead of za
 :nnoremap <Space> za
+
+# Move line up and down using j and k using alter
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+j<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv

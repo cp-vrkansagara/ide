@@ -28,3 +28,4 @@ git submodule add  https://github.com/tpope/vim-commentary.git bundle/vim-commen
 
 git submodule add https://github.com/preservim/nerdtree.git bundle/nerdtree
 git submodule add https://github.com/jlanzarotta/bufexplorer.git bundle/bufexplorer
+git submodule add https://github.com/terryma/vim-multiple-cursors.git bundle/vim-multiple
