@@ -7,7 +7,7 @@
 
 " " Via https://twitter.com/vimtips/status/208241766816677889
 " " Allows all operations to work with system clipboard
-" :set clipboard=unnamed
+:set clipboard=unnamed
 
 :nmap <leader>v :tabedit $MYVIMRC<CR>
 
@@ -96,7 +96,7 @@
 :let g:snips_author = "Vallabh Kansagara"
 
 " Preserve indentation while pasting text from the OS X clipboard
-:noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+" :noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " Folding
 " Toggle folding with spacebar instead of za

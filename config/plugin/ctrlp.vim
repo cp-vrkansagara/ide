@@ -23,7 +23,7 @@
 let g:ctrlp_map = '<C-f>'
 
 " Quickly find and open a recently opened file
-map <leader>f :MRU<CR>
+map <C-S-f>f :CtrlPMixed<CR>
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
