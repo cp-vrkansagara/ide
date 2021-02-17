@@ -96,7 +96,7 @@
 :let g:snips_author = "Vallabh Kansagara"
 
 " Preserve indentation while pasting text from the OS X clipboard
-:noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+" :noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " Folding
 " Toggle folding with spacebar instead of za
