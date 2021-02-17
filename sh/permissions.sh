@@ -2,6 +2,10 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
+if [ "$(whoami)" != "root" ]; then
+    SUDO=sudo
+fi
+
 echo "$USER is the only one is owning the $HOME directory"
 ${SUDO} chown $USER:$USER -Rf $HOME
 echo "$USER has all the rights to change $HOME directory"

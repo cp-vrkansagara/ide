@@ -25,5 +25,7 @@ map <leader>s? z=
 :hi  SpellRare term=reverse ctermbg=13 ctermbg=0 gui=undercurl guisp=Magenta
 
 " File type specific autocmd
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
-autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_gb
+if exists("spellfile")
+	autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
+	autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_gb
+endif
