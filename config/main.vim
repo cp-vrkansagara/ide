@@ -2,6 +2,15 @@
 " About:- Main configuration file for the VIM(init)
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Alt-letter will now be recognised by vi in a terminal as well as by gvim. The timeout settings are used to work around the ambiguity with escape sequences. Esc and j sent within 50ms will be mapped to <A-j>, greater than 50ms will count as separate keys. That should be enough time to distinguish between Meta encoding and hitting two keys.
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+set timeout ttimeoutlen=50
+
 
 " With a map leader it's possible to do extra key combinations
 :let mapleader = ","
@@ -124,3 +133,12 @@ noremap <leader>yy "*Y
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+
+" Vim move lime up and down using j and k
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv

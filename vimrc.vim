@@ -1,4 +1,11 @@
-set runtimepath+=~/.vim_runtime
+set runtimepath+=~/.vim
+function! VimErrorCaught()
+	if v:exception != ""
+		echo "\n" . 'Caught "' . v:exception . '" in ' . v:throwpoint ."\n"
+	else
+		echo 'Nothing caught\n'
+	endif
+endfunction
 
 try
 	" Import defaults configuration
