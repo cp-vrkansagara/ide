@@ -19,7 +19,8 @@ for type in Bold Light Medium Regular Retina; do
     fi;
 done
 
-echo "fc-cache -f"
-fc-cache -f
+echo "fc-cache -f -v"
+fc-cache -f -v
+
 
 echo "Fira code font installation [Done]."
