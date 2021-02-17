@@ -10,4 +10,5 @@ autocmd FileType php setlocal commentstring=\/\/\%s
 
 autocmd FileType apache setlocal commentstring=#\ %s
 autocmd FileType zsh setlocal commentstring=#\ %s
+autocmd FileType gitconfig setlocal commentstring=#\ %s
 
