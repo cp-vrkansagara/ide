@@ -25,6 +25,7 @@ endif
 
 " Load vimrc in new tab with leader-v
 :nmap <leader>v :tabedit $MYVIMRC<CR>
+:nmap <leader>my :tabedit ~/.vim/config/main.vim<CR>
 
 " Reload vimr configuration file
 :nnoremap <leader>r :source $MYVIMRC<CR>
