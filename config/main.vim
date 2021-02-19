@@ -11,6 +11,9 @@ while c <= 'z'
 endw
 set timeout ttimeoutlen=50
 
+" The escape key is a long ways away. This maps it to the sequence 'kj'
+:map! kj <Esc>
+:inoremap kj <Esc>
 
 " With a map leader it's possible to do extra key combinations
 :let mapleader = ","
@@ -66,10 +69,6 @@ set showcmd
 :set autoindent
 :set smartindent
 
-" The escape key is a long ways away. This maps it to the sequence 'kj'
-:map! kj <Esc>
-:inoremap kj <Esc>
-
 " Disable the splash screen
 :set shortmess +=I
 
@@ -79,6 +78,7 @@ set showcmd
 
 " enable mouse usage. makes it easier to browse multiple tabs,
 :set mouse=a
+
 " Allow better terminal/mouse integration
 :set mousemodel=extend
 
