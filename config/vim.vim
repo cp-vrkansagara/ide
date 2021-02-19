@@ -10,6 +10,7 @@
 :set clipboard=unnamed
 
 :nmap <leader>v :tabedit $MYVIMRC<CR>
+:nmap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
 
 " Reload vimr configuration file
 " nnoremap <Leader>r :source $MYVIMRC<CR>
