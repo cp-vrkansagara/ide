@@ -1,9 +1,9 @@
 
 " Open explorer to the right side
-" let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "right"
 "
 " Close the pan once file is open
-" let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=1
 
 " let NERDTreeMapOpenInTab='\r'
 " let NERDTreeMapOpenInTab='<ENTER>'
