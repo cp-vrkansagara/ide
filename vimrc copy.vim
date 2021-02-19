@@ -14,9 +14,6 @@ try
 	" (0) Helper file for general purpose
 	 source ~/.vim/config/helper.vim
 	 source ~/.vim/config/main.vim
-	 
-	 "" Bellow line for debugining purpose only, On demand
-	 "source ~/.vim/config/plugin/001-pathogen.vim
 
 	" (3) Override VIM built in functionality
 	for f in split(glob('~/.vim/config/vim/*.vim'), '\n')
@@ -29,9 +26,10 @@ try
 
 	" (4) VIM distributed plugins configuration override(load into 0-9,az,AZ order)
 	for f in split(glob('~/.vim/config/plugin/*.vim'), '\n')
-		" if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 ) elseif(stridx(f, 'pathogen.vim') == -1)
+		" if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 )
 		if (filereadable(f))
 			exe 'source' f
+		" elseif(stridx(f, 'pathogen.vim') == -1)
 		else
 			throw "File can not able to read " . f
 		endif
