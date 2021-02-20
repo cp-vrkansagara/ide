@@ -14,10 +14,13 @@ echo "Installing network realated stuf "
 ${SUDO} apt-get install -y iputils-ping net-tools lsof nmap 
 
 echo "System related stuff "
-${SUDO} apt-get install -y elinks htop git ctags vim curl lsb-release
+${SUDO} apt-get install -y elinks htop ctags vim curl lsb-release
 
 echo "Install desktop manager"
 ${SUDO} apt-get install -y xfce4 xfce4-goodies
+
+echo "Application related stuff..."
+${SUDO} apt-get install -y git meld vim-gtk
 
 
 ${SUDO} apt-get autoremove

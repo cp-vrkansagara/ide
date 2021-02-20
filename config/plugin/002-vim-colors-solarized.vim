@@ -4,25 +4,29 @@
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 " Note:- Do not rename of file , as It used for priority include name(002)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call togglebg#map("<F5>")
 
-:let g:solarized_bold = 1
-:let g:solarized_underline = 1
-:let g:solarized_italic = 1
-:let g:solarized_visibility= "normal"
-:let g:solarized_termtrans=0
+call togglebg#map("<F5>")
+let g:solarized_bold = 1
+let g:solarized_italic = 1
+let g:solarized_underline = 1
+let g:solarized_termtrans=0
+let g:solarized_contrast = "normal"
+let g:solarized_visibility = "normal"
 syntax enable
 
+" First line ensures we can have full spectrum of colors
 if has('gui_running')
-    " First line ensures we can have full spectrum of colors
-    ":set t_Co=256
-    :let g:solarized_termcolors=256
-    :set background=dark
+    set background=dark
 else
-    " First line ensures we can have full spectrum of colors
-    :set t_Co=256
-    :let g:solarized_termcolors=256
-    :set background=light
+    set background=light
 endif
 
-:colorscheme solarized
+if &term == "linux"
+    " colorscheme vallabh
+    colorscheme default
+    set background=dark
+else 
+    let g:solarized_termcolors=256
+    set t_Co=256
+    colorscheme solarized
+endif
