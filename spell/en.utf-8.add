@@ -9,3 +9,12 @@ sudo
 autoload
 filetypes
 github
+colorscheme
+solarized
+Color
+F5
+termtrans
+solarized_termtrans
+termcolors
+colors
+color
