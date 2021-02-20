@@ -17,6 +17,13 @@ try
 	 
 	 "" Bellow line for debugining purpose only, On demand
 	 "source ~/.vim/config/plugin/001-pathogen.vim
+	for f in split(glob('~/.vim/config/color/*.vim'), '\n')
+		if (filereadable(f))
+			exe 'source' f
+		else
+			throw "File can not able to read " . f
+		endif
+	endfor
 
 	" (3) Override VIM built in functionality
 	for f in split(glob('~/.vim/config/vim/*.vim'), '\n')
