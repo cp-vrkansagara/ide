@@ -14,13 +14,13 @@ try
 	"source ~/.vim/config/plugin/001-pathogen.vim
 	"source ~/.vim/config/plugin/002-vim-colors-solarized.vim
 	"source ~/.vim/config/plugin/nerdtree.vim
-	
+
 	" (0) Helper file for general purpose
-	 source ~/.vim/config/helper.vim
-	 source ~/.vim/config/main.vim
-	 
-	 "" Bellow line for debugining purpose only, On demand
-	 "source ~/.vim/config/plugin/001-pathogen.vim
+	source ~/.vim/config/helper.vim
+	source ~/.vim/config/main.vim
+
+	"" Bellow line for debugining purpose only, On demand
+	"source ~/.vim/config/plugin/001-pathogen.vim
 	for f in split(glob('~/.vim/config/color/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f

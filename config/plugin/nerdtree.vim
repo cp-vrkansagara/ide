@@ -1,7 +1,7 @@
-
 " Open explorer to the right side
 let g:NERDTreeWinPos = "right"
-"
+
+
 " Close the pan once file is open
 let NERDTreeQuitOnOpen=1
 
@@ -9,14 +9,13 @@ let NERDTreeQuitOnOpen=1
 " let NERDTreeMapOpenInTab='<ENTER>'
 
 " Space conflicts with code folding.
-:nnoremap <space> :NERDTreeToggle<cr>
-
 " Direct control key conflicts with different OS (i.e. xfce)
 " map <A-p> :NERDTreeToggle<cr>
-
-noremap <space> :call NERDTreeToggleInCurDir()<cr>
+" nnoremap <space> :NERDTreeToggle<cr>
+" noremap <space> :call NERDTreeToggleInCurDir()<cr>
+noremap <leader><space> :call NERDTreeToggleInCurDir()<cr>
 map <leader>nb :NERDTreeFromBookmark
-"map <leader>nf :NERDTreeFind<cr>
+map <leader>nf :NERDTreeFind<cr>
 
 " autocmd FileType nerdtree nmap <buffer> <left> o
 " autocmd FileType nerdtree nmap <buffer> <right> o
@@ -51,6 +50,3 @@ function! NERDTreeToggleInCurDir()
 		endif
 	endif
 endfunction
-
-""[Issue:-" ^G in the NERDTree explorer]
-let g:NERDTreeNodeDelimiter = "\u00a0"
