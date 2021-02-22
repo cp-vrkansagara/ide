@@ -76,8 +76,8 @@ set shortmess +=I
 " Calling quit will prompt you to save unsaved buffers anyways.
 set hidden
 
-" enable mouse usage. makes it easier to browse multiple tabs,
-set mouse=a
+" Disable mouse usage to make life easier a developer
+set mouse-=a
 
 " Allow better terminal/mouse integration
 set mousemodel=extend
