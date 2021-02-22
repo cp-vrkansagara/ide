@@ -49,7 +49,6 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Use UTF-8 encoding
 set encoding=utf-8
 
-
 " Set text width to 80 character only., I am not using at this time.
 " set textwidth=80
 set textwidth=0
@@ -81,10 +80,6 @@ set mouse-=a
 
 " Allow better terminal/mouse integration
 set mousemodel=extend
-
-" Via https://twitter.com/vimtips/status/208241766816677889
-" Allows all operations to work with system clipboard
-set clipboard=unnamed
 
 " Bash is my shell
 " Well, not really. But this makes CLI integration better.
@@ -143,3 +138,4 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+

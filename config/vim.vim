@@ -39,9 +39,6 @@ set backspace=start,eol,indent
 " Well, not really. But this makes CLI integration better.
 let bash_is_sh=1
 
-" Use UTF-8 encoding
-set encoding=utf-8
-
 " Scrolling options
 set scrolljump=5
 set scrolloff=3
@@ -112,3 +109,9 @@ nnoremap <Up> :echomsg "use k"<cr>
 nnoremap <Down> :echomsg "use j"<cr>
 nnoremap <Left> :echomsg "use h"<cr>
 nnoremap <Right> :echomsg "use l"<cr>
+
+augroup scroll
+    au!
+    au  VimEnter * :silent !synclient VertEdgeScroll=0
+    au  VimLeave * :silent !synclient VertEdgeScroll=1
+augroup END
