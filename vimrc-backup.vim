@@ -11,10 +11,6 @@ try
 	" Import defaults configuration
 	source $HOME/.vim/vendor/vim/defaults81.vim
 
-	"source ~/.vim/config/plugin/001-pathogen.vim
-	"source ~/.vim/config/plugin/002-vim-colors-solarized.vim
-	"source ~/.vim/config/plugin/nerdtree.vim
-	
 	" (0) Helper file for general purpose
 	 source ~/.vim/config/helper.vim
 	 source ~/.vim/config/main.vim
