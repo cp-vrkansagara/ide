@@ -20,7 +20,7 @@ echo "Install desktop manager"
 ${SUDO} apt-get install -y xfce4 xfce4-goodies
 
 echo "Application related stuff..."
-${SUDO} apt-get install -y git meld vim-gtk ack silversearcher-ag
+${SUDO} apt-get install -y git meld vim-gtk ack silversearcher-ag build-essential cmake vim-nox python3-dev
 
 
 ${SUDO} apt-get autoremove
