@@ -36,7 +36,7 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 " like <leader>q quite current file
 nnoremap <leader>q :q<cr>
 " like <leader>Q quite force fully
-nnoremap <leader>Q :qa!<cr>
+nnoremap <leader>Q :qa<cr>
 
 " "sudo" save: current file.
 cmap w!! w !sudo tee % >/dev/null
