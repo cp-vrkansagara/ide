@@ -115,3 +115,6 @@ alias ownIt='sudo chown -Rf $USER:$USER '
 alias myPublicIp='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myAllIp="ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias myIp="echo $(hostname -I | awk '{print $1}')"
+
+alias gWork='git config --global user.email "vallabh.kansagara@commercepundit.com"'
+alias gPersonal='git config --global user.email "vrkansagara@gmail.com"'
