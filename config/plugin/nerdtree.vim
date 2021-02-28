@@ -1,9 +1,19 @@
+
+" Let alwayse open bookmark with file explore
+let NERDTreeShowBookmarks=1
+let g:NERDTreeBookmarksFile = "$HOME/.vim/.NERDTreeBookmarks"
+if !empty($NERDTREE_BOOKMARKS)
+    if filereadable($NERDTREE_BOOKMARKS)
+        let g:NERDTreeBookmarksFile = $NERDTREE_BOOKMARKS
+    endif
+endif
+
 " Open explorer to the right side
 let g:NERDTreeWinPos = "right"
 
 
 " Close the pan once file is open
-let NERDTreeQuitOnOpen=1
+let g:NERDTreeQuitOnOpen=1
 
 " let NERDTreeMapOpenInTab='\r'
 " let NERDTreeMapOpenInTab='<ENTER>'

@@ -9,6 +9,7 @@ endif
 
 augroup filetypedetect
 	au! BufRead,BufNewFile *.foo,*.bar,*.baz		setfiletype fooBarBaz
+	au! BufRead,BufNewFile nginx.conf	setfiletype nginx
 augroup END
 
 
