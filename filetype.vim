@@ -6,26 +6,29 @@
 if exists("did_load_filetypes")
 	finish
 endif
+
 augroup filetypedetect
 	au! BufRead,BufNewFile *.foo,*.bar,*.baz		setfiletype fooBarBaz
 augroup END
 
 
-
-" :autocmd FileType vim autocmd BufWritePre <buffer> call OnFileSave()
 " :autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
-" :autocmd BufWritePost <buffer> :call OnFileSave()
+autocmd BufWritePre <buffer> call OnFileSave()
+autocmd BufWritePost <buffer> :call OnFileSave()
+
 
 function! OnFileSave()
 	let ext = &filetype
-	let current_buff = bufnr("%")
 	if ext == 'vim'
-		let matchstart = match(current_buff, ':%s/^://')
-		echom matchstart
-		if matchstart > 0
-			silent %s/^://
-		else
-		endif
+		" Remove : from every first line
+		silent! %s/^\s*://
+		" Remove white space from file
+		silent! %s/\s\+$//e
+	elseif ext == 'php'
+		" Remove white space from file
+		silent! %s/\s\+$//e
 	endif
 endfunction
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/

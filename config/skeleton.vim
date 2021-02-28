@@ -4,7 +4,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Skeleton (template) files...
-:autocmd BufNewFile *.html 0r $HOME/.vim/skeleton/index.html
+autocmd BufNewFile *.html 0r $HOME/.vim/skeleton/index.html
 
 
 " Note: The "normal" command afterwards deletes an ugly pending line and moves

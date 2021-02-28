@@ -24,7 +24,7 @@ nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
 
 " The escape key is a long ways away. This maps it to the sequence 'kj'
 map! kj <Esc>
-:inoremap kj <Esc>
+inoremap kj <Esc>
 
 " Turn off modelines
 set modelines=0
@@ -46,7 +46,7 @@ set scrolloff=3
 " Turn on "very magic" regex status by default for searches.
 " :he /magic for more information
 nnoremap / /\v
-:vnoremap / /\v
+vnoremap / /\v
 
 " Highlight Searches
 set highlight=lub
