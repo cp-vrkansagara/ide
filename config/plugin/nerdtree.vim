@@ -50,6 +50,3 @@ function! NERDTreeToggleInCurDir()
 		endif
 	endif
 endfunction
-
-""[Issue:-" ^G in the NERDTree explorer]
-let g:NERDTreeNodeDelimiter = "\u00a0"
