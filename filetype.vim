@@ -19,16 +19,28 @@ autocmd BufWritePost <buffer> :call OnFileSave()
 
 function! OnFileSave()
 	let ext = &filetype
+
 	if ext == 'vim'
 		" Remove : from every first line
 		silent! %s/^\s*://
 		" Remove white space from file
 		silent! %s/\s\+$//e
 	elseif ext == 'php'
-		" Remove white space from file
-		silent! %s/\s\+$//e
+		" Remove closing tag(?>) from every *.php file only TODO
 	endif
+
+	" Remove white space from all file type
+	silent! %s/\s\+$//e
+
 endfunction
 
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+command! FW call FilterToNewWindow('myscript')
+
+function! FilterToNewWindow(script)
+    let TempFile = tempname()
+    let SaveModified = &modified
+    exe 'w ' . TempFile
+    let &modified = SaveModified
+    exe 'split ' . TempFile
+    exe '%! ' . a:script
+endfunction
