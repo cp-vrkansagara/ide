@@ -40,8 +40,8 @@ set backspace=start,eol,indent
 let bash_is_sh=1
 
 " Scrolling options
-set scrolljump=5
-set scrolloff=3
+:set scrolljump=5
+:set scrolloff=3
 
 " Turn on "very magic" regex status by default for searches.
 " :he /magic for more information
@@ -62,10 +62,10 @@ set smartcase
 " Map <leader>f to split horizontally, and move to bottom window
 " nnoremap <leader>f <C-w>s<C-w>j
 " Use <ctrl> plus direction key to move around within windows
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+:nnoremap <C-h> <C-w>h
+:nnoremap <C-j> <C-w>j
+:nnoremap <C-k> <C-w>k
+:nnoremap <C-l> <C-w>l
 
 
 " Keybindings for movement in insert mode
