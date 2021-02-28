@@ -1,4 +1,4 @@
-### Things to fix / add 
+### Things to fix / add
 
-- [ ] `colors-solarized` conflicts with spell highlight 
-- [ ] copy/past 
+- [ ] `colors-solarized` conflicts with spell highlight
+- [ ] copy/past

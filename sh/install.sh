@@ -6,7 +6,7 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 
-${SUDO} apt-get install -y zsh guake ufw geany 
+${SUDO} apt-get install -y zsh guake ufw geany
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
