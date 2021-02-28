@@ -18,3 +18,8 @@ solarized_termtrans
 termcolors
 colors
 color
+config
+plugin
+nerdtree
+filereadable
+elseif

@@ -19,7 +19,7 @@ try
 	source ~/.vim/config/helper.vim
 	source ~/.vim/config/main.vim
 
-	"" Bellow line for debugining purpose only, On demand
+	"" Bellow line for debugging purpose only, On demand
 	"source ~/.vim/config/plugin/001-pathogen.vim
 	for f in split(glob('~/.vim/config/color/*.vim'), '\n')
 		if (filereadable(f))
@@ -38,7 +38,7 @@ try
 		endif
 	endfor
 
-	" (4) VIM distributed plugins configuration override(load into 0-9,az,AZ order)
+	" (4) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
 	for f in split(glob('~/.vim/config/plugin/*.vim'), '\n')
 		" if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 ) elseif(stridx(f, 'pathogen.vim') == -1)
 		if (filereadable(f))
@@ -62,10 +62,10 @@ try
 catch /.*/
 	call VimErrorCaught()
 catch /^\d\+$/
-	echo  "\nError =========@START\n\n"
+	echo  "\n Error =========@START\n\n"
 	echo "Caught error: " . v:exception
 	echo "Caught error: " . v:errmsg
-	echo  "\nError =========@END\n"
+	echo  "\n Error =========@END\n"
 finally
 	" This is for fail back.
 	" echo "Finally block called."
