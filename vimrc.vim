@@ -1,5 +1,4 @@
 set runtimepath+=~/.vim
-
 function! VimErrorCaught()
 	if v:exception != ""
 		echo "\n" . 'Caught "' . v:exception . '" in ' . v:throwpoint ."\n"
