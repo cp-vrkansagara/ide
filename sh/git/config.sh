@@ -15,7 +15,7 @@ git config --global diff.external "/usr/bin/meld"
 
 git config --global user.name "Vallabh Kansagara"
 git config --global help.autocorrect 0
-git config --global credential.help store
+git config --global credential.helper store
 
 git config --global alias.ls 'config --global -l'
 git config --global alias.ll 'log --oneline'

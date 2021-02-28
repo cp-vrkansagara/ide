@@ -87,12 +87,6 @@ let bash_is_sh=1
 
 " Repair weird terminal/vim settings
 set backspace=start,eol,indent
-<<<<<<< HEAD
-=======
-
-" Remember settings between sessions
-set viminfo='400,f1,"500,h,/100,:100,<500
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 
 " Switch CWD to the directory of the open buffer:
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -100,19 +94,12 @@ map <leader>tmp :cd /tmp<cr>:pwd<cr>
 
 " Keybindings for movement in insert mode
 imap <leader>0 <Esc>I
-<<<<<<< HEAD
 imap <leader>$ <Esc>,
-=======
 imap <leader>$ <Esc>A
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 imap <leader>h <Esc>i
 imap <leader>l <Esc>lli
 imap <leader>j <Esc>lji
 imap <leader>k <Esc>lki
-<<<<<<< HEAD
-=======
-
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 
 " Execute last command over a visual selection
 vnoremap . :norm.<CR>
@@ -136,10 +123,6 @@ noremap <leader>yy "*Y
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
-<<<<<<< HEAD
-=======
-
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 
 " Vim move lime up and down using j and k
 nnoremap <A-j> :m .+1<CR>==
@@ -148,7 +131,3 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-<<<<<<< HEAD
-=======
-
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
