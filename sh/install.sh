@@ -22,6 +22,9 @@ ${SUDO} apt-get install -y xfce4 xfce4-goodies
 echo "Application related stuff..."
 ${SUDO} apt-get install -y git meld vim-gtk ack silversearcher-ag build-essential cmake vim-nox python3-dev
 
+echo "Application Development stuff"
+${SUDO} apt-get install -y libxml2-utils #xmllint
+
 
 ${SUDO} apt-get autoremove
 

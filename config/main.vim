@@ -88,11 +88,9 @@ let bash_is_sh=1
 " Repair weird terminal/vim settings
 set backspace=start,eol,indent
 
-" Remember settings between sessions
-set viminfo='400,f1,"500,h,/100,:100,<500
-
 " Switch CWD to the directory of the open buffer:
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+map <leader>tmp :cd /tmp<cr>:pwd<cr>
 
 " Keybindings for movement in insert mode
 imap <leader>0 <Esc>I
@@ -102,13 +100,8 @@ imap <leader>l <Esc>lli
 imap <leader>j <Esc>lji
 imap <leader>k <Esc>lki
 
-
 " Execute last command over a visual selection
 :vnoremap . :norm.<CR>
-
-" Folding
-" Toggle folding with spacebar instead of za
-"nnoremap <Space> za
 
 " Pasting toggle...
 set pastetoggle=<Ins>

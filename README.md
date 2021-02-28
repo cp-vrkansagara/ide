@@ -42,3 +42,21 @@ Developer User :- If there is vim there is geek.
 #### You can !
 	I would like take issue and pull request regarding this project and love to answer if anything on this.AGG
 
+
+
+#### VIM Helpful Regex
+
+Remove from first character as vim is smart enough to load set and map stuff
+%s/^:// 
+
+View the auto-command with:
+autocmd BufWritePost *
+
+And remove all auto-commands from the previous with:
+:autocmd! BufWritePost *
+
+
+:autocmd BufWritePost * !run_tests.sh <afile>
+
+:autocmd BufWritePost *.vim %s/^:// <afile>
+

@@ -93,9 +93,6 @@ set encoding=utf-8
 " snipMate options
 let g:snips_author = "Vallabh Kansagara"
 
-" Folding
-" Toggle folding with spacebar instead of za
-nnoremap <space> za
 
 " Move line up and down using j and k using alter
 nnoremap <A-j> :m .+1<CR>==

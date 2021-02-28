@@ -18,12 +18,12 @@ function! GotoFile(w)
     endif
 
     " check exists file.
-    if filereadable(fname)
+    if fileable(fname)
         let fullname = fname
     else
         " try find file with prefix by working directory
         let fullname = getcwd() . '/' . fname
-        if ! filereadable(fullname)
+        if ! fileable(fullname)
             " the last try, using current directory based on file opened.
             let fullname = expand('%:h') . '/' . fname
         endif

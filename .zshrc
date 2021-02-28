@@ -99,6 +99,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"    
+
+# Docker Related stuff #
 # sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # sudo chmod +x /usr/local/bin/docker-compose
 # dc up -dV --build --remove-orphan --force-recreate
@@ -106,12 +108,17 @@ alias dc='docker-compose '
 alias dcb='docker-compose up -dV --build --remove-orphan --force-recreate'
 alias dcu='docker-compose up -dV --remove-orphan --force-recreate'
 alias dcd='docker-compose down'
+
+#File Manager related stuff #
 alias www='cd ~/www'
 alias htdocs='cd ~/htdocs'
 alias gh='cd ~/git'
-
+alias ls='/bin/ls --human-readable --size -1 -S --classify'
+alias ll='/bin/ls -lhtra'
+alias du='/usr/bin/du -sh * | sort -h'
 
 alias ownIt='sudo chown -Rf $USER:$USER '
+alias ownItWithPermission='sudo chmod 0744 -Rf'
 alias myPublicIp='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myAllIp="ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias myIp="echo $(hostname -I | awk '{print $1}')"

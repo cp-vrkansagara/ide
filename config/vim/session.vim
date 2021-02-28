@@ -3,6 +3,9 @@
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Remember settings between sessions
+set viminfo='400,f1,"500,h,/100,:100,<500
+
 " Ref:- https://stackoverflow.com/a/31978241/2627408
 function! MakeSession()
   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
