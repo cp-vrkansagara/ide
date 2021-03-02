@@ -39,6 +39,10 @@ git submodule add -f https://github.com/garbas/vim-snipmate.git bundle/vim-snipm
 git submodule add -f https://github.com/ycm-core/YouCompleteMe.git  bundle/YouCompleteMe.git
 git submodule add -f https://github.com/vim-syntastic/syntastic.git bundle/syntastic.git
 git submodule add -f https://github.com/ycm-core/lsp-examples bundle/lsp-examples.git
+
+git submodule add -f https://github.com/junegunn/goyo.vim bundle/goyo.vim
+git submodule add -f https://github.com/amix/vim-zenroom2 bundle/vim-zenroom2
+
 echo "Bellow line is necessary because it check with recursive dependence"
 git submodule update --init --recursive
 

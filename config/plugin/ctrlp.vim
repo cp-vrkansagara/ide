@@ -2,7 +2,7 @@
 " File name :- ctrlp.vim
 " About:- Active fork of kien/ctrlp.vim—Fuzzy file, buffer, mru, tag, etc finder.
 " Maintainer:- Vallabh Kansagara — @vrkansagara
-" web :-  https://kien.github.io/ctrlp.vim/ 
+" web :-  https://kien.github.io/ctrlp.vim/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Once CtrlP is open:
@@ -36,3 +36,7 @@ let g:ctrlp_use_caching = 1
 "    \ 'AcceptSelection("e")': ['<2-LeftMouse>'],
 "    \ 'AcceptSelection("t")': ['<cr>'],
 "    \ }
+
+let g:ctrlp_max_height = 15
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\vendor|^\bundle'
+

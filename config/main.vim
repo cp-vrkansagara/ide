@@ -117,9 +117,13 @@ set laststatus=2
 set scrolljump=5
 set scrolloff=3
 
-" Yank text to the clipboard easier
+" Yank text to the clipboard easier (y = yank|copy , d = delete|cut, p = paste) (Register
+" *=window, + = linux) - In normal mode, one can use p to paste after the cursor, or P to paste before the cursor.
 noremap <leader>y "*y
 noremap <leader>yy "*Y
+noremap <leader>y "+y
+noremap <leader>yy "+Y
+
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
