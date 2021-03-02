@@ -1,28 +1,38 @@
+" Space conflicts with code folding.
+" This only work with first directory with vim open
+" nnoremap <leader><space> :NERDTreeToggle<cr>
+noremap <leader><space> :call NERDTreeToggleInCurDir()<cr>
+" Direct control key conflicts with different OS (i.e. xfce)
+noremap <A-p> :NERDTreeToggle<cr>
+
+
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
+
+let NERDTreeMinimalUI = 3
+let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers=1
+let NERDTreeDirArrowExpandable = '+'
+let NERDTreeDirArrowCollapsible = '-'
+let NERDTreeIgnore = ['^node_modules$','^.DS_Store$','^.idea$','^.git$','^.coffee$','^vendor$','^bundle$']
+
 " Let alwayse open bookmark with file explore
 let NERDTreeShowBookmarks=1
 
-" Open explorer to the right side
-let g:NERDTreeWinPos = "right"
+" I like clean os structure so moving to .vim directory
+" let g:NERDTreeBookmarksFile="$HOME/.vim/.NERDTreeBookmarks"
 
+if filereadable(".NERDTreeBookmarks")
+    let g:NERDTreeBookmarksFile = ".NERDTreeBookmarks"
+endif
+
+" Open explorer to the right side
+let NERDTreeWinPos = "right"
 
 " Close the pan once file is open
-let g:NERDTreeQuitOnOpen=1
-let g:NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen=3
+let NERDTreeAutoDeleteBuffer = 1
 
-" let g:NERDTreeMinimalUI = 1
-" let g:NERDTreeDirArrows = 1
-
-" let NERDTreeMapOpenInTab='\r'
-" let NERDTreeMapOpenInTab='<ENTER>'
-
-" Space conflicts with code folding.
-" Direct control key conflicts with different OS (i.e. xfce)
-" map <A-p> :NERDTreeToggle<cr>
-" nnoremap <space> :NERDTreeToggle<cr>
-" noremap <space> :call NERDTreeToggleInCurDir()<cr>
-noremap <leader><space> :call NERDTreeToggleInCurDir()<cr>
-map <leader>nb :NERDTreeFromBookmark
-map <leader>nf :NERDTreeFind<cr>
 
 " autocmd FileType nerdtree nmap <buffer> <left> o
 " autocmd FileType nerdtree nmap <buffer> <right> o
@@ -42,9 +52,8 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
 
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
-
+" This function will open NERDTree into current buffer, supper easy for
+" current directory
 function! NERDTreeToggleInCurDir()
 	"If NERDTree is open in the current buffer
 	if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
@@ -58,5 +67,4 @@ function! NERDTreeToggleInCurDir()
 	endif
 endfunction
 
-let g:NERDTreeIgnore = ['^node_modules$','^.DS_Store$','^.idea$','^.git$','^.coffee$','^vendor$','^bundle$']
 

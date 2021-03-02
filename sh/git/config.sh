@@ -2,7 +2,11 @@
 set -e
 
 CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
+BASEDIR=$(dirname "$0")
 
+cd $BASEDIR
+# Run script to local directory
+echo "Current directory is $(pwd)"
 
 echo "Git configuration started on ${CURRENT_DATE}"
 # Git config list
@@ -50,6 +54,11 @@ git config --global alias.meCommit 'rev-list --count'
 git config --global alias.gc 'gc --prune=now --aggressive'
 
 git config --global alias.work 'config --global user.email vallabh.kansagara@commercepundit.com'
-git config --global alias.personal 'config --global user.email vrkansagara@gmail.com'
+git config --global alias.personal 'config user.email vrkansagara@gmail.com'
+git config --global alias.personal 'config user.email vrkansagara@gmail.com'
 
-
+git config --global core.excludesFile '~/.gitignore'
+echo "Copying global .gitignore file for current user"
+# Tee command append to file multiple time TODO
+cat .gitignore | tee -a ~/.gitignore-global > /dev/null
+sed 's/\r//' ~/.gitignore-global | sort -u > ~/.gitignore
