@@ -1,12 +1,5 @@
-
 " Let alwayse open bookmark with file explore
 let NERDTreeShowBookmarks=1
-" let g:NERDTreeBookmarksFile = "$HOME/.vim/.NERDTreeBookmarks"
-if !empty($NERDTREE_BOOKMARKS)
-    if filereadable($NERDTREE_BOOKMARKS)
-        let g:NERDTreeBookmarksFile = $NERDTREE_BOOKMARKS
-    endif
-endif
 
 " Open explorer to the right side
 let g:NERDTreeWinPos = "right"
@@ -64,3 +57,6 @@ function! NERDTreeToggleInCurDir()
 		endif
 	endif
 endfunction
+
+let g:NERDTreeIgnore = ['^node_modules$','^.DS_Store$','^.idea$','^.git$','^.coffee$','^vendor$','^bundle$']
+
