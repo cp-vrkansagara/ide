@@ -14,7 +14,8 @@ let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers=1
 let NERDTreeDirArrowExpandable = '+'
 let NERDTreeDirArrowCollapsible = '-'
-let NERDTreeIgnore = ['^node_modules$','^.DS_Store$','^.idea$','^.git$','^.coffee$','^vendor$','^bundle$']
+
+let NERDTreeIgnore = ['.netrwhist','.NERDTreeBookmarks','^node_modules$','^.DS_Store$','^.idea$','^.git$','^.coffee$','^vendor$','^bundle$']
 
 " Let alwayse open bookmark with file explore
 let NERDTreeShowBookmarks=1

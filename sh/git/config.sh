@@ -60,5 +60,5 @@ git config --global alias.personal 'config user.email vrkansagara@gmail.com'
 git config --global core.excludesFile '~/.gitignore'
 echo "Copying global .gitignore file for current user"
 # Tee command append to file multiple time TODO
-cat .gitignore | tee -a ~/.gitignore-global > /dev/null
-sed 's/\r//' ~/.gitignore-global | sort -u > ~/.gitignore
+cat .gitignore | tee -a /tmp/.gitignore-global > /dev/null
+sed 's/\r//' /tmp/.gitignore-global | sort -u > ~/.gitignore
