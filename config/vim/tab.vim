@@ -4,7 +4,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " like <leader>n one new tab
-:nnoremap <leader>t :tabnew<cr>
+nnoremap <leader>t :tabnew<cr>
 
 
 " Tab options (as in Vim GUI Tabs)
@@ -16,24 +16,24 @@
 " :imap <C-t> <ESC>:tabnew<CR>
 " :nmap <C-w> :tabclose<CR>
 " :imap <C-w> <ESC>:tabclose<CR>
-:nmap <C-Left> :tabp<CR>
-:imap <C-Left> <ESC>:tabp<CR>
-:nmap <C-Right> :tabn<CR>
-:imap <C-Right> <ESC>:tabn<CR>
-:nmap <C-Up> :tabfirst<CR>
-:imap <C-Up> <ESC>:tabfirst<CR>
-:nmap <C-Down> :tablast<CR>
-:imap <C-Down> <ESC>:tablast<CR>
+nmap <C-Left> :tabp<CR>
+imap <C-Left> <ESC>:tabp<CR>
+nmap <C-Right> :tabn<CR>
+imap <C-Right> <ESC>:tabn<CR>
+nmap <C-Up> :tabfirst<CR>
+imap <C-Up> <ESC>:tabfirst<CR>
+nmap <C-Down> :tablast<CR>
+imap <C-Down> <ESC>:tablast<CR>
 
 " In tty right and left key will not work
-:nmap <leader>tp :tabp<CR>
-:imap <leader>tp <ESC>:tabp<CR>
-:nmap <leader>tn :tabn<CR>
-:imap <leader>tn <ESC>:tabn<CR>
-:nmap <leader>tf :tabfirst<CR>
-:imap <leader>tf <ESC>:tabfirst<CR>
-:nmap <leader>tl :tablast<CR>
-:imap <leader>tl <ESC>:tablast<CR>
+nmap <leader>tp :tabp<CR>
+imap <leader>tp <ESC>:tabp<CR>
+nmap <leader>tn :tabn<CR>
+imap <leader>tn <ESC>:tabn<CR>
+nmap <leader>tf :tabfirst<CR>
+imap <leader>tf <ESC>:tabfirst<CR>
+nmap <leader>tl :tablast<CR>
+imap <leader>tl <ESC>:tablast<CR>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
