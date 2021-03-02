@@ -131,3 +131,19 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+
+" nnoremap <F5> yi":let @/ = @"<CR>
+" Set column size to 80 character (standard size)
+" " Make it obvious where 80 characters is ( Reformat it:gq)
+" set textwidth=80
+" set colorcolumn=+1
+" au BufRead,BufNewFile * setlocal textwidth=80
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+

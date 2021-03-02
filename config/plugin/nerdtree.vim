@@ -1,7 +1,7 @@
 
 " Let alwayse open bookmark with file explore
 let NERDTreeShowBookmarks=1
-let g:NERDTreeBookmarksFile = "$HOME/.vim/.NERDTreeBookmarks"
+" let g:NERDTreeBookmarksFile = "$HOME/.vim/.NERDTreeBookmarks"
 if !empty($NERDTREE_BOOKMARKS)
     if filereadable($NERDTREE_BOOKMARKS)
         let g:NERDTreeBookmarksFile = $NERDTREE_BOOKMARKS
@@ -14,6 +14,10 @@ let g:NERDTreeWinPos = "right"
 
 " Close the pan once file is open
 let g:NERDTreeQuitOnOpen=1
+let g:NERDTreeAutoDeleteBuffer = 1
+
+" let g:NERDTreeMinimalUI = 1
+" let g:NERDTreeDirArrows = 1
 
 " let NERDTreeMapOpenInTab='\r'
 " let NERDTreeMapOpenInTab='<ENTER>'

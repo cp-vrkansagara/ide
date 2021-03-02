@@ -24,11 +24,7 @@ nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
 
 " The escape key is a long ways away. This maps it to the sequence 'kj'
 map! kj <Esc>
-<<<<<<< HEAD
 inoremap kj <Esc>
-=======
-:inoremap kj <Esc>
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 
 " Turn off modelines
 set modelines=0
@@ -50,11 +46,7 @@ set scrolloff=3
 " Turn on "very magic" regex status by default for searches.
 " :he /magic for more information
 nnoremap / /\v
-<<<<<<< HEAD
 vnoremap / /\v
-=======
-:vnoremap / /\v
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 
 " Highlight Searches
 set highlight=lub
@@ -101,12 +93,9 @@ set encoding=utf-8
 " snipMate options
 let g:snips_author = "Vallabh Kansagara"
 
-<<<<<<< HEAD
-=======
 " Folding
 " Toggle folding with spacebar instead of za
 nnoremap <space> za
->>>>>>> 275342d72b6b90c5b96e3a0e7fbb31b62b1f9757
 
 " Move line up and down using j and k using alter
 nnoremap <A-j> :m .+1<CR>==

@@ -12,3 +12,4 @@ function! FilterToNewWindow(script)
 endfunction
 
 
+nnoremap gX :silent :execute "!xdg-open" expand('%:p:h') . "/" . expand("<cfile>") " &"<cr>

@@ -29,3 +29,6 @@ if exists("spellfile")
 	autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 	autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_gb
 endif
+
+" Autocomplete with dictionary words when spell check is on
+set complete+=kspell
