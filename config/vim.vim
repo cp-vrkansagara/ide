@@ -5,27 +5,6 @@ set shortmess +=I
 " Calling quit will prompt you to save unsaved buffers anyways.
 set hidden
 
-" " Via https://twitter.com/vimtips/status/208241766816677889
-" " Allows all operations to work with system clipboard
-" set clipboard=unnamed
-" Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
-noremap <leader>y "*y
-noremap <leader>p "*p
-noremap <leader>Y "+y
-noremap <leader>P "+p
-
-nmap <leader>v :tabedit $MYVIMRC<CR>
-nmap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
-
-" Reload vimr configuration file
-" nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
-
-" The escape key is a long ways away. This maps it to the sequence 'kj'
-map! kj <Esc>
-inoremap kj <Esc>
-
 " Turn off modelines
 set modelines=0
 
@@ -104,11 +83,6 @@ inoremap <A-j> <Esc>:m .+j<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-
-nnoremap <Up> :echomsg "use k"<cr>
-nnoremap <Down> :echomsg "use j"<cr>
-nnoremap <Left> :echomsg "use h"<cr>
-nnoremap <Right> :echomsg "use l"<cr>
 
 augroup scroll
     au!

@@ -18,6 +18,23 @@ inoremap kj <Esc>
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 
+nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
+
+" Reload vimr configuration file
+" nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
+
+" The escape key is a long ways away. This maps it to the sequence 'kj'
+map! kj <Esc>
+inoremap kj <Esc>
+
+" get off my lawn
+nnoremap <up> :echoe "use k"<cr>
+nnoremap <down> :echoe "use j"<cr>
+nnoremap <left> :echoe "use h"<cr>
+nnoremap <right> :echoe "use l"<cr>
+
 " vimcasts #24
 " Auto-reload vimrc on save
 if has("autocmd")
@@ -45,6 +62,17 @@ nnoremap <leader>w :w<cr>
 " w! Save current file with sudo access
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+
+" " Via https://twitter.com/vimtips/status/208241766816677889
+" " Allows all operations to work with system clipboard
+" set clipboard=unnamed
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
+noremap <leader>y "*y
+noremap <leader>p "*p
+noremap <leader>Y "+y
+noremap <leader>P "+p
 
 " Use UTF-8 encoding
 set encoding=utf-8
@@ -143,11 +171,3 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " set textwidth=80
 " set colorcolumn=+1
 " au BufRead,BufNewFile * setlocal textwidth=80
-
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
-

@@ -54,7 +54,7 @@ git config --global alias.meCommit 'rev-list --count'
 git config --global alias.gc 'gc --prune=now --aggressive'
 
 git config --global alias.work 'config --global user.email vallabh.kansagara@commercepundit.com'
-git config --global alias.personal 'config user.email vrkansagara@gmail.com'
+git config --global alias.workLocal 'config user.email vallabh.kansagara@commercepundit.com'
 git config --global alias.personal 'config user.email vrkansagara@gmail.com'
 
 git config --global core.excludesFile '~/.gitignore'

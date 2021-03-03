@@ -71,3 +71,13 @@ endfunction
 " nnoremap gf :call GotoFile("")<CR>
 " nnoremap <C-W>f :call GotoFile("new")<CR>
 " nnoremap <C-W><C-F> :call GotoFile("new")<CR>
+"
+function! s:VSetSearch()
+  let temp = @@
+  norm! gvy
+  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  let @@ = temp
+endfunction
+" Vim pr0n: Visual search mappings(  search for the word under the cursor, press *=next,#=previous )
+vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
+vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>

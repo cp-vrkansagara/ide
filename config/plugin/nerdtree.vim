@@ -20,9 +20,7 @@ let NERDTreeIgnore = ['.netrwhist','.NERDTreeBookmarks','^node_modules$','^.DS_S
 " Let alwayse open bookmark with file explore
 let NERDTreeShowBookmarks=1
 
-" I like clean os structure so moving to .vim directory
-" let g:NERDTreeBookmarksFile="$HOME/.vim/.NERDTreeBookmarks"
-
+" This will look for the opening of vim directory(git ignore global)
 if filereadable(".NERDTreeBookmarks")
     let g:NERDTreeBookmarksFile = ".NERDTreeBookmarks"
 endif
