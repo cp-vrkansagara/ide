@@ -27,11 +27,11 @@ Linux User :- If there is terminal there is a way.
 Developer User :- If there is vim there is geek.
 ```
 
-#### Awasome doment for this project
+#### Awesome awesome for this project
 
 - Shortcuts
 - Debug information
-- Do's and Don's
+- Do's and Dont's
 - Developer use case
 - Todo / Fix
 - New feature / Removal of things
@@ -44,17 +44,5 @@ Developer User :- If there is vim there is geek.
 
     I would like take issue and pull request regarding this project and love to answer if anything on this.AGG
 
-#### VIM Helpful Regex
-
-Remove from first character as vim is smart enough to load set and map stuff
-%s/^://
-
-View the auto-command with:
-autocmd BufWritePost \*
-
-And remove all auto-commands from the previous with:
-:autocmd! BufWritePost \*
-
-:autocmd BufWritePost \* !run_tests.sh <afile>
-
-:autocmd BufWritePost \*.vim %s/^:// <afile>
+#### Do's and dont's
+- Do not use `CTRL+S` this is standard terminal suspension command (Press `CTRL+Q` will resume)
