@@ -20,14 +20,22 @@ autocmd BufWritePost <buffer> :call OnFileSave()
 
 function! OnFileSave()
 	let ext = &filetype
+	let file_name = expand('%:t:r')
+	let extension = expand('%:e')
 
+	" Remove last word of each line ( %s/\s*\w\+\s*$// )
+	" Remove last character of each line ( %s/.\{1}$// )
 	if ext == 'vim'
 		" Remove : from every first line
 		silent! %s/^\s*://
-		" Remove white space from file
-		silent! %s/\s\+$//e
-	elseif ext == 'php'
+
+	elseif extension == 'php'
+
 		" Remove closing tag(?>) from every *.php file only TODO
+		" PHP Performance
+		silent! %s/\"\([^"]*\)\"/'\1'/g
+		" silent! %s/\s\+$//g
+
 	endif
 
 	" Remove white space from all file type

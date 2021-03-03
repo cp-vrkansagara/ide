@@ -116,6 +116,9 @@ let bash_is_sh=1
 " Repair weird terminal/vim settings
 set backspace=start,eol,indent
 
+" VIM Disable Automatic Newline At End Of File
+set nofixendofline
+
 " Switch CWD to the directory of the open buffer:
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 map <leader>tmp :cd /tmp<cr>:pwd<cr>

@@ -27,6 +27,7 @@ map <C-S-f>f :CtrlPMixed<CR>
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>. :CtrlPTag<cr>
 
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_lazy_update = 1

@@ -23,12 +23,16 @@ else
 fi
 
 echo "Creating tags for directory '$dir' using alias '$name'"
-cd $dir
-exec ctags-exuberant -f ~/.vim/tags/$name \
--h ".php" -R \
---exclude="\.svn" \
---totals=yes \
---tag-relative=yes \
---fields=+afkst \
---PHP-kinds=+cf
+cd $dir/.git
+rm -rf $dir/.git/tags
+# exec ctags-exuberant -f ~/.vim/tags/$name \
+#--regex-php=/regex/tag-name/tag-kind/flags
+exec ctags-exuberant -f tags \
+	-h \".php\" -R \
+	--exclude=\"\.svn\" \
+	--totals=yes \
+	--tag-relative=yes \
+	--PHP-kinds=+cfpd \
+	--regex-PHP='/(public\s+|static\s+|protected\s+|private\s+)\$([^     =]+)/\2/p/'
+
 echo "ctag generation done. [DONE]"
