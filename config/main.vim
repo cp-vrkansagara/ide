@@ -52,8 +52,15 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 
 " like <leader>q quite current file
 nnoremap <leader>q :q<cr>
-" like <leader>Q quite force fully
+
+" like <leader>Q quite gresss force fully
 nnoremap <leader>Q :qa<cr>
+
+" Close current buffer (DANGER)
+" nnoremap <leader>bd :bufdo bd<cr>
+" Close all buffers (DANGER)
+" nnoremap <leader>ba :bufdo bd!<cr>
+
 
 " Open clast closing buffer into split
 nnoremap <leader>T :call LastWindow()<cr>

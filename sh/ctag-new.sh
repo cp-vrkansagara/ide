@@ -30,14 +30,21 @@ rm -rf $dir/.git/tags
 exec ctags-exuberant -f tags \
 	--languages=PHP \
 	-R \
-	--extra=+f \
-	--exclude="\.svn" \
-	--exclude="\.git/" \
-	--exclude="vendor/" \
 	--totals=yes \
 	--tag-relative=yes \
+	--extra=+f \
 	--fields=+aimS \
-	# --PHP-kinds=+cfintv
-	--PHP-kinds=+cfiv
+	--PHP-kinds=+cfiv \
+	--exclude="\.svn" \
+	--exclude="\.git/" \
+	--exclude="node_modules/" \
+	--exclude="\DATA" \
+	--exclude="\composer" \
+	--exclude="\composer.phar" \
+	--regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\/f/' \
+	--regex-PHP='/abstract class ([^ ]*)/\/c/' \
+	--regex-PHP='/interface ([^ ]*)/\/c/' \
+	--regex-PHP='/get([a-z|A-Z|0-9]+)Attribute/\1/' \
+	--regex-PHP='/scope([a-z|A-Z|0-9]+)/\1/'
 
 echo "ctag generation done. [DONE]"
