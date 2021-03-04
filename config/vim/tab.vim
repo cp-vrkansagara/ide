@@ -38,3 +38,14 @@ imap <leader>tl <ESC>:tablast<CR>
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+
+" Open last closed tab into split for fast navigation
+augroup bufclosetrack
+  au!
+  autocmd WinLeave * let g:lastWinName = @%
+augroup END
+function! LastWindow()
+  exe "split " . g:lastWinName
+endfunction
+" command -nargs=0 LastWindow call LastWindow()
+nnoremap <leader>T :call LastWindow()<cr>

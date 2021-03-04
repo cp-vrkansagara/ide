@@ -55,6 +55,9 @@ nnoremap <leader>q :q<cr>
 " like <leader>Q quite force fully
 nnoremap <leader>Q :qa<cr>
 
+" Open clast closing buffer into split
+nnoremap <leader>T :call LastWindow()<cr>
+
 " "sudo" save: current file.
 cmap w!! w !sudo tee % >/dev/null
 nnoremap <leader>w :w<cr>

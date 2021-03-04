@@ -81,3 +81,5 @@ endfunction
 " Vim pr0n: Visual search mappings(  search for the word under the cursor, press *=next,#=previous )
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
+
+
