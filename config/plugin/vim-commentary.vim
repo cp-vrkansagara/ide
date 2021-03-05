@@ -12,6 +12,7 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType php setlocal commentstring=\/\/\%s
 
 " Comment which having # 
+autocmd FileType crontab setlocal commentstring=#\ %s
 autocmd FileType apache setlocal commentstring=#\ %s
 autocmd FileType zsh setlocal commentstring=#\ %s
 autocmd FileType dockerfile setlocal commentstring=#\ %s

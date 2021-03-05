@@ -57,9 +57,9 @@ nnoremap <leader>q :q<cr>
 nnoremap <leader>Q :qa<cr>
 
 " Close current buffer (DANGER)
-" nnoremap <leader>bd :bufdo bd<cr>
+nnoremap <leader>bd :bufdo bd
 " Close all buffers (DANGER)
-" nnoremap <leader>ba :bufdo bd!<cr>
+nnoremap <leader>ba :bufdo bd!
 
 
 " Open clast closing buffer into split
