@@ -23,16 +23,28 @@ else
 fi
 
 echo "Creating tags for directory '$dir' using alias '$name'"
-cd $dir/.git
-rm -rf $dir/.git/tags
-# exec ctags-exuberant -f ~/.vim/tags/$name \
-#--regex-php=/regex/tag-name/tag-kind/flags
-exec ctags-exuberant -f tags \
-	-h \".php\" -R \
-	--exclude=\"\.svn\" \
+
+"Move to $dir is essential because ctags not accept the directory path"
+cd $dir
+
+exec ctags-exuberant -f $dir/$name \
+	--languages=PHP \
+	-R \
 	--totals=yes \
 	--tag-relative=yes \
-	--PHP-kinds=+cfpd \
-	--regex-PHP='/(public\s+|static\s+|protected\s+|private\s+)\$([^     =]+)/\2/p/'
+	--extra=+f \
+	--fields=+aimS \
+	--PHP-kinds=+cfiv \
+	--exclude="\.svn" \
+	--exclude="\.git/" \
+	--exclude="node_modules/" \
+	--exclude="\DATA" \
+	--exclude="\composer" \
+	--exclude="\composer.phar" \
+	--regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\/f/' \
+	--regex-PHP='/abstract class ([^ ]*)/\/c/' \
+	--regex-PHP='/interface ([^ ]*)/\/c/' \
+	--regex-PHP='/get([a-z|A-Z|0-9]+)Attribute/\1/' \
+	--regex-PHP='/scope([a-z|A-Z|0-9]+)/\1/'
 
 echo "ctag generation done. [DONE]"

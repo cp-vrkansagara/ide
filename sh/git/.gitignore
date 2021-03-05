@@ -25,4 +25,4 @@ id_rsa.pub
 # Ignore tags
 .git/tags
 ./tags
-
+tags
