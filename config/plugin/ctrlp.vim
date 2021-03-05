@@ -29,6 +29,7 @@ map <C-S-f>f :CtrlPMixed<CR>
 map <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>. :CtrlPTag<cr>
 
+" Seach recursively from the ancestor containing .git
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_lazy_update = 1
 let g:ctrlp_use_caching = 1

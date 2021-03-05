@@ -24,7 +24,8 @@ fi
 
 echo "Creating tags for directory '$dir' using alias '$name'"
 
-"Move to $dir is essential because ctags not accept the directory path"
+# echo "Move to '$dir' is essential because ctags not accept the directory path"
+
 cd $dir
 
 exec ctags-exuberant -f $dir/$name \
@@ -32,15 +33,19 @@ exec ctags-exuberant -f $dir/$name \
 	-R \
 	--totals=yes \
 	--tag-relative=yes \
-	--extra=+f \
 	--fields=+aimS \
-	--PHP-kinds=+cfiv \
+	--extra=+f \
+	--PHP-kinds=+cdfiv \
 	--exclude="\.svn" \
 	--exclude="\.git/" \
 	--exclude="node_modules/" \
 	--exclude="\DATA" \
 	--exclude="\composer" \
 	--exclude="\composer.phar" \
+	--exclude='*.js' \
+	--exclude='*.min.js' \
+	--exclude='*.phtml' \
+	--exclude='*.blade.php' \
 	--regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\/f/' \
 	--regex-PHP='/abstract class ([^ ]*)/\/c/' \
 	--regex-PHP='/interface ([^ ]*)/\/c/' \
