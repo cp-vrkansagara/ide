@@ -47,5 +47,6 @@ augroup END
 function! LastWindow()
   exe "split " . g:lastWinName
 endfunction
+
 " command -nargs=0 LastWindow call LastWindow()
 nnoremap <leader>T :call LastWindow()<cr>

@@ -53,17 +53,8 @@ nnoremap <leader>q :q<cr>
 " like <leader>Q quite gresss force fully
 nnoremap <leader>Q :qa<cr>
 
-" Close current buffer (DANGER)
-nnoremap <leader>bd :bufdo bd
-" Close all buffers (DANGER)
-nnoremap <leader>ba :bufdo bd!
-
-
-" Open clast closing buffer into split
-nnoremap <leader>T :call LastWindow()<cr>
-
 " "sudo" save: current file.
-cmap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
 nnoremap <leader>w :w<cr>
 
 " w! Save current file with sudo access
