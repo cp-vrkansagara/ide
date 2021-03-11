@@ -28,6 +28,9 @@ function! OnFileSave()
 	if ext == 'vim'
 		" Remove : from every first line
 		silent! %s/^\s*://
+		silent! %s/^map/nnoremap/
+		silent! %s/^nmap/nnoremap/
+		silent! %s/^imap/inoremap/
 
 	elseif extension == 'php'
 

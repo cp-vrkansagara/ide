@@ -18,6 +18,6 @@ if has("gui_macvim")
 	map <M-Esc>[65~ <S-MouseUp>
 	map! <M-Esc>[65~ <S-MouseUp>
 else
-	set guifont=RobotoMonoForPowerline-Medium:h14
-	set go=agimt
+"	set guifont=RobotoMonoForPowerline-Medium:h14
+"	set go=agimt
 endif

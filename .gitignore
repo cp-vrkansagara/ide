@@ -1,3 +1,4 @@
+
 #vim specific swap
 *~
 *.swp
@@ -5,16 +6,6 @@ tmp/
 
 #if any log(s)
 *.log
-#Directory specifi
-tags/
-.vim_runtime
-tmp/
 
 # ide related
-.idea/
-.DS_Store
-
-.netrwhist
 bundle/
-.NERDTreeBookmarks
-

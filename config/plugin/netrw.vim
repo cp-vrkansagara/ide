@@ -15,7 +15,7 @@
 let g:netrw_home=$HOME.'/vim/tmp'
 
 " Map ,n to open netrw in the current working directory
-" ":map <Leader>n :edit .<CR>
+" nnoremap <Leader>n :edit .<CR>
 
 " hide netrw top message
 let g:netrw_banner=0

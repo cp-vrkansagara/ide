@@ -26,3 +26,7 @@ id_rsa.pub
 .git/tags
 ./tags
 tags
+
+.netrwhist
+.NERDTreeBookmarks
+

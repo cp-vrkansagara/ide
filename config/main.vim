@@ -12,22 +12,19 @@ endw
 set timeout ttimeoutlen=50
 
 " The escape key is a long ways away. This maps it to the sequence 'kj'
-map! kj <Esc>
+nnoremap kj <Esc>
 inoremap kj <Esc>
 
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 
-nmap <leader>v :tabedit $MYVIMRC<CR>
-nmap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
+nnoremap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
 
 " Reload vimr configuration file
 " nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
 
-" The escape key is a long ways away. This maps it to the sequence 'kj'
-map! kj <Esc>
-inoremap kj <Esc>
 
 " get off my lawn
 nnoremap <up> :echoe "use k"<cr>
@@ -44,8 +41,8 @@ if has("autocmd")
 endif
 
 " Load vimrc in new tab with leader-v
-nmap <leader>v :tabedit $MYVIMRC<CR>
-nmap <leader>my :tabedit ~/.vim/config/main.vim<CR>
+nnoremap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader>my :tabedit ~/.vim/config/main.vim<CR>
 
 " Reload vimr configuration file
 nnoremap <leader>r :source $MYVIMRC<CR>
@@ -130,17 +127,17 @@ set backspace=start,eol,indent
 set nofixendofline
 
 " Switch CWD to the directory of the open buffer:
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-map <leader>tmp :cd /tmp<cr>:pwd<cr>
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>tmp :cd /tmp<cr>:pwd<cr>
 
 " Keybindings for movement in insert mode
-imap <leader>0 <Esc>I
-imap <leader>$ <Esc>,
-imap <leader>$ <Esc>A
-imap <leader>h <Esc>i
-imap <leader>l <Esc>lli
-imap <leader>j <Esc>lji
-imap <leader>k <Esc>lki
+inoremap <leader>0 <Esc>I
+inoremap <leader>$ <Esc>,
+inoremap <leader>$ <Esc>A
+inoremap <leader>h <Esc>i
+inoremap <leader>l <Esc>lli
+inoremap <leader>j <Esc>lji
+inoremap <leader>k <Esc>lki
 
 " Execute last command over a visual selection
 vnoremap . :norm.<CR>

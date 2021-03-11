@@ -29,8 +29,8 @@ vnoremap / /\v
 
 " Highlight Searches
 set highlight=lub
-map <leader>s set hlsearch<CR>
-map <leader>S set nohlsearch<CR>
+nnoremap <leader>s set hlsearch<CR>
+nnoremap <leader>S set nohlsearch<CR>
 set incsearch
 set showmatch
 
@@ -48,12 +48,12 @@ nnoremap <C-l> <C-w>l
 
 
 " Keybindings for movement in insert mode
-imap <leader>0 <Esc>I
-imap <leader>$ <Esc>A
-imap <leader>h <Esc>i
-imap <leader>j <Esc>lji
-imap <leader>l <Esc>lli
-imap <leader>k <Esc>lki
+inoremap <leader>0 <Esc>I
+inoremap <leader>$ <Esc>A
+inoremap <leader>h <Esc>i
+inoremap <leader>j <Esc>lji
+inoremap <leader>l <Esc>lli
+inoremap <leader>k <Esc>lki
 
 " Allow better terminal/mouse integration
 set mousemodel=extend

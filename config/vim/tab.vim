@@ -16,28 +16,28 @@ nnoremap <leader>t :tabnew<cr>
 " :imap <C-t> <ESC>:tabnew<CR>
 " :nmap <C-w> :tabclose<CR>
 " :imap <C-w> <ESC>:tabclose<CR>
-nmap <C-Left> :tabp<CR>
-imap <C-Left> <ESC>:tabp<CR>
-nmap <C-Right> :tabn<CR>
-imap <C-Right> <ESC>:tabn<CR>
-nmap <C-Up> :tabfirst<CR>
-imap <C-Up> <ESC>:tabfirst<CR>
-nmap <C-Down> :tablast<CR>
-imap <C-Down> <ESC>:tablast<CR>
+nnoremap <C-Left> :tabp<CR>
+inoremap <C-Left> <ESC>:tabp<CR>
+nnoremap <C-Right> :tabn<CR>
+inoremap <C-Right> <ESC>:tabn<CR>
+nnoremap <C-Up> :tabfirst<CR>
+inoremap <C-Up> <ESC>:tabfirst<CR>
+nnoremap <C-Down> :tablast<CR>
+inoremap <C-Down> <ESC>:tablast<CR>
 
 " In tty right and left key will not work
-nmap <leader>tp :tabp<CR>
-imap <leader>tp <ESC>:tabp<CR>
-nmap <leader>tn :tabn<CR>
-imap <leader>tn <ESC>:tabn<CR>
-nmap <leader>tf :tabfirst<CR>
-imap <leader>tf <ESC>:tabfirst<CR>
-nmap <leader>tl :tablast<CR>
-imap <leader>tl <ESC>:tablast<CR>
+nnoremap <leader>tp :tabp<CR>
+inoremap <leader>tp <ESC>:tabp<CR>
+nnoremap <leader>tn :tabn<CR>
+inoremap <leader>tn <ESC>:tabn<CR>
+nnoremap <leader>tf :tabfirst<CR>
+inoremap <leader>tf <ESC>:tabfirst<CR>
+nnoremap <leader>tl :tablast<CR>
+inoremap <leader>tl <ESC>:tablast<CR>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+nnoremap <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
 " Open last closed tab into split for fast navigation
 augroup bufclosetrack
