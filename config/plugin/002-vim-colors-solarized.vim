@@ -18,12 +18,6 @@ syntax enable
 
 " First line ensures we can have full spectrum of colors
 if has('gui_running') || &term =='linux'
-    set background=dark
-else
-    set background=light
-endif
-
-if &term == "linux"
     " colorscheme vallabh
     " colorscheme default
 	set background=dark
