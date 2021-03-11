@@ -18,13 +18,12 @@ syntax enable
 
 " First line ensures we can have full spectrum of colors
 if has('gui_running') || &term =='linux'
-    " colorscheme vallabh
-    " colorscheme default
 	set background=dark
-    colorscheme peaksea
+	colorscheme atom-dark
 else
     let g:solarized_termcolors=256
     set t_Co=256
+	set background=light
 	" colorscheme peaksea
     colorscheme solarized
 endif
