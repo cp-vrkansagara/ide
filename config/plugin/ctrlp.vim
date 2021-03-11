@@ -42,3 +42,5 @@ let g:ctrlp_use_caching = 1
 let g:ctrlp_max_height = 15
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\vendor|^\bundle'
 
+let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:30,results:30'
+
