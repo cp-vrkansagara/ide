@@ -9,26 +9,50 @@ endif
 
 augroup filetypedetect
 	au! BufRead,BufNewFile *.foo,*.bar,*.baz		setfiletype fooBarBaz
+	au! BufRead,BufNewFile nginx.conf	setfiletype nginx
 augroup END
 
 
-" :autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
+":autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
 autocmd BufWritePre <buffer> call OnFileSave()
 autocmd BufWritePost <buffer> :call OnFileSave()
 
 
 function! OnFileSave()
 	let ext = &filetype
+	let file_name = expand('%:t:r')
+	let extension = expand('%:e')
+
+	" Remove last word of each line ( %s/\s*\w\+\s*$// )
+	" Remove last character of each line ( %s/.\{1}$// )
 	if ext == 'vim'
 		" Remove : from every first line
 		silent! %s/^\s*://
-		" Remove white space from file
-		silent! %s/\s\+$//e
-	elseif ext == 'php'
-		" Remove white space from file
-		silent! %s/\s\+$//e
+		silent! %s/^map/nnoremap/
+		silent! %s/^nmap/nnoremap/
+		silent! %s/^imap/inoremap/
+
+	elseif extension == 'php'
+
+		" Remove closing tag(?>) from every *.php file only TODO
+		" PHP Performance
+		silent! %s/\"\([^"]*\)\"/'\1'/g
+		" silent! %s/\s\+$//g
+
 	endif
+
+	" Remove white space from all file type
+	silent! %s/\s\+$//e
+
 endfunction
 
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+command! FW call FilterToNewWindow('myscript')
+
+function! FilterToNewWindow(script)
+    let TempFile = tempname()
+    let SaveModified = &modified
+    exe 'w ' . TempFile
+    let &modified = SaveModified
+    exe 'split ' . TempFile
+    exe '%! ' . a:script
+endfunction

@@ -1,21 +1,37 @@
-" Open explorer to the right side
-let g:NERDTreeWinPos = "right"
-
-
-" Close the pan once file is open
-let NERDTreeQuitOnOpen=1
-
-" let NERDTreeMapOpenInTab='\r'
-" let NERDTreeMapOpenInTab='<ENTER>'
-
 " Space conflicts with code folding.
-" Direct control key conflicts with different OS (i.e. xfce)
-" map <A-p> :NERDTreeToggle<cr>
-" nnoremap <space> :NERDTreeToggle<cr>
-" noremap <space> :call NERDTreeToggleInCurDir()<cr>
+" This only work with first directory with vim open
+" nnoremap <leader><space> :NERDTreeToggle<cr>
 noremap <leader><space> :call NERDTreeToggleInCurDir()<cr>
+" Direct control key conflicts with different OS (i.e. xfce)
+noremap <A-p> :NERDTreeToggle<cr>
+
+
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
+
+let NERDTreeMinimalUI = 3
+let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers=1
+let NERDTreeDirArrowExpandable = '+'
+let NERDTreeDirArrowCollapsible = '-'
+
+let NERDTreeIgnore = ['.netrwhist','.NERDTreeBookmarks','^node_modules$','^.DS_Store$','^.idea$','^.git$','^.coffee$','^vendor$','^bundle$']
+
+" Let alwayse open bookmark with file explore
+let NERDTreeShowBookmarks=1
+
+" This will look for the opening of vim directory(git ignore global)
+if filereadable(".NERDTreeBookmarks")
+    let g:NERDTreeBookmarksFile = ".NERDTreeBookmarks"
+endif
+
+" Open explorer to the right side
+let NERDTreeWinPos = "right"
+
+" Close the pan once file is open
+let NERDTreeQuitOnOpen=3
+let NERDTreeAutoDeleteBuffer = 1
+
 
 " autocmd FileType nerdtree nmap <buffer> <left> o
 " autocmd FileType nerdtree nmap <buffer> <right> o
@@ -35,9 +51,8 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
 
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
-
+" This function will open NERDTree into current buffer, supper easy for
+" current directory
 function! NERDTreeToggleInCurDir()
 	"If NERDTree is open in the current buffer
 	if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
@@ -50,3 +65,5 @@ function! NERDTreeToggleInCurDir()
 		endif
 	endif
 endfunction
+
+

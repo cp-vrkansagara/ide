@@ -23,12 +23,33 @@ else
 fi
 
 echo "Creating tags for directory '$dir' using alias '$name'"
+
+# echo "Move to '$dir' is essential because ctags not accept the directory path"
+
 cd $dir
-exec ctags-exuberant -f ~/.vim/tags/$name \
--h ".php" -R \
---exclude="\.svn" \
---totals=yes \
---tag-relative=yes \
---fields=+afkst \
---PHP-kinds=+cf
+
+exec ctags-exuberant -f $dir/$name \
+	--languages=PHP \
+	-R \
+	--totals=yes \
+	--tag-relative=yes \
+	--fields=+aimS \
+	--extra=+f \
+	--PHP-kinds=+cdfiv \
+	--exclude="\.svn" \
+	--exclude="\.git/" \
+	--exclude="node_modules/" \
+	--exclude="\DATA" \
+	--exclude="\composer" \
+	--exclude="\composer.phar" \
+	--exclude='*.js' \
+	--exclude='*.min.js' \
+	--exclude='*.phtml' \
+	--exclude='*.blade.php' \
+	--regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\/f/' \
+	--regex-PHP='/abstract class ([^ ]*)/\/c/' \
+	--regex-PHP='/interface ([^ ]*)/\/c/' \
+	--regex-PHP='/get([a-z|A-Z|0-9]+)Attribute/\1/' \
+	--regex-PHP='/scope([a-z|A-Z|0-9]+)/\1/'
+
 echo "ctag generation done. [DONE]"

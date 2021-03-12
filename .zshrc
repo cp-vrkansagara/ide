@@ -98,7 +98,7 @@ fi
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"    
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Docker Related stuff #
 # sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -110,18 +110,19 @@ alias dcu='docker-compose up -dV --remove-orphan --force-recreate'
 alias dcd='docker-compose down'
 
 #File Manager related stuff #
+alias v='vim -u NONE -N -U NONE'
+alias vi='cd ~/.vim && vim'
 alias www='cd ~/www'
 alias htdocs='cd ~/htdocs'
 alias gh='cd ~/git'
 alias ls='/bin/ls --human-readable --size -1 -S --classify'
 alias ll='/bin/ls -lhtra'
-alias du='/usr/bin/du -sh * | sort -h'
+alias du='/usr/bin/du -sh  '
 
 alias ownIt='sudo chown -Rf $USER:$USER '
 alias ownItWithPermission='sudo chmod 0744 -Rf'
 alias myPublicIp='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myAllIp="ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias myIp="echo $(hostname -I | awk '{print $1}')"
-
 alias gWork='git config --global user.email "vallabh.kansagara@commercepundit.com"'
 alias gPersonal='git config --global user.email "vrkansagara@gmail.com"'

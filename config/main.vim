@@ -12,11 +12,25 @@ endw
 set timeout ttimeoutlen=50
 
 " The escape key is a long ways away. This maps it to the sequence 'kj'
-map! kj <Esc>
+nnoremap kj <Esc>
 inoremap kj <Esc>
 
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
+
+nnoremap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
+
+" Reload vimr configuration file
+" nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
+
+
+" get off my lawn
+nnoremap <up> :echoe "use k"<cr>
+nnoremap <down> :echoe "use j"<cr>
+nnoremap <left> :echoe "use h"<cr>
+nnoremap <right> :echoe "use l"<cr>
 
 " vimcasts #24
 " Auto-reload vimrc on save
@@ -27,16 +41,26 @@ if has("autocmd")
 endif
 
 " Load vimrc in new tab with leader-v
-nmap <leader>v :tabedit $MYVIMRC<CR>
-nmap <leader>my :tabedit ~/.vim/config/main.vim<CR>
+nnoremap <leader>v :tabedit $MYVIMRC<CR>
+nnoremap <leader>my :tabedit ~/.vim/config/main.vim<CR>
 
 " Reload vimr configuration file
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 " like <leader>q quite current file
 nnoremap <leader>q :q<cr>
-" like <leader>Q quite force fully
+
+" like <leader>Q quite gresss force fully
 nnoremap <leader>Q :qa<cr>
+
+" Close current buffer (DANGER)
+nnoremap <leader>bd :bufdo bd
+" Close all buffers (DANGER)
+nnoremap <leader>ba :bufdo bd!
+
+
+" Open clast closing buffer into split
+nnoremap <leader>T :call LastWindow()<cr>
 
 " "sudo" save: current file.
 cmap w!! w !sudo tee % >/dev/null
@@ -45,6 +69,17 @@ nnoremap <leader>w :w<cr>
 " w! Save current file with sudo access
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+
+" " Via https://twitter.com/vimtips/status/208241766816677889
+" " Allows all operations to work with system clipboard
+" set clipboard=unnamed
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
+noremap <leader>y "*y
+noremap <leader>p "*p
+noremap <leader>Y "+y
+noremap <leader>P "+p
 
 " Use UTF-8 encoding
 set encoding=utf-8
@@ -88,17 +123,21 @@ let bash_is_sh=1
 " Repair weird terminal/vim settings
 set backspace=start,eol,indent
 
+" VIM Disable Automatic Newline At End Of File
+set nofixendofline
+
 " Switch CWD to the directory of the open buffer:
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-map <leader>tmp :cd /tmp<cr>:pwd<cr>
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>tmp :cd /tmp<cr>:pwd<cr>
 
 " Keybindings for movement in insert mode
-imap <leader>0 <Esc>I
-imap <leader>$ <Esc>,
-imap <leader>h <Esc>i
-imap <leader>l <Esc>lli
-imap <leader>j <Esc>lji
-imap <leader>k <Esc>lki
+inoremap <leader>0 <Esc>I
+inoremap <leader>$ <Esc>,
+inoremap <leader>$ <Esc>A
+inoremap <leader>h <Esc>i
+inoremap <leader>l <Esc>lli
+inoremap <leader>j <Esc>lji
+inoremap <leader>k <Esc>lki
 
 " Execute last command over a visual selection
 vnoremap . :norm.<CR>
@@ -116,14 +155,17 @@ set laststatus=2
 set scrolljump=5
 set scrolloff=3
 
-" Yank text to the clipboard easier
+" Yank text to the clipboard easier (y = yank|copy , d = delete|cut, p = paste) (Register
+" *=window, + = linux) - In normal mode, one can use p to paste after the cursor, or P to paste before the cursor.
 noremap <leader>y "*y
 noremap <leader>yy "*Y
+noremap <leader>y "+y
+noremap <leader>yy "+Y
+
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
 
-                   
 " Vim move lime up and down using j and k
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -133,6 +175,9 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
-
-
-
+" nnoremap <F5> yi":let @/ = @"<CR>
+" Set column size to 80 character (standard size)
+" " Make it obvious where 80 characters is ( Reformat it:gq)
+" set textwidth=80
+" set colorcolumn=+1
+" au BufRead,BufNewFile * setlocal textwidth=80

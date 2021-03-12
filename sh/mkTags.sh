@@ -63,4 +63,5 @@ exec ctags \
 --fields=+aimS \
 # --PHP-kinds=+cfintv
 --PHP-kinds=+cftv
-echo "[DONE]"
+
+echo "Tags creation [DONE]"

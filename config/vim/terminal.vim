@@ -1,2 +1,3 @@
 
-map! <leader>tt :terminal<cr>
+
+nnoremap <leader>to :terminal ++rows=5<cr>

@@ -64,3 +64,15 @@
 [submodule "bundle/lsp-examples.git"]
 	path = bundle/lsp-examples.git
 	url = https://github.com/ycm-core/lsp-examples
+[submodule "bundle/goyo.vim"]
+	path = bundle/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule "bundle/vim-zenroom2"]
+	path = bundle/vim-zenroom2
+	url = https://github.com/amix/vim-zenroom2
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim
+[submodule "bundle/vim-solarized8"]
+	path = bundle/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
