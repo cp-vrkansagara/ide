@@ -8,7 +8,7 @@ set viminfo='400,f1,"500,h,/100,:100,<500
 
 " Ref:- https://stackoverflow.com/a/31978241/2627408
 function! MakeSession()
-  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessiondir = $HOME . "/.vim/data/sessions" . getcwd()
   if (filewritable(b:sessiondir) != 2)
     exe 'silent !mkdir -p ' b:sessiondir
     redraw!
@@ -18,7 +18,7 @@ function! MakeSession()
 endfunction
 
 function! LoadSession()
-  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessiondir = $HOME . "/.vim/data/sessions" . getcwd()
   let b:sessionfile = b:sessiondir . "/session.vim"
   if (filereadable(b:sessionfile))
     exe 'source ' b:sessionfile

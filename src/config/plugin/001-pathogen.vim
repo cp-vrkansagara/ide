@@ -16,11 +16,12 @@
 " path before we re-enable it later in the vimrc.
 filetype off
 
-let s:vim_runtime = expand('<sfile>:p:h')."/../.."
+let s:vim_runtime = expand('<sfile>:p:h')."/../../.."
 " let s:vim_runtime = expand("%:p:h") ."/../"
 
 call pathogen#infect(s:vim_runtime.'/bundle/{}')
-call pathogen#infect(s:vim_runtime.'/src/sources_forked/{}')
-call pathogen#infect(s:vim_runtime.'/src/sources_non_forked/{}')
-call pathogen#infect(s:vim_runtime.'/src/my_plugins/{}')
+
+" Vendor forlder is source of github/third party code
+call pathogen#infect(s:vim_runtime.'/vendor/{}')
+
 call pathogen#helptags()

@@ -8,20 +8,12 @@ function! VimErrorCaught()
 endfunction
 
 try
-	" Import defaults configuration
-	source $HOME/.vim/vendor/vim/defaults81.vim
 
-	"source ~/.vim/config/plugin/001-pathogen.vim
-	"source ~/.vim/config/plugin/002-vim-colors-solarized.vim
-	"source ~/.vim/config/plugin/nerdtree.vim
+	"(Priority = 1) Initialization of vim
+	source ~/.vim/src/main.vim
 
-	" (0) Helper file for general purpose
-	source ~/.vim/config/helper.vim
-	source ~/.vim/config/main.vim
-
-	"" Bellow line for debugging purpose only, On demand
-	"source ~/.vim/config/plugin/001-pathogen.vim
-	for f in split(glob('~/.vim/config/color/*.vim'), '\n')
+	"(Priority = 2) Override VIM built in functionality(load into 0-9,az,AZ order)
+	for f in split(glob('~/.vim/src/config/vim/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f
 		else
@@ -29,18 +21,8 @@ try
 		endif
 	endfor
 
-	" (3) Override VIM built in functionality
-	for f in split(glob('~/.vim/config/vim/*.vim'), '\n')
-		if (filereadable(f))
-			exe 'source' f
-		else
-			throw "File can not able to read " . f
-		endif
-	endfor
-
-	" (4) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
-	for f in split(glob('~/.vim/config/plugin/*.vim'), '\n')
-		" if (filereadable(f) && stridx(f, 'pathogen.vim') == -1 ) elseif(stridx(f, 'pathogen.vim') == -1)
+	"(Priority = 3) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
+	for f in split(glob('~/.vim/src/config/plugin/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f
 		else
@@ -49,7 +31,7 @@ try
 	endfor
 
 	" (5)Language specific settings configuration,Loading order that doesn't matter
-	for f in split(glob('~/.vim/config/language/*.vim'), '\n')
+	for f in split(glob('~/.vim/src/config/language/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f
 		else

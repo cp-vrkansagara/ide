@@ -2,6 +2,7 @@
 " This only work with first directory with vim open
 " nnoremap <leader><space> :NERDTreeToggle<cr>
 noremap <leader><space> :call NERDTreeToggleInCurDir()<cr>
+
 " Direct control key conflicts with different OS (i.e. xfce)
 noremap <A-p> :NERDTreeToggle<cr>
 
