@@ -46,3 +46,8 @@ Developer User :- If there is vim there is geek.
 
 #### Do's and dont's
 - Do not use `CTRL+S` this is standard terminal suspension command (Press `CTRL+Q` will resume)
+
+
+#### VIM Screen
+![image](https://github.com/vrkansagara/ide/blob/master/screenshots/dark.png)
+![image](https://github.com/vrkansagara/ide/blob/master/screenshots/light.png)
