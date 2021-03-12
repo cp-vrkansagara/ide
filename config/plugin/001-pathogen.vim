@@ -11,14 +11,16 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-" let s:vim_runtime = expand('<sfile>:p:h')."/.."
 "
 " Call "filetype off" first to ensure that bundle ftplugins can be added to the
 " path before we re-enable it later in the vimrc.
 filetype off
 
-call pathogen#infect()
-" call pathogen#incfect(s:vim_runtime.'/sources_forked/{}')
-" call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
-" call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
+let s:vim_runtime = expand('<sfile>:p:h')."/../.."
+" let s:vim_runtime = expand("%:p:h") ."/../"
+
+call pathogen#infect(s:vim_runtime.'/bundle/{}')
+call pathogen#infect(s:vim_runtime.'/src/sources_forked/{}')
+call pathogen#infect(s:vim_runtime.'/src/sources_non_forked/{}')
+call pathogen#infect(s:vim_runtime.'/src/my_plugins/{}')
 call pathogen#helptags()
