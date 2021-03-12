@@ -15,7 +15,7 @@
 let g:netrw_home=$HOME.'/vim/tmp'
 
 " Map ,n to open netrw in the current working directory
-" ":map <Leader>n :edit .<CR>
+" nnoremap <Leader>n :edit .<CR>
 
 " hide netrw top message
 let g:netrw_banner=0
@@ -41,9 +41,9 @@ let g:netrw_winsize = 25
 "nmap <silent> <NL> t :rightbelow 20vs<CR>:e .<CR>:wincmd h<CR>
 
 " Open file explorer at right side
-:nnoremap <leader><Space> :Vex! .<cr>
+":nnoremap <leader><Space> :Vex! .<cr>
 " Open file explorer at top side
-:nnoremap <leader>nn :Hex! .<cr>
+" :nnoremap <leader>nn :Hex! .<cr>
 
 " https://vi.stackexchange.com/a/13351/2917
 function! NetrwOpenMultiTab(current_line,...) range

@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
-
 set -e
 
 CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
-PLUGINS_DIRECTORY="$HOME/.vim_runtime/my_plugins"
-if [ ! -d "$PLUGINS_DIRECTORY/vim-rhubarb" ]; then
-  git clone https://github.com/tpope/vim-rhubarb.git $HOME/.vim_runtime/my_plugins/vim-rhubarb
-else
-    cd ${PLUGINS_DIRECTORY}/vim-rhubarb
+cd $HOME/.vim
+git add . 
+git commit -am"Random commit at ${CURRENT_DATE}"
 
-    git pull --rebas,
-fi
-
-an apple,
+git submodule update --init --recursive
+git push
+echo "Update of .vim directory is done."

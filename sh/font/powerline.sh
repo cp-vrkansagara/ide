@@ -17,7 +17,8 @@ cd /tmp/powerline
 # clean-up a bit
 rm -rf /tmp/powerline
 
-echo "fc-cache -f"
-fc-cache -f
+echo "fc-cache -f -v"
+fc-cache -f -v
+
 
 echo "Powerline font installation [Done]."
