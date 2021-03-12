@@ -9,5 +9,6 @@ snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
 let g:snips_author = "Vallabh Kansagara"
 let g:snipMate = { 'snippet_version' : 1 }
 let g:snipMate.snippet_version = 1
-:imap <C-T> <Plug>snipMateNextOrTrigger
-:smap <C-T> <Plug>snipMateNextOrTrigger
+inoremap <C-T> <Plug>snipMateNextOrTrigger
+smap <C-T> <Plug>snipMateNextOrTrigger
+

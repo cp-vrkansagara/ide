@@ -27,11 +27,11 @@ function! OnFileSave()
 	" Remove last character of each line ( %s/.\{1}$// )
 	if ext == 'vim'
 		" Remove : from every first line
-		silent! %s/^\s*://
-		" silent! %s/^map/nnoremap/
-		" silent! %s/^nmap/nnoremap/
-		" silent! %s/^imap/inoremap/
-		" silent! %s/^cmap/cnoremap/
+		" silent! %s/^\s*://
+		silent! %s/^map/nnoremap/
+		silent! %s/^nmap/nnoremap/
+		silent! %s/^imap/inoremap/
+		silent! %s/^cmap/cnoremap/
 
 	elseif extension == 'php'
 
