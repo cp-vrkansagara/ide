@@ -28,14 +28,15 @@ function! OnFileSave()
 	if ext == 'vim'
 		" Remove : from every first line
 		silent! %s/^\s*://
-		silent! %s/^map/nnoremap/
-		silent! %s/^nmap/nnoremap/
-		silent! %s/^imap/inoremap/
+		" silent! %s/^map/nnoremap/
+		" silent! %s/^nmap/nnoremap/
+		" silent! %s/^imap/inoremap/
+		" silent! %s/^cmap/cnoremap/
 
 	elseif extension == 'php'
 
 		" Remove closing tag(?>) from every *.php file only TODO
-		" PHP Performance
+		" PHP Performance (insted of " use ')
 		silent! %s/\"\([^"]*\)\"/'\1'/g
 		" silent! %s/\s\+$//g
 
