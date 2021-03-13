@@ -35,7 +35,7 @@ echo "Adding symbolink link for better git tracking of project"
 ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
 
 # Set sh directory executable
-chmod -R +x $HOME/.vim/sh/*
+chmod -R +x $HOME/.vim/src/sh/*
 
 # Before leaving the script reset to CWD
 cd $HOME
