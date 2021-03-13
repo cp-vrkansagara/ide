@@ -19,10 +19,10 @@ nnoremap <leader>s? z= " Suggest
 " Map <leader>ss to turn spelling on (VIM 7.0+)
 ":for item in ['Bad','Cap','Local','Rare']| exe "hi Spell".item| enfor " Print current value
 
-hi  SpellBad cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
-hi  SpellCap cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
-hi  SpellLocal cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
-hi  SpellRare cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
+hi  SpellBad cterm=underline ctermfg=none ctermbg=none term=Reverse gui=undercurl guisp=Red
+hi  SpellCap cterm=underline ctermfg=none ctermbg=none term=Reverse gui=undercurl guisp=Red
+hi  SpellLocal cterm=underline ctermfg=none ctermbg=none term=Reverse gui=undercurl guisp=Red
+hi  SpellRare cterm=underline ctermfg=none ctermbg=none term=Reverse gui=undercurl guisp=Red
 
 " File type specific autocmd
 if exists("spellfile")
