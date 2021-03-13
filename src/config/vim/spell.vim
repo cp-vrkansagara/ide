@@ -11,18 +11,18 @@ nnoremap <leader>ss :setlocal spell spelllang=en_gb<cr>
 " Disable spell check
 nnoremap <leader>ss! :set nospell<cr>
 
-nnoremap <leader>sn ]s
-nnoremap <leader>sp [s
-nnoremap <leader>sa zg
-nnoremap <leader>s? z=
+nnoremap <leader>sn ]s " Next
+nnoremap <leader>sp [s " Previous
+nnoremap <leader>sa zg " Add
+nnoremap <leader>s? z= " Suggest
 
 " Map <leader>ss to turn spelling on (VIM 7.0+)
 ":for item in ['Bad','Cap','Local','Rare']| exe "hi Spell".item| enfor " Print current value
 
-hi  SpellBad term=reverse ctermbg=9  ctermbg=0 gui=undercurl guisp=Red
-hi  SpellCap term=reverse ctermbg=12 ctermbg=0 gui=undercurl guisp=Blue
-hi  SpellLocal term=underline ctermbg=14 ctermbg=0 gui=undercurl guisp=Cyan
-hi  SpellRare term=reverse ctermbg=13 ctermbg=0 gui=undercurl guisp=Magenta
+hi  SpellBad cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
+hi  SpellCap cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
+hi  SpellLocal cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
+hi  SpellRare cterm=underline ctermfg=NONE ctermbg=NONE term=Reverse gui=Undercurl guisp=Red
 
 " File type specific autocmd
 if exists("spellfile")

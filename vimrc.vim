@@ -41,7 +41,7 @@ try
 	endfor
 
 	" Before passing access to user , it must be light background.
-	echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
+	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
 	call VimErrorCaught()
 catch /^\d\+$/
