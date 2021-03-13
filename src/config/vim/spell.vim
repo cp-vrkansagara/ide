@@ -3,7 +3,7 @@
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set spell spelllang=en_gb
-set spellfile=~/.vim/spell/en.utf-8.add
+set spellfile=~/.vim/data/spell/en.utf-8.add
 
 " Enable spell check
 nnoremap <leader>ss :setlocal spell spelllang=en_gb<cr>
@@ -17,7 +17,7 @@ nnoremap <leader>sa zg
 nnoremap <leader>s? z=
 
 " Map <leader>ss to turn spelling on (VIM 7.0+)
-":for item in ['Bad','Cap','Local','Rare']| exe "hi Spell".item| endfor " Print current value
+":for item in ['Bad','Cap','Local','Rare']| exe "hi Spell".item| enfor " Print current value
 
 hi  SpellBad term=reverse ctermbg=9  ctermbg=0 gui=undercurl guisp=Red
 hi  SpellCap term=reverse ctermbg=12 ctermbg=0 gui=undercurl guisp=Blue

@@ -31,7 +31,6 @@ try
 		endif
 	endfor
 
-
 	"(Priority = 4) Language specific settings configuration,Loading order that doesn't matter
 	for f in split(glob('~/.vim/src/config/language/*.vim'), '\n')
 		if (filereadable(f))
@@ -52,5 +51,5 @@ catch /^\d\+$/
 	echo  "\n Error =========@END\n"
 finally
 	" This is for fail back.
-	echo "Finally block called."
+	" echo "Finally block called."
 endtry
