@@ -17,7 +17,7 @@
 filetype off
 
 let s:vim_runtime = expand('<sfile>:p:h')."/../../.."
-" let s:vim_runtime = expand("%:p:h") ."/../"
+" let s:vim_runtime = expand("%:p:h") ."/../../.."
 
 call pathogen#infect(s:vim_runtime.'/bundle/{}')
 

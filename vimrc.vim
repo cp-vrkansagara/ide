@@ -1,4 +1,4 @@
-set runtimepath+=~/.vim
+set runtimepath+=$HOME/.vim
 function! VimErrorCaught()
 	if v:exception != ""
 		echo "\n" . 'Caught "' . v:exception . '" in ' . v:throwpoint ."\n"
@@ -10,6 +10,7 @@ endfunction
 try
 
 	"(Priority = 1) Initialization of vim
+	source ~/.vim/src/defaults.vim
 	source ~/.vim/src/main.vim
 
 	"(Priority = 2) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
@@ -29,7 +30,6 @@ try
 			throw "File can not able to read " . f
 		endif
 	endfor
-
 
 
 	"(Priority = 4) Language specific settings configuration,Loading order that doesn't matter
@@ -52,5 +52,5 @@ catch /^\d\+$/
 	echo  "\n Error =========@END\n"
 finally
 	" This is for fail back.
-	" echo "Finally block called."
+	echo "Finally block called."
 endtry

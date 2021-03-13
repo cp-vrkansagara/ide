@@ -5,7 +5,7 @@
 " Note:- Do not rename of file , as It used for priority include name(002)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call togglebg#map("<F5>")
+" call togglebg#map("<F5>")
 
 let g:solarized_bold = 1
 let g:solarized_italic = 1
