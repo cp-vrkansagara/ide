@@ -12,7 +12,16 @@ try
 	"(Priority = 1) Initialization of vim
 	source ~/.vim/src/main.vim
 
-	"(Priority = 2) Override VIM built in functionality(load into 0-9,az,AZ order)
+	"(Priority = 2) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
+	for f in split(glob('~/.vim/src/config/plugin/*.vim'), '\n')
+		if (filereadable(f))
+			exe 'source' f
+		else
+			throw "File can not able to read " . f
+		endif
+	endfor
+
+	"(Priority = 3) Override VIM built in functionality(load into 0-9,az,AZ order)
 	for f in split(glob('~/.vim/src/config/vim/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f
@@ -21,14 +30,7 @@ try
 		endif
 	endfor
 
-	"(Priority = 3) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
-	for f in split(glob('~/.vim/src/config/plugin/*.vim'), '\n')
-		if (filereadable(f))
-			exe 'source' f
-		else
-			throw "File can not able to read " . f
-		endif
-	endfor
+
 
 	"(Priority = 4) Language specific settings configuration,Loading order that doesn't matter
 	for f in split(glob('~/.vim/src/config/language/*.vim'), '\n')
