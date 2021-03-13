@@ -20,10 +20,9 @@ if [ $(ls $HOME/.vim* | wc -l) != 0 ]; then
 fi
 
 echo "Cloning the [vrkansagar] vim configuration."
-git clone --recursive --branch 2021 --depth 1 https://github.com/vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
+git clone --branch master --depth 1 https://github.com/vrkansagara/ide.git /tmp/.vim-${CURRENT_DATE}
 cd /tmp/.vim-${CURRENT_DATE}
-# git pull --recurse-submodules
-git submodule update --init --recursive
+
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 
 echo "Set up pathogen for vim run time path."
@@ -35,7 +34,7 @@ echo "Adding symbolink link for better git tracking of project"
 ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
 
 # Set sh directory executable
-chmod -R +x $HOME/.vim/sh/*
+chmod -R +x $HOME/.vim/src/sh/*
 
 # Before leaving the script reset to CWD
 cd $HOME
