@@ -30,7 +30,7 @@ try
 		endif
 	endfor
 
-	" (5)Language specific settings configuration,Loading order that doesn't matter
+	"(Priority = 4) Language specific settings configuration,Loading order that doesn't matter
 	for f in split(glob('~/.vim/src/config/language/*.vim'), '\n')
 		if (filereadable(f))
 			exe 'source' f
@@ -40,7 +40,7 @@ try
 	endfor
 
 	" Before passing access to user , it must be light background.
-	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
+	echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
 catch /.*/
 	call VimErrorCaught()
 catch /^\d\+$/

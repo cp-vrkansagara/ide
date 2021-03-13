@@ -1,11 +1,4 @@
-
 #vim specific swap
 *~
 *.swp
-tmp/
-
-#if any log(s)
 *.log
-
-# ide related
-bundle/
