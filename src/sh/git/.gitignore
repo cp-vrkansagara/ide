@@ -30,3 +30,4 @@ tags
 .netrwhist
 .NERDTreeBookmarks
 
+.php_cs.cache
