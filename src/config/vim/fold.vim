@@ -9,9 +9,19 @@ set foldlevel=2
 nnoremap <space> za
 nnoremap <S-space> zM
 
+
+" Following will prevent vim from closing folds in a current pane when opening a
+" new pane.
+" See http://stackoverflow.com/posts/30618494/revisions
+autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
+
+
 " set foldmethod=expr foldexpr=getline(v:lnum)=~'^\\s*'.&commentstring[0]
 autocmd FileType c      setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\\s*//'
 autocmd FileType python setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\\s*#'
 
 autocmd FileType php	setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\\s*//'
 autocmd FileType php	setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\\s*#'
+
+

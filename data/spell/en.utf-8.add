@@ -45,3 +45,8 @@ macvim
 gui
 GVIM
 datetime
+E_ALL
+display_errors
+display_startup_errors
+ini_set
+log_errors

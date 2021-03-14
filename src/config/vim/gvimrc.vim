@@ -28,6 +28,8 @@ if has("gui_macvim")
 	map! <M-Esc>[65~ <S-MouseUp>
 	set macligatures
 
+	"No damn bells!
+	set noerrorbells visualbell t_vb=
 else
 
 	set go=agimt

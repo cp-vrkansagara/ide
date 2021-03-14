@@ -146,6 +146,14 @@ set laststatus=2
 set scrolljump=5
 set scrolloff=3
 
+augroup scroll
+    au!
+    au  VimEnter * :silent !synclient VertEdgeScroll=0
+    au  VimLeave * :silent !synclient VertEdgeScroll=1
+augroup END
+
+
+
 " Yank text to the clipboard easier (y = yank|copy , d = delete|cut, p = paste) (Register
 " *=window, + = linux) - In normal mode, one can use p to paste after the cursor, or P to paste before the cursor.
 noremap <leader>y "*y

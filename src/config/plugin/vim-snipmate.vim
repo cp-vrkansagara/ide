@@ -1,9 +1,9 @@
 
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
-""""""""""""""""""""""""""""""
-ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
-snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
+"""""""""""""""""""""""""""""
+" ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
+" snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
 
 " snipMate options
 let g:snips_author = "Vallabh Kansagara"
