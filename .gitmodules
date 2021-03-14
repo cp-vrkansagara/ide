@@ -55,3 +55,12 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/vim-php-nsmespace"]
+	path = bundle/vim-php-nsmespace
+	url = https://github.com/arnaud-lb/vim-php-namespace
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-php-cs-fixer"]
+	path = bundle/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer.git

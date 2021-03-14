@@ -27,7 +27,7 @@ function! OnFileSave()
 	" Remove last character of each line ( %s/.\{1}$// )
 	if ext == 'vim'
 		" Remove : from every first line
-		" silent! %s/^\s*://
+		silent! %s/^\s*://
 		silent! %s/^map/nnoremap/
 		silent! %s/^nmap/nnoremap/
 		silent! %s/^imap/inoremap/
@@ -39,7 +39,8 @@ function! OnFileSave()
 		" PHP Performance (insted of " use ')
 		silent! %s/\"\([^"]*\)\"/'\1'/g
 		" silent! %s/\s\+$//g
-
+		silent! call PhpSortUse()
+		silent! call PhpCsFixerFixFile()
 	endif
 
 	" Remove white space from all file type

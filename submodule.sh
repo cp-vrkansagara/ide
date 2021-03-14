@@ -23,6 +23,7 @@ git submodule add -f https://github.com/preservim/nerdtree.git bundle/nerdtree
 git submodule add -f https://github.com/jlanzarotta/bufexplorer.git bundle/bufexplorer
 git submodule add -f https://github.com/junegunn/goyo.vim bundle/goyo.vim
 git submodule add -f https://github.com/amix/vim-zenroom2 bundle/vim-zenroom2
+git submodule add -f https://github.com/arnaud-lb/vim-php-namespace bundle/vim-php-nsmespace
 
 #vim-snipmate @START
 git submodule add -f https://github.com/garbas/vim-snipmate.git bundle/vim-snipmate
@@ -31,6 +32,8 @@ git submodule add -f https://github.com/MarcWeber/vim-addon-mw-utils.git bundle/
 git submodule add -f https://github.com/honza/vim-snippets.git bundle/vim-snippets
 #vim-snipmate @END
 
+git submodule add -f https://github.com/ervandew/supertab.git bundle/supertab
+git submodule add -f https://github.com/stephpy/vim-php-cs-fixer.git bundle/vim-php-cs-fixer
 
 # git submodule add -f https://github.com/gabrielelana/vim-markdown bundle/vim-markdown
 # git submodule add -f https://github.com/gabrielelana/vim-markdown bundle/vim-markdown
