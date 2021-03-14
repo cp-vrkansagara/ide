@@ -22,8 +22,20 @@ ${SUDO} apt-get install -y iputils-ping net-tools lsof nmap whois network-manage
 echo "System related stuff "
 ${SUDO} apt-get install -y elinks htop ctags vim curl lsb-release
 
-# echo "Install desktop manager"
-# ${SUDO} apt-get install -y xfce4 xfce4-goodies
+read -r -p "Do you want to install XFCE desktop ? [Y/n] " input
+case $input in
+    [yY][eE][sS]|[yY])
+		echo "Install desktop manager"
+		${SUDO} apt-get install -y xfce4 xfce4-goodies
+ ;;
+    [nN][oO]|[nN])
+ echo "Skipping...XFCE"
+       ;;
+    *)
+ echo "Invalid input..."
+ exit 1
+ ;;
+esac
 
 ${SUDO} apt-get autoremove
 
