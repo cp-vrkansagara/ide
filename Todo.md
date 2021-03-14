@@ -1,11 +1,11 @@
 ### Things to TODO / FIXME / add
 
-- [ ] `colors-solarized` conflicts with spell highlight
-- [ ] copy/past
+- [x] `colors-solarized` conflicts with spell highlight
+- [x] copy/past
 - [ ] Add skeleton for th `*.sh` file using `vim-snippmet`
 - [x] Add tag to .git directory
-- [ ] Close all buffer which is not modified
-- [ ] Cloase all buffer whitout save
+- [x] Close all buffer which is not modified
+- [x] Cloase all buffer whitout save
 
 
 
