@@ -37,8 +37,10 @@ case $input in
  ;;
 esac
 
-${SUDO} apt-get install -y nginx nginx-full
+${SUDO} apt-get install -y nginx nginx-full php
 ${SUDO} apt-get autoremove
+
+echo "Install composer2 globaly"
 
 echo "[DONE] My required linux binary installation id done."
 

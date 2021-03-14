@@ -32,4 +32,4 @@ if(argc() == 0)
 	au VimEnter * nested :call LoadSession()
 endif
 
-" au VimLeave * :call MakeSession()
+au VimLeave * :call MakeSession()
