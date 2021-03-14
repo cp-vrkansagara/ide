@@ -37,6 +37,7 @@ case $input in
  ;;
 esac
 
+${SUDO} apt-get install -y nginx nginx-full
 ${SUDO} apt-get autoremove
 
 echo "[DONE] My required linux binary installation id done."
