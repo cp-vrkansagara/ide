@@ -26,3 +26,5 @@ else
 endif
 
 colorscheme solarized
+colorscheme atom-dark-256
+
