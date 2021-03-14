@@ -50,7 +50,7 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 " like <leader>q quite current file
 nnoremap <leader>q :q<cr>
 
-" like <leader>Q quite gresss force fully
+" like <leader>Q quite gresss fully
 nnoremap <leader>Q :qa<cr>
 
 " "sudo" save: current file.

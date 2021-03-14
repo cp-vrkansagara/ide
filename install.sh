@@ -26,8 +26,7 @@ git submodule update --init --recursive
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 
 echo "Set up pathogen for vim run time path."
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # Copy of current vimrc to root directory cause to update .vim folder with git tracking so create symbolic link
 echo "Adding symbolic link for better git tracking of project"
