@@ -27,7 +27,6 @@ id_rsa.pub
 ./tags
 tags
 
-.netrwhist
-.NERDTreeBookmarks
 
+# php specific ignore
 .php_cs.cache
