@@ -2,11 +2,11 @@
 
 - [x] `colors-solarized` conflicts with spell highlight
 - [x] copy/past
-- [ ] Add skeleton for th `*.sh` file using `vim-snippmet`
+- [x] Add skeleton for th `*.sh` file using `vim-snippmet`
 - [x] Add tag to .git directory
 - [x] Close all buffer which is not modified
 - [x] Cloase all buffer whitout save
-- [ ] Add `composer2` library and it's global package for the development environment
+- [x] Add `composer2` library and it's global package for the development environment
 
 
 

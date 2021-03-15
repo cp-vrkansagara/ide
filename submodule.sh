@@ -1,3 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+if [ "$(whoami)" != "root" ]; then
+	SUDO=sudo
+fi
+
+CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
+export DEBIAN_FRONTEND=noninteractive
+
 # git submodule update --init --recursive
 # git submodule update --recursive
 # git submodule foreach git pull origin master
@@ -34,17 +44,14 @@ git submodule add -f https://github.com/honza/vim-snippets.git bundle/vim-snippe
 
 git submodule add -f https://github.com/ervandew/supertab.git bundle/supertab
 git submodule add -f https://github.com/stephpy/vim-php-cs-fixer.git bundle/vim-php-cs-fixer
+git submodule add -f https://github.com/gabrielelana/vim-markdown.git bundle/vim-markdown
 
-# git submodule add -f https://github.com/gabrielelana/vim-markdown bundle/vim-markdown
-# git submodule add -f https://github.com/gabrielelana/vim-markdown bundle/vim-markdown
 # git submodule add -f https://github.com/terryma/vim-multiple-cursors.git bundle/vim-multiple
-
-
 # git submodule add -f https://github.com/ycm-core/YouCompleteMe.git  bundle/YouCompleteMe.git
 # git submodule add -f https://github.com/vim-syntastic/syntastic.git bundle/syntastic.git
 # git submodule add -f https://github.com/ycm-core/lsp-examples bundle/lsp-examples.git
 
 
-echo "Bellow line is necessary because it check with recursive dependence"
 git submodule update --init --recursive
+echo "Submodule installation recursive dependence [DONE]."
 
