@@ -2,7 +2,7 @@
 
 - [x] `colors-solarized` conflicts with spell highlight
 - [x] copy/past
-- [x] Add skeleton for th `*.sh` file using `vim-snippmet`
+- [ ] Add skeleton for th `*.sh` file using `vim-snippmet`
 - [x] Add tag to .git directory
 - [x] Close all buffer which is not modified
 - [x] Cloase all buffer whitout save

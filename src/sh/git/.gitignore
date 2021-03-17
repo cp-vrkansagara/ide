@@ -30,3 +30,5 @@ tags
 
 # php specific ignore
 .php_cs.cache
+.phpcs-cache
+.phpunit.result.cache
