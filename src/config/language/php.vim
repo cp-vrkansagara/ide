@@ -19,9 +19,6 @@ autocmd BufNewFile,BufRead *.phtml set ft=php
 autocmd BufNewFile,BufRead *.phps set ft=php
 autocmd BufNewFile,BufRead *.blade.php set ft=php
 
-set omnifunc=phpcomplete#CompletePHP
-
-
 function! PhpCsCheck()
     try
         exec "!./vendor/bin/phpcs ". expand('%:p')

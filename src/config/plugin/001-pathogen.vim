@@ -25,3 +25,6 @@ call pathogen#infect(s:vim_runtime.'/bundle/{}')
 call pathogen#infect(s:vim_runtime.'/vendor/{}')
 
 call pathogen#helptags()
+
+filetype plugin on
+filetype plugin indent on

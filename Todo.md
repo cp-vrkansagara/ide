@@ -7,6 +7,8 @@
 - [x] Close all buffer which is not modified
 - [x] Cloase all buffer whitout save
 - [x] Add `composer2` library and it's global package for the development environment
+- [ ] Configure `airblade/vim-gitgutter`
+- [ ] Configure `voldikss/vim-floaterm`
 
 
 
@@ -14,3 +16,6 @@
 
 - [x] Replace ' (single quote) insted of " on *.php(file extention only) buffer open
 - [ ] Remove closing php tag `?>` only when there is no code after this line so
+
+## VIM as IDE
+- https://vim.fandom.com/wiki/Use_Vim_like_an_IDE

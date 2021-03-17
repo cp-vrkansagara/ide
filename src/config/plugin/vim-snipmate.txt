@@ -1,7 +1,16 @@
 
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
+" *SnipMate-mappings*
 """""""""""""""""""""""""""""
+
+
+" :let g:snips_trigger_key = '<tab>'
+" :let g:snips_trigger_key_backwards = '<s-tab>'
+
+let g:snips_trigger_key = 'C-RR'
+let g:snips_trigger_key_backwards = 'C-TT'
+
 ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
 snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
 

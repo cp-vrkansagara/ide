@@ -1,14 +1,15 @@
 " Space conflicts with code folding.
 " This only work with first directory with vim open
 " nnoremap <leader><space> :NERDTreeToggle<cr>
+" nnoremap <F5> :NERDTreeToggle<CR>
 noremap <leader><space> :call NERDTreeToggleInCurDir()<cr>
 
 " Direct control key conflicts with different OS (i.e. xfce)
 noremap <A-p> :NERDTreeToggle<cr>
 
 
-map <leader>nb :NERDTreeFromBookmark
-map <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>nb :NERDTreeFromBookmark
+nnoremap <leader>nf :NERDTreeFind<cr>
 
 let NERDTreeMinimalUI = 3
 let NERDTreeDirArrows = 1

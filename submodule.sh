@@ -45,6 +45,8 @@ git submodule add -f https://github.com/honza/vim-snippets.git bundle/vim-snippe
 git submodule add -f https://github.com/ervandew/supertab.git bundle/supertab
 git submodule add -f https://github.com/stephpy/vim-php-cs-fixer.git bundle/vim-php-cs-fixer
 git submodule add -f https://github.com/gabrielelana/vim-markdown.git bundle/vim-markdown
+git submodule add -f https://github.com/airblade/vim-gitgutter.git bundle/vim-gitgutter
+git submodule add -f https://github.com/voldikss/vim-floaterm.git bundle/vim-floaterm
 
 # git submodule add -f https://github.com/terryma/vim-multiple-cursors.git bundle/vim-multiple
 # git submodule add -f https://github.com/ycm-core/YouCompleteMe.git  bundle/YouCompleteMe.git
