@@ -23,6 +23,7 @@ cd /tmp/.vim-${CURRENT_DATE}
 
 # git pull --recurse-submodules
 git submodule update --init --recursive
+chmod +x bin/ -Rf
 mv /tmp/.vim-${CURRENT_DATE} $HOME/.vim
 
 echo "Set up pathogen for vim run time path."
