@@ -5,7 +5,7 @@ dir=$(pwd)
 name="tags"
 
 echo "Creating tags for directory '$dir' using alias '$name'"
-
+mv tags /tmp/
 # echo "Move to '$dir' is essential because ctags not accept the directory path"
 exec ctags-exuberant -f $dir/$name \
 	--languages=PHP \
