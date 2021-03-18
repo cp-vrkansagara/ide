@@ -73,3 +73,6 @@
 [submodule "bundle/vim-floaterm"]
 	path = bundle/vim-floaterm
 	url = https://github.com/voldikss/vim-floaterm.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/preservim/tagbar.git
