@@ -5,9 +5,8 @@ int main(){
 	printf("hello world !");
 
     for (i= 0; i < 10;++i ) {
-        printf("\n I is [%d]",i);
+        printf("\n I am number  [%d]",i);
     }    
-
 
 	return 0;
 }
