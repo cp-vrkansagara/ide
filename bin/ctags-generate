@@ -5,15 +5,14 @@ dir=$(pwd)
 name="tags"
 
 echo "Creating tags for directory '$dir' using alias '$name'"
-mv tags /tmp/
-# echo "Move to '$dir' is essential because ctags not accept the directory path"
+
 exec ctags-exuberant -f $dir/$name \
 	--languages=PHP \
 	-R \
 	--totals=yes \
 	--tag-relative=yes \
-	--fields=+aimS \
-	--extra=+f \
+	# --fields=+aimS \
+	# --extra=+f \
 	--PHP-kinds=+cdfiv \
 	--exclude="\.svn" \
 	--exclude="\.git/" \
@@ -24,11 +23,11 @@ exec ctags-exuberant -f $dir/$name \
 	--exclude='*.js' \
 	--exclude='*.min.js' \
 	--exclude='*.phtml' \
-	--exclude='*.blade.php' \
-	--regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\/f/' \
-	--regex-PHP='/abstract class ([^ ]*)/\/c/' \
-	--regex-PHP='/interface ([^ ]*)/\/c/' \
-	--regex-PHP='/get([a-z|A-Z|0-9]+)Attribute/\1/' \
-	--regex-PHP='/scope([a-z|A-Z|0-9]+)/\1/'
+	--exclude='*.blade.php'
+	# --regex-PHP='/(public |static |abstract |protected |private )+function ([^ (]*)/\/f/' \
+	# --regex-PHP='/abstract class ([^ ]*)/\/c/' \
+	# --regex-PHP='/interface ([^ ]*)/\/c/' \
+	# --regex-PHP='/get([a-z|A-Z|0-9]+)Attribute/\1/' \
+	# --regex-PHP='/scope([a-z|A-Z|0-9]+)/\1/'
 
 echo "ctag generation done. [DONE]"

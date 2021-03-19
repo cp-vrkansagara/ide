@@ -13,9 +13,9 @@ augroup filetypedetect
 augroup END
 
 
-":autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
-autocmd BufWritePre <buffer> call OnFileSave()
-autocmd BufWritePost <buffer> :call OnFileSave()
+" :autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
+" autocmd BufWritePre <buffer> :call OnFileSave()
+" autocmd BufWritePost <buffer> :call OnFileSave()
 
 
 function! OnFileSave()
