@@ -1,0 +1,23 @@
+
+""""""""""""""""""""""""""""""
+" => snipMate (beside <TAB> support <CTRL-j>)
+" *SnipMate-mappings*
+"""""""""""""""""""""""""""""
+
+
+" :let g:snips_trigger_key = '<tab>'
+" :let g:snips_trigger_key_backwards = '<s-tab>'
+
+let g:snips_trigger_key = 'C-RR'
+let g:snips_trigger_key_backwards = 'C-TT'
+
+ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
+snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
+
+" snipMate options
+let g:snips_author = "Vallabh Kansagara"
+let g:snipMate = { 'snippet_version' : 1 }
+let g:snipMate.snippet_version = 1
+nnoremap <C-T> <Plug>snipMateNextOrTrigger
+smap <C-T> <Plug>snipMateNextOrTrigger
+

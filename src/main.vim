@@ -25,7 +25,6 @@ nnoremap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
 " nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
 
-
 " get off my lawn
 nnoremap <up> :echoe "use k"<cr>
 nnoremap <down> :echoe "use j"<cr>
@@ -42,9 +41,6 @@ endif
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
 nnoremap <leader>my :tabedit ~/.vim/config/main.vim<CR>
 
-" Reload vimr configuration file
-nnoremap <leader>r :source $MYVIMRC<CR>
-
 " like <leader>q quite current file
 nnoremap <leader>q :q<cr>
 
@@ -59,15 +55,15 @@ nnoremap <leader>w :w<cr>
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
-
-" " Via https://twitter.com/vimtips/status/208241766816677889
-" " Allows all operations to work with system clipboard
-" set clipboard=unnamed
-" Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
+" Yank text to the clipboard easier (y = yank|copy , d = delete|cut, p = paste) (Register
+" *=window, + = linux) - In normal mode, one can use p to paste after the cursor, or P to paste before the cursor.
 noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+noremap <leader>y "+y
+noremap <leader>yy "+Y
+
 noremap <leader>p "*p
-noremap <leader>Y "+y
 noremap <leader>P "+p
 
 " Use UTF-8 encoding
@@ -144,24 +140,13 @@ set laststatus=2
 set scrolljump=5
 set scrolloff=3
 
-augroup scroll
-    au!
-    au  VimEnter * :silent !synclient VertEdgeScroll=0
-    au  VimLeave * :silent !synclient VertEdgeScroll=1
-augroup END
+" As mouse scroll is disable so no need of bello code
+" augroup scroll
+"     au!
+"     au  VimEnter * :silent !synclient VertEdgeScroll=0
+"     au  VimLeave * :silent !synclient VertEdgeScroll=1
+" augroup END
 
-
-
-" Yank text to the clipboard easier (y = yank|copy , d = delete|cut, p = paste) (Register
-" *=window, + = linux) - In normal mode, one can use p to paste after the cursor, or P to paste before the cursor.
-noremap <leader>y "*y
-noremap <leader>yy "*Y
-noremap <leader>y "+y
-noremap <leader>yy "+Y
-
-
-" Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p set paste<CR>:put  *<CR>set nopaste<CR>
 
 " Vim move lime up and down using j and k
 nnoremap <A-j> :m .+1<CR>==

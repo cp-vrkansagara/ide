@@ -10,7 +10,6 @@ endfunction
 try
 
 	"(Priority = 1) Initialization of vim
-	source ~/.vim/src/defaults.vim
 	source ~/.vim/src/main.vim
 
 	"(Priority = 2) VIM distributed plugin configuration override(load into 0-9,az,AZ order)
