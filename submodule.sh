@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+
 set -e
+set -x
 
 if [ "$(whoami)" != "root" ]; then
 	SUDO=sudo
@@ -13,12 +15,12 @@ export DEBIAN_FRONTEND=noninteractive
 # git submodule foreach git pull origin master
 # git submodule foreach git pull --rebase
 
-echo "Change to .vim direcotry "
+echo "Submodule installation started at ${CURRENT_DATE}"
 
 cd ~/.vim
 
 ${SUDO} rm -rf bundle/* -Rf
-${SUDO} rm -rf .git/modules/* -Rf
+# ${SUDO} rm -rf .git/modules/* -Rf
 
 git submodule add -f https://github.com/tpope/vim-pathogen.git bundle/vim-pathogen
 git submodule add -f https://github.com/tpope/vim-fugitive.git bundle/fugitive
@@ -36,8 +38,7 @@ git submodule add -f https://github.com/mileszs/ack.vim.git bundle/ack.vim
 git submodule add -f https://github.com/jlanzarotta/bufexplorer.git bundle/bufexplorer
 git submodule add -f https://github.com/airblade/vim-gitgutter.git bundle/vim-gitgutter
 git submodule add -f https://github.com/neoclide/coc.nvim.git bundle/coc.nvim
-# git submodule add -f https://github.com/junegunn/goyo.vim bundle/goyo.vim
-# git submodule add -f https://github.com/amix/vim-zenroom2 bundle/vim-zenroom2
+git submodule add -f https://github.com/gabrielelana/vim-markdown.git bundle/vim-markdown
 
 #vim-snipmate @START
 # git submodule add -f https://github.com/garbas/vim-snipmate.git bundle/vim-snipmate
@@ -46,10 +47,11 @@ git submodule add -f https://github.com/neoclide/coc.nvim.git bundle/coc.nvim
 # git submodule add -f https://github.com/honza/vim-snippets.git bundle/vim-snippets
 #vim-snipmate @END
 
-git submodule add -f https://github.com/gabrielelana/vim-markdown.git bundle/vim-markdown
 # git submodule add -f https://github.com/preservim/tagbar.git bundle/tagbar
-
 # git submodule add -f https://github.com/terryma/vim-multiple-cursors.git bundle/vim-multiple
+# git submodule add -f https://github.com/junegunn/goyo.vim bundle/goyo.vim
+# git submodule add -f https://github.com/amix/vim-zenroom2 bundle/vim-zenroom2
 
 git submodule update --init --recursive
+
 echo "Submodule installation recursive dependence [DONE]."
