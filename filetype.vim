@@ -13,9 +13,9 @@ augroup filetypedetect
 augroup END
 
 
-":autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
-autocmd BufWritePre <buffer> call OnFileSave()
-autocmd BufWritePost <buffer> :call OnFileSave()
+" :autocmd FileType vim autocmd BufWritePost <buffer> call OnFileSave()
+" autocmd BufWritePre <buffer> :call OnFileSave()
+" autocmd BufWritePost <buffer> :call OnFileSave()
 
 
 function! OnFileSave()
@@ -28,10 +28,10 @@ function! OnFileSave()
 	if ext == 'vim'
 		" Remove : from every first line
 		silent! %s/^\s*://
-		" silent! %s/^map/nnoremap/
-		" silent! %s/^nmap/nnoremap/
-		" silent! %s/^imap/inoremap/
-		" silent! %s/^cmap/cnoremap/
+		silent! %s/^map/nnoremap/
+		silent! %s/^nmap/nnoremap/
+		silent! %s/^imap/inoremap/
+		silent! %s/^cmap/cnoremap/
 
 	elseif extension == 'php'
 
@@ -39,7 +39,8 @@ function! OnFileSave()
 		" PHP Performance (insted of " use ')
 		silent! %s/\"\([^"]*\)\"/'\1'/g
 		" silent! %s/\s\+$//g
-
+		silent! call PhpSortUse()
+		silent! call PhpCsFixerFixFile()
 	endif
 
 	" Remove white space from all file type

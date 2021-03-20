@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/bin:$HOME/.config/composer/vendor/bin:$HOME/git/magento/ece-tools/vendor/bin:$PATH
+export PATH=$HOME/bin:$HOME/.vim/bin:/usr/local/bin:$HOME/.config/composer/vendor/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH="/home/vallabh/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -24,13 +24,13 @@ ZSH_THEME="agnoster"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=3
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -100,6 +100,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ls='ls -lAlhtra'
+
 # Docker Related stuff #
 # sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # sudo chmod +x /usr/local/bin/docker-compose
@@ -116,7 +118,9 @@ alias www='cd ~/www'
 alias htdocs='cd ~/htdocs'
 alias gh='cd ~/git'
 alias ls='/bin/ls --human-readable --size -1 -S --classify'
-alias ll='/bin/ls -lhtra'
+alias ll='/bin/ls -lhtraF'
+alias la='ls -A'
+alias l='ls -CF'
 alias du='/usr/bin/du -sh  '
 
 alias ownIt='sudo chown -Rf $USER:$USER '
@@ -124,5 +128,12 @@ alias ownItWithPermission='sudo chmod 0744 -Rf'
 alias myPublicIp='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myAllIp="ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias myIp="echo $(hostname -I | awk '{print $1}')"
+alias myListen="sudo lsof -iTCP -sTCP:LISTEN -Pn"
 alias gWork='git config --global user.email "vallabh.kansagara@commercepundit.com"'
 alias gPersonal='git config --global user.email "vrkansagara@gmail.com"'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
