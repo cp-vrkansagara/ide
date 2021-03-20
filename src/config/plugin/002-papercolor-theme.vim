@@ -5,18 +5,15 @@
 " Note:- Do not rename of file , as It used for priority include name(002)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call togglebg#map("<F5>")
-
 syntax enable
 
 " First line ensures we can have full spectrum of colors
 if has('gui_running') || &term =='linux' || &t_Co < 256
 	set bg=dark
 	set background=dark
-	let g:solarized_termcolors=16
+	colorscheme default
 else
     set t_Co=256
 	set background=light
+	colorscheme PaperColor
 endif
-
-colorscheme PaperColor
