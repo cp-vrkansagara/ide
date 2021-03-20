@@ -1,17 +1,11 @@
-" File name :- 002-vim-colors-solarized.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File name :- 002-papercolor-them.vim
 " About:- Color scheme for the editor.
 " Maintainer:- Vallabh Kansagara — @vrkansagara
 " Note:- Do not rename of file , as It used for priority include name(002)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call togglebg#map("<F5>")
-
-let g:solarized_bold = 1
-let g:solarized_italic = 1
-let g:solarized_underline = 1
-let g:solarized_termtrans=0
-let g:solarized_contrast = "normal"
-let g:solarized_visibility = "normal"
 
 syntax enable
 
@@ -20,10 +14,9 @@ if has('gui_running') || &term =='linux' || &t_Co < 256
 	set bg=dark
 	set background=dark
 	let g:solarized_termcolors=16
-	colorscheme nord
 else
-    let g:solarized_termcolors=256
     set t_Co=256
 	set background=light
 endif
+
 colorscheme PaperColor

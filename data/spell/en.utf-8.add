@@ -52,3 +52,5 @@ ini_set
 log_errors
 use
 use
+gopls
+gopls

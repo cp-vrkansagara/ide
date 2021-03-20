@@ -34,6 +34,7 @@ else
 
 	set go=agimt
 	" set guifont=Fira_Code:h17
+	set guifont=Hack\ 9
 	set linespace=15
 endif
 
