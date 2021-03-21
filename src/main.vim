@@ -19,11 +19,11 @@ inoremap kj <Esc>
 let mapleader = ","
 
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
-nnoremap <leader>my :tabedit $HOME/.vim/vim.vim<CR>
+nnoremap <leader>my :tabedit $HOME/.vim/src/main.vim<CR>
 
-" Reload vimr configuration file
+" Reload vimrc configuration file
 " nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
+" nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
 
 " get off my lawn
 nnoremap <up> :echoe "use k"<cr>
@@ -36,10 +36,6 @@ nnoremap <right> :echoe "use l"<cr>
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-
-" Load vimrc in new tab with leader-v
-nnoremap <leader>v :tabedit $MYVIMRC<CR>
-nnoremap <leader>my :tabedit ~/.vim/config/main.vim<CR>
 
 " like <leader>q quite current file
 nnoremap <leader>q :q<cr>
@@ -163,7 +159,6 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " set textwidth=80
 " set colorcolumn=+1
 " au BufRead,BufNewFile * setlocal textwidth=80
-
 
 set complete=.,w,b,u,t,kspell
 " CTRL + o and CTRL+i back

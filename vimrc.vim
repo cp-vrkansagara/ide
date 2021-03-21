@@ -1,4 +1,5 @@
 set runtimepath+=$HOME/.vim
+
 function! VimErrorCaught()
 	if v:exception != ""
 		echo "\n" . 'Caught "' . v:exception . '" in ' . v:throwpoint ."\n"
@@ -40,7 +41,8 @@ try
 	endfor
 
 	" Before passing access to user , it must be light background.
-	" echo "Welcome to the world of Vallabh Kansagara (VRKANSAGARA) - Editor config load [DONE]."
+	echo "Do one thing and do it well - Vallabh Kansagara (VRKANSAGARA)."
+
 catch /.*/
 	call VimErrorCaught()
 catch /^\d\+$/

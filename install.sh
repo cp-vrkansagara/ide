@@ -36,6 +36,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 
 echo "Adding symbolic link for better git tracking of project"
 ln -s $HOME/.vim/vimrc.vim $HOME/.vimrc
+ln -s $HOME/.vim/.zshrc $HOME/.zshrc
 
 # Set sh and bin  directory executable
 ${SUDO} chmod -R +x $HOME/.vim/src/sh/* $HOME/.vim/bin
