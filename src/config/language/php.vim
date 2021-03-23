@@ -4,7 +4,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " PHP parser check (CTRL + l)
-autocmd FileType php noremap <C-l> :w!<CR>:! clear && php -l %<CR>
+autocmd FileType php noremap <C-l> :w!<CR>:! echo -e "\033[0m" /usr/bin/clear && php -l %<CR>
 
 " run file with PHP CLI (CTRL-m)
 autocmd FileType php noremap <C-m> :w!<CR>:!php %<CR>
@@ -42,6 +42,6 @@ function! PhpCsFix()
 endfunction
 " :set omnifunc=phpcomplete#CompletePHP
 
-"Sort PHP use statements
+"Sort PHP use statements ( This is already done using php-name
 "http://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
-vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
+" vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>

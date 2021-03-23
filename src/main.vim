@@ -22,7 +22,7 @@ nnoremap <leader>v :tabedit $MYVIMRC<CR>
 nnoremap <leader>my :tabedit $HOME/.vim/src/main.vim<CR>
 
 " Reload vimrc configuration file
-" nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
 " nnoremap <leader>r :source ~/.vim/vimrc.vim<CR>
 
 " get off my lawn

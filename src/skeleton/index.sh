@@ -10,10 +10,10 @@ fi
 CURRENT_DATE=$(date "+%Y%m%d%H%M%S")
 export DEBIAN_FRONTEND=noninteractive
 echo $0
- 
+
 full_path=$(realpath $0)
 echo "This is full_path " $full_path
- 
+
 dir_path=$(dirname $full_path)
 echo "This is dir_path" $dir_path
 

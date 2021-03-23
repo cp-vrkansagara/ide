@@ -3,7 +3,8 @@
 - [ ] Add skeleton for th `*.sh` file using `vim-snippmet`
 - [ ] Configure `airblade/vim-gitgutter`
 - [ ] Add shortcut for F5 = background=dark/light
--
+- [ ] `phpcs.xml` not found into current directory then use the global one
+- [ ] Check php file type use statement is shorting or not
 
 ## PHP performance related
 
@@ -11,4 +12,4 @@
 
 ## VIM as IDE
 
-- https://vim.fandom.com/wiki/Use_Vim_like_an_IDE
+- [Ref](!https://vim.fandom.com/wiki/Use_Vim_like_an_IDE)

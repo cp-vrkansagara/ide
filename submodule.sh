@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-set -x
+# set -x  Used to debug the script
 
 if [ "$(whoami)" != "root" ]; then
 	SUDO=sudo
@@ -28,6 +28,7 @@ git submodule add -f https://github.com/tpope/vim-sensible.git bundle/vim-sensib
 git submodule add -f https://github.com/tpope/vim-scriptease.git bundle/vim-scriptease
 git submodule add -f https://github.com/tpope/vim-rhubarb.git bundle/vim-rhubarb
 git submodule add -f  https://github.com/tpope/vim-commentary.git bundle/vim-commentry
+git submodule add -f https://github.com/tpope/vim-surround.git bundle/vim-surround
 
 git submodule add -f https://github.com/NLKNguyen/papercolor-theme.git bundle/papercolor-theme
 git submodule add -f https://github.com/vim-airline/vim-airline.git bundle/vim-airline
@@ -41,11 +42,8 @@ git submodule add -f https://github.com/neoclide/coc.nvim.git bundle/coc.nvim
 git submodule add -f https://github.com/gabrielelana/vim-markdown.git bundle/vim-markdown
 
 #vim-snipmate @START
-# git submodule add -f https://github.com/garbas/vim-snipmate.git bundle/vim-snipmate
-# git submodule add -f https://github.com/tomtom/tlib_vim.git bundle/tlib_vim
-# git submodule add -f https://github.com/MarcWeber/vim-addon-mw-utils.git bundle/vim-addon-mw-utils
-# git submodule add -f https://github.com/honza/vim-snippets.git bundle/vim-snippets
-#vim-snipmate @END
+git submodule add -f https://github.com/honza/vim-snippets.git bundle/vim-snippets
+#vim-snipmate @EN5
 
 # git submodule add -f https://github.com/preservim/tagbar.git bundle/tagbar
 # git submodule add -f https://github.com/terryma/vim-multiple-cursors.git bundle/vim-multiple
