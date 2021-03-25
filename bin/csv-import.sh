@@ -15,14 +15,19 @@ _db_port="3306"
 # To avoide :- [Warning] Using a password on the command line interface can be insecure.
 # Usage for mysqldump --defaults-extra-file=$credentialsFile .....
 # Usage for mysql --defaults-extra-file=$credentialsFile .....
-credentialsFile="/tmp/CSV/mysql-credentials.cnf"
+credentialsFile="/tmp/mysql-credentials.cnf"
 echo "[client]" > $credentialsFile
 echo "user=$_db_user" >> $credentialsFile
 echo "password=$_db_password" >> $credentialsFile
 echo "host=$_db_host" >> $credentialsFile
 
 # define directory containing CSV files
-_csv_directory="/var/lib/mysql-files/csv"
+# SHOW VARIABLES LIKE "secure_file_priv";
+# SELECT VERSION();
+# SELECT @@GLOBAL.secure_file_priv;
+
+_csv_directory="/tmp/mysql-files"
+sudo chown -R mysql:mysql  $_csv_directory
 
 # go into directory
 cd $_csv_directory
@@ -46,11 +51,11 @@ do
 
   # Ensure table exists
   mysql --defaults-extra-file=$credentialsFile  $_db << eof
-    -- DROP TABLE IF EXISTS \`$_table_name\`;
+	-- DROP TABLE IF EXISTS \`$_table_name\`;
     CREATE TABLE IF NOT EXISTS \`$_table_name\` (
       id int(11) NOT NULL auto_increment,
       PRIMARY KEY  (id)
-    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 eof
 
   # loop through header columns
